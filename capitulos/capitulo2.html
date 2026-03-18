@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 2: Amvesh — Mar de Cinzas</title>
+<meta name="description" content="Capítulo 2 de Mar de Cinzas. A mina, os tritões e o sistema que ela decidiu aprender.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.reading-wrap {
+  max-width: var(--read-w);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem;
+}
+.chapter-header {
+  text-align: center;
+  padding-bottom: 3.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.ch-series { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1.6rem; }
+.ch-number { font-family: var(--display); font-size: 0.72rem; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.8rem; }
+.ch-title-main { font-family: var(--display); font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 900; color: var(--text); letter-spacing: 0.04em; line-height: 1.1; margin-bottom: 0.6rem; }
+.ch-subtitle { font-family: var(--display); font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--faint); }
+.ch-ornament { font-size: 1.5rem; opacity: 0.2; margin: 2rem auto 0; filter: sepia(0.5); }
+.reading-wrap p { font-family: var(--serif); font-size: clamp(1.05rem, 2.5vw, 1.2rem); line-height: 1.85; color: var(--text); margin-bottom: 1.2em; }
+.drop-cap::first-letter { font-family: var(--display); font-size: 4.2em; font-weight: 900; line-height: 0.75; float: left; margin: 0.08em 0.1em 0 0; color: var(--gold); }
+.thought { font-style: italic; color: var(--sea); }
+.scene-break { text-align: center; font-size: 0.9rem; color: var(--faint); letter-spacing: 0.5em; margin: 2.5rem 0; user-select: none; }
+.ornament-break { text-align: center; font-size: 1.3rem; color: var(--gold-dim); opacity: 0.4; margin: 3.5rem 0; user-select: none; }
+.reading-wrap h2 { font-family: var(--display); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dim); margin: 3.5rem 0 1.6rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.pull-quote { border-left: 2px solid var(--gold-dim); padding: 0 0 0 1.4rem; margin: 2rem 0; }
+.pull-quote p { font-style: italic; color: var(--muted); font-size: clamp(1rem, 2.3vw, 1.15rem); }
+.pull-quote cite { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); font-style: normal; margin-top: -0.6rem; margin-bottom: 1.2em; }
+.chapter-end { text-align: center; padding-top: 3.5rem; margin-top: 2rem; border-top: 1px solid var(--rule); }
+.end-label { font-family: var(--mono) !important; font-size: 9px !important; letter-spacing: 0.28em !important; text-transform: uppercase; color: var(--faint) !important; font-style: normal !important; margin: 0 !important; }
+.chapter-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.75rem; align-items: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.ch-nav-prev, .ch-nav-next { font-family: var(--display); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 0.7rem 1rem; border: 1px solid var(--rule2); border-radius: 4px; color: var(--muted); transition: all 0.15s; }
+.ch-nav-prev { text-align: left; }
+.ch-nav-next { text-align: right; }
+.ch-nav-prev:hover, .ch-nav-next:hover { border-color: var(--gold-dim); color: var(--text); }
+.ch-nav-center { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); text-decoration: none; text-align: center; white-space: nowrap; transition: color 0.15s; }
+.ch-nav-center:hover { color: var(--gold-dim); }
+@media (max-width: 520px) {
+  .reading-wrap { padding-top: calc(var(--nav-h) + 2.5rem); }
+  .chapter-nav { grid-template-columns: 1fr 1fr; }
+  .ch-nav-center { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/" class="active">Capítulos</a>
+      <a href="../project-bible.html">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="reading-wrap">
+
+  <header class="chapter-header">
+    <p class="ch-series">Mar de Cinzas &nbsp;·&nbsp; Arco I — Fuga</p>
+    <p class="ch-number">Capítulo Dois</p>
+    <h1 class="ch-title-main">Amvesh</h1>
+    <p class="ch-subtitle">The Mine</p>
+    <div class="ch-ornament">⚓</div>
+  </header>
+
+  <p class="drop-cap">O orc se chamava Reth. Não Elizabeth soube disso no primeiro dia, nem no segundo — soube no quinto, quando alguém no pátio gritou o nome de longe num tom que significava que havia um problema que não podia esperar. Reth virou o rosto. Elizabeth, que havia passado três dias fingindo não observá-lo, registrou o movimento com a precisão de quem estava mapeando.</p>
+
+  <p>Cinco dias. E esse era o primeiro pedaço de informação que valia algo.</p>
+
+  <p><span class="thought">Nome. Reth. Reação a chamados de urgência — responde, mas não apressado. Posição de força real, não de hierarquia formal. O diretor não sabe que é ele quem manda aqui. Ou sabe e prefere não encarar esse fato.</span></p>
+
+  <p>A instalação de Amvesh operava em três turnos. Mineração de éter bruto nas camadas inferiores, processamento nos andares do meio, embalagem e transferência no nível da superfície. Os tritões trabalhavam no subsolo — suas fisiologias toleravam a pressão e a umidade que destruíam pulmões humanos em meses. Os orcs e mestiços de maior porte operavam as máquinas de extração. Os mestiços menores faziam o trabalho de manuseio e transporte.</p>
+
+  <p>Elizabeth havia sido designada como supervisora de turno da embalagem. O título soava importante. Na prática, significava que ela ficava de pé por doze horas num corredor entre as esteiras de transferência e assinava papéis que ninguém lia, referentes a caixotes que tinham o peso errado em pelo menos um terço das contagens.</p>
+
+  <p><span class="thought">Um terço das contagens com peso errado. Isso não é incompetência — é sistemático. Alguém está desviando. E alguém acima está deixando isso acontecer por alguma razão.</span></p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>Ela passou a semana seguinte não falando com ninguém que não precisasse ouvir. Assinava os papéis. Ficava de pé no corredor. Não reclamava do peso. Não reclamava da comida. Quando alguém testava — uma cotovelada, um prato virado por acidente, a sua cota de ferramenta sumindo antes do turno começar — ela recolhia o que sobrava e continuava trabalhando.</p>
+
+  <p>Ninguém esperava isso. O invisível aguenta. O invisível não reage de forma que force uma resposta.</p>
+
+  <p>Na segunda semana, os testes diminuíram.</p>
+
+  <p>Na terceira, pararam.</p>
+
+  <div class="ornament-break">⚓</div>
+
+  <h2>O idioma do subsolo</h2>
+
+  <p class="drop-cap">Os tritões não falavam o idioma padrão do Almirantado. Falavam uma mistura de Náutico Antigo e sinais manuais — uma língua que havia evoluído ao longo de décadas de trabalho forçado subterrâneo, onde o barulho das máquinas de éter tornava qualquer som inútil para comunicação a mais de três metros. Elizabeth havia visto referências a esse idioma em documentos do Almirantado. Havia lido a nota de rodapé que dizia que a língua não tinha nome oficial e que o Almirantado não reconhecia sua importância como sistema comunicativo.</p>
+
+  <p>A nota de rodapé havia sido escrita por alguém que nunca havia tentado supervisionar tritões.</p>
+
+  <p><span class="thought">Se eu não consigo me comunicar com um terço da força de trabalho, sou supervisora de nada. E se sou supervisora de nada, não tenho utilidade nenhuma. E se não tenho utilidade nenhuma, sou apenas o erro humano que o Almirantado jogou aqui para morrer.</span></p>
+
+  <p>Ela começou a estudar os sinais durante o turno. Não perguntando — observando. Mapeando o braço que indicava parada de emergência, a mão aberta que significava peso a mais na carga, o sinal de dois dedos que ela levou três semanas para descobrir que era um aviso de vazamento de éter nas câmaras inferiores.</p>
+
+  <p>Ninguém percebeu que ela estava aprendendo. O lixo não aprende.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>No quadragésimo dia, houve um vazamento de verdade.</p>
+
+  <p>O sinal veio da câmara três — dois dedos levantados, palm voltada para baixo, movimento giratório no pulso. Vazamento ativo, câmara pressurizada, risco de expansão de éter não processado. O protocolo oficial do Almirantado para essa situação envolvia acionar o painel de controle do nível médio, esperar a confirmação do diretor e evacuar pelo corredor leste.</p>
+
+  <p>O problema era que o corredor leste estava obstruído por uma carga que havia tombado duas horas antes e que ninguém havia desmontado ainda, porque a ordem de desmontagem estava esperando assinatura do próprio diretor, que não havia aparecido no turno.</p>
+
+  <p>Elizabeth viu o sinal. Viu o corredor leste. Fez o cálculo.</p>
+
+  <p>— Corredor norte — disse ela em voz alta. E na língua de sinais que havia passado quarenta dias aprendendo sem que ninguém percebesse, repetiu o mesmo: corredor norte, saída alternativa, agora.</p>
+
+  <p>Houve um silêncio de dois segundos que ela nunca havia sentido antes naquele lugar.</p>
+
+  <p>Todos saíram pelo corredor norte.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>O diretor chegou vinte minutos depois do esvaziamento da câmara. Encontrou o corredor leste bloqueado, o corredor norte com a equipe completa sem baixas, e um relatório de incidente que Elizabeth havia preenchido com precisão cirúrgica enquanto esperava — incluindo a nota de que a carga tombada do corredor leste havia sido reportada duas horas antes do turno e que a demora na desmontagem havia tornado necessária a evacuação alternativa.</p>
+
+  <p>Ele a olhou por um momento longo.</p>
+
+  <p>Depois assinou o relatório e foi embora sem dizer nada.</p>
+
+  <p>Reth, que havia saído pelo corredor norte com os demais e havia observado tudo, ficou parado perto da saída depois que o diretor foi embora. Não olhou para Elizabeth diretamente. Mas quando passou por ela no caminho de volta para o pátio, disse em voz baixa — em idioma padrão, o que ela soube depois que era um gesto que ele raramente fazia:</p>
+
+  <div class="pull-quote">
+    <p>— Você aprendeu rápido para alguém que não devia saber nada.</p>
+    <cite>— Reth &nbsp;·&nbsp; instalação de extração de Amvesh &nbsp;·&nbsp; quadragésimo primeiro dia</cite>
+  </div>
+
+  <p>Elizabeth não respondeu. Mas guardou cada palavra.</p>
+
+  <div class="ornament-break">⚓</div>
+
+  <h2>O sistema que ela decidiu aprender</h2>
+
+  <p class="drop-cap">O desvio funcionava da seguinte forma: um em cada doze caixotes saía com peso líquido menor do que o registrado. A diferença era pequena o suficiente para que qualquer variação individual parecesse erro de pesagem — mas consistente o suficiente, ao longo de meses, para que a acumulação total representasse uma quantidade significativa de éter bruto desaparecido do inventário oficial.</p>
+
+  <p>Elizabeth levou duas semanas para mapear o sistema completamente. Levou mais uma semana para entender quem sabia e quem não sabia que sabia, que é diferente: havia três camadas de conhecimento na instalação, e cada camada achava que a informação parava nela.</p>
+
+  <p>O éter desviado ia para algum lugar. E esse algum lugar não era um cofre particular de alguém que estava ficando rico à custa do Almirantado.</p>
+
+  <p>Era o fundo de fuga.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>Reth a explicou isso no sexagésimo dia, quando ela finalmente perguntou de forma direta em vez de inferir. Não porque não soubesse a resposta — sabia. Mas porque havia uma diferença entre saber e ser incluída, e ela havia aprendido, em Dornath, que algumas portas só abrem quando você bate nelas pela porta certa.</p>
+
+  <p>Havia dezessete tritões, seis orcs e quatro mestiços com planos ativos de saída. Não fuga em pânico — saída planejada, com datas, rotas e identidades alternativas arranjadas ao longo de anos de desvio silencioso. O fundo cobria passagens, documentos falsos e a primeira semana de custo em qualquer porto que não tivesse guarnição pesada do Almirantado.</p>
+
+  <p>— E você — disse Elizabeth. — Você vai também?</p>
+
+  <p>— Quando o fundo for suficiente.</p>
+
+  <p>— Quanto falta?</p>
+
+  <p>Reth a olhou por um momento.</p>
+
+  <p>— Por que você quer saber?</p>
+
+  <p>Elizabeth pensou na pergunta corretamente antes de responder. Não a resposta que ele esperava. A resposta que abriria a porta seguinte.</p>
+
+  <p>— Porque eu tenho um problema diferente do seu e uma solução diferente. E acho que podem se encaixar da forma certa se eu entender o tamanho exato do que você precisa.</p>
+
+  <div class="pull-quote">
+    <p>Reth ficou quieto por um tempo. Depois disse o número.</p>
+  </div>
+
+  <p>Era menor do que ela esperava. E ela já havia estado pensando por três semanas em como consegui-lo.</p>
+
+  <div class="chapter-end">
+    <p class="end-label">— Fim do Capítulo Dois —</p>
+  </div>
+
+  <nav class="chapter-nav" aria-label="Navegação entre capítulos">
+    <a href="capitulo1.html" class="ch-nav-prev">← Anterior</a>
+    <a href="../capitulos/" class="ch-nav-center">⚓ &nbsp;Todos os capítulos</a>
+    <a href="capitulo3.html" class="ch-nav-next">Próximo →</a>
+  </nav>
+
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

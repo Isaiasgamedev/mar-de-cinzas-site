@@ -1,220 +1,208 @@
-/* =====================================================
-   MAR DE CINZAS — style.css
-   Estilos compartilhados: base, variáveis, navegação
-   ===================================================== */
+/* ═══════════════════════════════════════════════
+   MAR DE CINZAS — shared foundation
+   ═══════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Fira+Code:wght@400;500&display=swap');
 
-/* ── Variáveis ── */
+/* ─── RESET ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img, video { max-width: 100%; display: block; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; }
+
+/* ─── CUSTOM PROPERTIES ─── */
 :root {
-  --ink: #e8e0cc;
-  --ink-dim: #a89880;
-  --ink-faint: #6b5e4e;
-  --bg: #0a0806;
-  --bg2: #110e0a;
-  --bg3: #1a1510;
-  --bg4: #221c14;
-  --accent: #c9872a;
-  --accent2: #7eb8d4;
-  --accent3: #a0d090;
-  --accent4: #d47070;
-  --accent5: #9b78c8;
-  --accent6: #d4a0a0;
-  --border: #2e2418;
-  --border2: #3d3020;
-  --gold: #b8915a;
-  --gold-dim: #6b5232;
-  --text: #ddd0b8;
-  --text-muted: #8a7f6a;
-  --text-dim: #524b3c;
-  --serif: 'EB Garamond', Georgia, serif;
-  --display: 'Cinzel', Georgia, serif;
-  --nav-h: 52px;
+  /* background layers */
+  --bg:        #07090d;
+  --bg2:       #0b0f15;
+  --bg3:       #0f1319;
+  --bg4:       #141920;
+
+  /* text */
+  --text:      #ded1bc;
+  --muted:     #8a7a68;
+  --faint:     #4a403a;
+
+  /* accents */
+  --gold:      #c8973a;
+  --gold-dim:  #7a5c28;
+  --sea:       #5a9aba;
+  --sea-dim:   #3a6879;
+
+  /* borders */
+  --rule:      rgba(255,255,255,0.07);
+  --rule2:     rgba(255,255,255,0.12);
+
+  /* type */
+  --serif:     'EB Garamond', Georgia, serif;
+  --display:   'Cinzel', Georgia, serif;
+  --mono:      'Fira Code', monospace;
+
+  /* layout */
+  --nav-h:     56px;
+  --max-w:     1100px;
+  --read-w:    68ch;
 }
 
-/* ── Reset ── */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ─── BASE ─── */
 html {
   scroll-behavior: smooth;
   background: var(--bg);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: var(--serif);
   font-size: 18px;
-  line-height: 1.8;
-  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* =====================================================
-   NAVEGAÇÃO PRINCIPAL (mobile-first)
-   ===================================================== */
-
+/* ─── NAVIGATION ─── */
 .site-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
+  height: var(--nav-h);
   z-index: 200;
-  background: rgba(10, 8, 6, 0.97);
-  border-bottom: 1px solid var(--border2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(7,9,13,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--rule);
 }
 
 .nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1.25rem;
-  height: var(--nav-h);
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 1rem;
 }
 
 .nav-brand {
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  letter-spacing: 0.22em;
-  color: var(--accent);
-  text-decoration: none;
+  font-family: var(--display);
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
   flex-shrink: 0;
-  transition: color 0.2s;
+  white-space: nowrap;
 }
 
-.nav-brand:hover { color: var(--ink); }
-
-/* ── Botão hambúrguer ── */
-.nav-toggle {
+/* desktop links */
+.nav-links {
   display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--display);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.45rem 0.95rem;
+  border-radius: 4px;
+  position: relative;
+  transition: color 0.15s;
+}
+
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--gold); }
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px; left: 50%;
+  width: 16px; height: 1.5px;
+  background: var(--gold);
+  transform: translateX(-50%);
+  border-radius: 1px;
+}
+
+/* hamburger toggle */
+.nav-toggle {
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
+  border: 1px solid var(--rule2);
+  border-radius: 5px;
+  padding: 9px;
   flex-shrink: 0;
 }
 
 .nav-toggle span {
   display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--ink-dim);
-  border-radius: 2px;
-  transition: transform 0.25s, opacity 0.25s;
+  height: 1.5px;
+  background: var(--muted);
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s, background 0.15s;
 }
 
-.nav-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-.nav-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Links do menu ── */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  background: rgba(10, 8, 6, 0.98);
-  border-top: 1px solid var(--border);
-  position: absolute;
-  top: var(--nav-h);
-  left: 0; right: 0;
-  padding: 0.5rem 0;
-}
-
-.nav-links.open {
-  display: flex;
-}
-
-.nav-links a {
-  color: var(--ink-dim);
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  padding: 12px 1.5rem;
-  border-left: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--accent);
-  border-left-color: var(--accent);
-}
-
-/* ── Desktop nav ── */
-@media (min-width: 768px) {
-  .nav-toggle { display: none; }
+@media (max-width: 640px) {
+  .nav-toggle { display: flex; }
 
   .nav-links {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: none;
-    border: none;
-    padding: 0;
+    display: none;
+    position: absolute;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.75rem 1.5rem 1.25rem;
+    background: rgba(7,9,13,0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--rule);
   }
+
+  .nav-links.open { display: flex; }
 
   .nav-links a {
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    padding: 0 1rem;
-    height: var(--nav-h);
-    display: flex;
-    align-items: center;
-    font-size: 9px;
+    font-size: 0.78rem;
+    padding: 0.65rem 0;
+    width: 100%;
+    border-bottom: 1px solid var(--rule);
   }
 
-  .nav-links a:hover,
-  .nav-links a.active {
-    border-left-color: transparent;
-    border-bottom-color: var(--accent);
-  }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-links a.active::after { display: none; }
 }
 
-/* =====================================================
-   RODAPÉ DO SITE
-   ===================================================== */
-
+/* ─── FOOTER ─── */
 .site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 3rem 1.5rem 2.5rem;
   text-align: center;
-  padding: 3rem 1.5rem 2rem;
-  border-top: 1px solid var(--border2);
-  margin-top: 4rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--faint);
+  line-height: 2.2;
 }
 
-.site-footer p {
-  font-family: 'Cinzel', serif;
-  font-size: 10px;
-  letter-spacing: 0.3em;
-  color: var(--ink-faint);
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
+.site-footer a {
+  color: var(--gold-dim);
+  text-decoration: none;
+  transition: color 0.15s;
 }
 
-.site-footer small {
-  display: block;
-  font-family: 'Fira Code', monospace;
-  font-size: 10px;
-  color: var(--accent6);
-  opacity: 0.4;
-  letter-spacing: 0.08em;
-}
+.site-footer a:hover { color: var(--gold); }

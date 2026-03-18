@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capítulo 3: A Perpétua — Mar de Cinzas</title>
+<meta name="description" content="Capítulo 3 de Mar de Cinzas. O navio, a tripulação e o oceano pela primeira vez.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.reading-wrap {
+  max-width: var(--read-w);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem;
+}
+.chapter-header {
+  text-align: center;
+  padding-bottom: 3.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.ch-series { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1.6rem; }
+.ch-number { font-family: var(--display); font-size: 0.72rem; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.8rem; }
+.ch-title-main { font-family: var(--display); font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 900; color: var(--text); letter-spacing: 0.04em; line-height: 1.1; margin-bottom: 0.6rem; }
+.ch-subtitle { font-family: var(--display); font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--faint); }
+.ch-ornament { font-size: 1.5rem; opacity: 0.2; margin: 2rem auto 0; filter: sepia(0.5); }
+.reading-wrap p { font-family: var(--serif); font-size: clamp(1.05rem, 2.5vw, 1.2rem); line-height: 1.85; color: var(--text); margin-bottom: 1.2em; }
+.drop-cap::first-letter { font-family: var(--display); font-size: 4.2em; font-weight: 900; line-height: 0.75; float: left; margin: 0.08em 0.1em 0 0; color: var(--gold); }
+.thought { font-style: italic; color: var(--sea); }
+.scene-break { text-align: center; font-size: 0.9rem; color: var(--faint); letter-spacing: 0.5em; margin: 2.5rem 0; user-select: none; }
+.ornament-break { text-align: center; font-size: 1.3rem; color: var(--gold-dim); opacity: 0.4; margin: 3.5rem 0; user-select: none; }
+.reading-wrap h2 { font-family: var(--display); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dim); margin: 3.5rem 0 1.6rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
+.pull-quote { border-left: 2px solid var(--gold-dim); padding: 0 0 0 1.4rem; margin: 2rem 0; }
+.pull-quote p { font-style: italic; color: var(--muted); font-size: clamp(1rem, 2.3vw, 1.15rem); }
+.pull-quote cite { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); font-style: normal; margin-top: -0.6rem; margin-bottom: 1.2em; }
+.chapter-end { text-align: center; padding-top: 3.5rem; margin-top: 2rem; border-top: 1px solid var(--rule); }
+.end-label { font-family: var(--mono) !important; font-size: 9px !important; letter-spacing: 0.28em !important; text-transform: uppercase; color: var(--faint) !important; font-style: normal !important; margin: 0 !important; }
+.chapter-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.75rem; align-items: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.ch-nav-prev, .ch-nav-next { font-family: var(--display); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 0.7rem 1rem; border: 1px solid var(--rule2); border-radius: 4px; color: var(--muted); transition: all 0.15s; }
+.ch-nav-prev { text-align: left; }
+.ch-nav-next { text-align: right; }
+.ch-nav-prev:hover, .ch-nav-next:hover { border-color: var(--gold-dim); color: var(--text); }
+.ch-nav-next.disabled { opacity: 0.25; pointer-events: none; }
+.ch-nav-center { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); text-decoration: none; text-align: center; white-space: nowrap; transition: color 0.15s; }
+.ch-nav-center:hover { color: var(--gold-dim); }
+@media (max-width: 520px) {
+  .reading-wrap { padding-top: calc(var(--nav-h) + 2.5rem); }
+  .chapter-nav { grid-template-columns: 1fr 1fr; }
+  .ch-nav-center { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/" class="active">Capítulos</a>
+      <a href="../project-bible.html">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="reading-wrap">
+
+  <header class="chapter-header">
+    <p class="ch-series">Mar de Cinzas &nbsp;·&nbsp; Arco I — Fuga</p>
+    <p class="ch-number">Capítulo Três</p>
+    <h1 class="ch-title-main">A Perpétua</h1>
+    <p class="ch-subtitle">The Perpetua</p>
+    <div class="ch-ornament">⚓</div>
+  </header>
+
+  <p class="drop-cap">O plano era simples. Simples da forma que planos perigosos são simples — porque cada peça depende de todas as outras, e uma falha em qualquer parte desfaz tudo o que veio antes. Mas Elizabeth havia aprendido, ao longo de noventa e dois dias em Amvesh, que sistemas construídos sobre invisibilidade só funcionam se você não errar nos detalhes. E ela não errava nos detalhes.</p>
+
+  <p>O fundo de Reth precisava de quinze unidades de éter processado acima do acumulado. Não muito. Suficiente para fechar três passagens e dois conjuntos de documentos. Elizabeth havia identificado a forma de conseguir as quinze unidades sem alterar nada no fluxo de desvio que já existia — o que era crucial, porque alterar o fluxo existente significaria explicar a alteração, e explicações criavam rastros.</p>
+
+  <p>O que ela fez foi mais simples: arrumou o corredor leste.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>A carga tombada que havia bloqueado o corredor no dia do vazamento nunca havia sido completamente desmontada — apenas deslocada o suficiente para desobstruir a passagem. Os caixotes que compunham o bloqueio haviam sido empilhados numa câmara lateral sem inventário oficial, porque o diretor não havia assinado a ordem de remontagem e ninguém queria gerar um segundo documento pedindo solução para o problema do documento que ninguém havia resolvido.</p>
+
+  <p>Burocracia. Elizabeth havia crescido à volta dela. Sabia exatamente como funciona.</p>
+
+  <p><span class="thought">Caixotes sem inventário oficial numa câmara sem registro são, em termos formais, caixotes que não existem. E o que não existe não pode ser contado como déficit. Mas pode aparecer como excedente, se o excedente for registrado corretamente.</span></p>
+
+  <p>Ela passou dois dias remontando o inventário da câmara lateral com precisão absoluta, criou o documento de regularização correto, esperou que o diretor assinasse sem ler — como sempre fazia — e apresentou o excedente identificado como resultado da auditoria de rotina que supostamente todo supervisor de turno deveria realizar mensalmente.</p>
+
+  <p>O diretor ficou satisfeito. Havia encontrado éter extra. Era um número que melhorava o relatório dele.</p>
+
+  <p>Quinze unidades. O suficiente.</p>
+
+  <div class="ornament-break">⚓</div>
+
+  <h2>A saída</h2>
+
+  <p class="drop-cap">Não foi barulhenta. Seria um erro ser barulhenta — esse tipo de saída, quando é barulhenta, chama atenção antes de estar completa, e atenção antes de estar completa é o fim de planos que levaram noventa dias para construir.</p>
+
+  <p>Reth e os dezessete tritões saíram em dois grupos, em noites diferentes, pelo corredor de manutenção do nível mais baixo que Elizabeth havia mapeado durante as inspeções de turno. Os orcs e mestiços com saída planejada foram por três rotas separadas nos três dias seguintes.</p>
+
+  <p>Elizabeth foi a última. Não por nobreza — por cálculo. Quem monitora a saída dos outros não precisa de cobertura própria. E um supervisor de turno fazendo rondas às três da manhã era exatamente a coisa mais invisível possível naquela instalação, porque toda a equipe noturna estava acostumada a vê-la andar pelos corredores em horários que não faziam sentido.</p>
+
+  <p><span class="thought">Invisível. Sempre invisível. Mesmo quando saio, saio invisível.</span></p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>O porto de Veth ficava a dezoito horas de caminhada da instalação de Amvesh, pela rota costeira que não cruzava com nenhum posto avançado do Almirantado. Elizabeth havia memorizado a rota a partir dos mapas do diretor que ficavam na parede da sala de controle que ela passava três vezes por turno.</p>
+
+  <p>Chegou com o sol nascendo sobre o oceano.</p>
+
+  <p>Era a primeira vez que via o oceano.</p>
+
+  <p>Não o oceano de mapas. Não o oceano de relatórios de campanha que havia lido em documentos do pai. O oceano de verdade — que não cabe em nenhum pedaço de papel e que, quando você está de pé na beira dele pela primeira vez, tem um som que não tem nome e uma extensão para a qual ainda não existia uma palavra que ela conhecesse.</p>
+
+  <p><span class="thought">Ah. Então é isso.</span></p>
+
+  <div class="ornament-break">⚓</div>
+
+  <h2>A Perpétua</h2>
+
+  <p class="drop-cap">O navio não era impressionante. Era um cargueiro de médio porte com dez anos de serviço visíveis no casco e um nome pintado na proa em letras que alguém havia tentado retocar duas vezes sem sucesso completo.</p>
+
+  <p><em>Perpétua.</em></p>
+
+  <p>O capitão original havia morrido de febre tifóide em Veth três semanas antes. A tripulação — onze pessoas, um mix de humanos fora de contrato, dois tritões de sangue misto e um orc que Elizabeth reconheceu de Amvesh — estava tecnicamente sem comando e tecnicamente em infração com o porto por não ter apresentado documentação de nova capitania no prazo regulamentar.</p>
+
+  <p>O dono do porto havia informado que o prazo para regularização era de mais quarenta e oito horas.</p>
+
+  <p>Elizabeth chegou com trinta e seis horas de margem.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>A conversa com a tripulação durou menos tempo do que ela esperava.</p>
+
+  <p>Não porque fossem rápidos para confiar. Era exatamente o oposto: eram lentos para confiar em qualquer pessoa, o que era a resposta correta para gente que havia aprendido a suspeitar de tudo com uniforme do Almirantado. A conversa foi curta porque ela não tentou convencê-los de nada. Apresentou os fatos em ordem. O problema deles: sem capitão, sem documentação, quarenta e oito horas para resolver ou perder o navio para o porto. A solução que ela trazia: documentação de capitania que cobria a transição, preparada com base nos formulários que havia memorizado dos arquivos do diretor de Amvesh, válidos no jurisdição de Veth por tratado padrão de navegação costeira.</p>
+
+  <p>Um dos humanos perguntou de onde havia saído aquilo tudo.</p>
+
+  <p>— De Amvesh, há trinta e seis horas — disse ela.</p>
+
+  <p>O orc que ela havia reconhecido olhou para ela por um longo momento. E então assentiu.</p>
+
+  <div class="scene-break">· · ·</div>
+
+  <p>A documentação foi entregue ao porto com seis horas de antecedência.</p>
+
+  <p>Escarleti Thoss — o nome que ela havia escolhido para os documentos, porque Elizabeth era o nome que o Almirantado tinha registrado e Escarleti era o nome que ela queria que fosse o próximo — tornou-se capitã registrada do cargueiro <em>Perpétua</em> com um carimbo de aprovação e uma nota de rodapé de que a ortografia do nome havia sido verificada e estava correta.</p>
+
+  <p>Dezesseis anos. Nenhum treinamento naval formal. Uma tripulação que ainda não havia decidido se confiava nela.</p>
+
+  <p>E o oceano, que ela havia visto pela primeira vez onze horas antes, se abrindo na frente da proa como algo que não tinha bordas.</p>
+
+  <div class="pull-quote">
+    <p>— Capitã Thoss. — A voz era de Daven, o humano que havia perguntado de onde ela havia saído. Ele estava na popa, segurando uma corda com a expressão de quem ainda estava calculando. — Qual é a rota?</p>
+    <p>Ela olhou para o oceano por um momento. Depois:</p>
+    <p>— Para longe de Dornath. O resto a gente descobre.</p>
+    <cite>— Escarleti Thoss &nbsp;·&nbsp; porto de Veth &nbsp;·&nbsp; primeira manhã</cite>
+  </div>
+
+  <p>A Perpétua deixou o porto com a maré da tarde.</p>
+
+  <p>Ninguém a perseguiu. Pelo menos não ainda.</p>
+
+  <div class="chapter-end">
+    <p class="end-label">— Fim do Capítulo Três —</p>
+  </div>
+
+  <nav class="chapter-nav" aria-label="Navegação entre capítulos">
+    <a href="capitulo2.html" class="ch-nav-prev">← Anterior</a>
+    <a href="../capitulos/" class="ch-nav-center">⚓ &nbsp;Todos os capítulos</a>
+    <span class="ch-nav-next disabled">Próximo →</span>
+  </nav>
+
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
