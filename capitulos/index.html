@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Capítulos</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* ── Estilos específicos da página de capítulos ── */
+
+  .chapters-wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: calc(var(--nav-h) + 48px) 1.5rem 5rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border2);
+  }
+
+  .page-header-ornament {
+    font-size: 2rem;
+    opacity: 0.4;
+    margin-bottom: 1rem;
+    filter: sepia(1);
+  }
+
+  .page-header-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .page-header-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.6rem;
+  }
+
+  .page-header-desc {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-dim);
+  }
+
+  /* ── Lista de capítulos ── */
+  .chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .chapter-item {
+    display: flex;
+    text-decoration: none;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 1.4rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s, background 0.2s;
+    align-items: flex-start;
+    gap: 1.4rem;
+  }
+
+  .chapter-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--accent);
+    border-radius: 3px 0 0 3px;
+    transition: background 0.2s;
+  }
+
+  .chapter-item:hover {
+    border-color: var(--accent);
+    background: var(--bg4);
+  }
+
+  .chapter-item.soon {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .chapter-item.soon::before {
+    background: var(--ink-faint);
+  }
+
+  .chapter-num {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 900;
+    color: var(--accent);
+    opacity: 0.3;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 2.2rem;
+  }
+
+  .chapter-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .chapter-series {
+    font-family: 'Fira Code', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .chapter-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.03em;
+  }
+
+  .chapter-sub {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .chapter-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .chapter-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 1px solid;
+    text-transform: uppercase;
+  }
+
+  .tag-available { color: var(--accent3); border-color: rgba(160,208,144,0.35); background: rgba(160,208,144,0.06); }
+  .tag-soon      { color: var(--ink-faint); border-color: var(--border2); background: transparent; }
+  .tag-arc       { color: var(--accent2); border-color: rgba(126,184,212,0.3); background: rgba(126,184,212,0.06); }
+
+  .chapter-arrow {
+    font-size: 1.2rem;
+    color: var(--accent);
+    opacity: 0.4;
+    flex-shrink: 0;
+    align-self: center;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .chapter-item:hover .chapter-arrow {
+    opacity: 0.8;
+    transform: translateX(3px);
+  }
+
+  /* ── Separador de arco ── */
+  .arc-header {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 2rem 0 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ── Rodapé da lista ── */
+  .chapters-note {
+    margin-top: 3rem;
+    padding: 1.2rem 1.6rem;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/" class="active">Capítulos</a>
+      <a href="../project-bible.html">Project Bible</a>
+    </div>
+  </div>
+</nav>
+
+<div class="chapters-wrap">
+
+  <header class="page-header">
+    <div class="page-header-ornament">⚓</div>
+    <div class="page-header-label">Mar de Cinzas · Audio Comic</div>
+    <h1 class="page-header-title">Capítulos</h1>
+    <p class="page-header-desc">A história de Escarleti Thoss e a Perpétua</p>
+  </header>
+
+  <!-- ARC I -->
+  <p class="arc-header">⌖ Arco I — Fuga</p>
+
+  <div class="chapter-list">
+
+    <a href="capitulo1.html" class="chapter-item">
+      <div class="chapter-num">1</div>
+      <div class="chapter-info">
+        <div class="chapter-series">Capítulo Um · Arco I</div>
+        <div class="chapter-title">O Começo do Fim</div>
+        <div class="chapter-sub">A cerimônia, as Doze Obrigações, e a decisão que muda tudo</div>
+        <div class="chapter-meta">
+          <span class="chapter-tag tag-available">Disponível</span>
+          <span class="chapter-tag tag-arc">Arco I</span>
+        </div>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </a>
+
+    <div class="chapter-item soon">
+      <div class="chapter-num">2</div>
+      <div class="chapter-info">
+        <div class="chapter-series">Capítulo Dois · Arco I</div>
+        <div class="chapter-title">Amvesh</div>
+        <div class="chapter-sub">A mina, os tritões, e a primeira vez que o plano funciona</div>
+        <div class="chapter-meta">
+          <span class="chapter-tag tag-soon">Em breve</span>
+          <span class="chapter-tag tag-arc">Arco I</span>
+        </div>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter-item soon">
+      <div class="chapter-num">3</div>
+      <div class="chapter-info">
+        <div class="chapter-series">Capítulo Três · Arco I</div>
+        <div class="chapter-title">A Perpétua</div>
+        <div class="chapter-sub">O navio, a tripulação inicial, e o oceano abrindo pela primeira vez</div>
+        <div class="chapter-meta">
+          <span class="chapter-tag tag-soon">Em breve</span>
+          <span class="chapter-tag tag-arc">Arco I</span>
+        </div>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+  <!-- ARC II -->
+  <p class="arc-header">⌖ Arco II — Manifesto</p>
+
+  <div class="chapter-list">
+
+    <div class="chapter-item soon">
+      <div class="chapter-num">–</div>
+      <div class="chapter-info">
+        <div class="chapter-series">Arco II · Em desenvolvimento</div>
+        <div class="chapter-title">O Peso da Verdade</div>
+        <div class="chapter-sub">O Manifesto das Profundezas, Orvacht, e o confronto com Voss</div>
+        <div class="chapter-meta">
+          <span class="chapter-tag tag-soon">Em breve</span>
+          <span class="chapter-tag tag-arc">Arco II</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ARC III -->
+  <p class="arc-header">⌖ Arco III — O Fundo</p>
+
+  <div class="chapter-list">
+
+    <div class="chapter-item soon">
+      <div class="chapter-num">–</div>
+      <div class="chapter-info">
+        <div class="chapter-series">Arco III · Em desenvolvimento</div>
+        <div class="chapter-title">O Que Sempre Esteve Lá</div>
+        <div class="chapter-sub">O Abismo, o Inquilino, e o custo de Mira</div>
+        <div class="chapter-meta">
+          <span class="chapter-tag tag-soon">Em breve</span>
+          <span class="chapter-tag tag-arc">Arco III</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="chapters-note">
+    ⚓ &nbsp;Os capítulos são publicados à medida que ficam prontos. Acompanhe pelo projeto.
+    <br>Mar de Cinzas · Dark fantasy · Pirataria · Magia industrial · Pós-guerra racial
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

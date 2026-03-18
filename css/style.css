@@ -1,0 +1,220 @@
+/* =====================================================
+   MAR DE CINZAS — style.css
+   Estilos compartilhados: base, variáveis, navegação
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@300;400&display=swap');
+
+/* ── Variáveis ── */
+:root {
+  --ink: #e8e0cc;
+  --ink-dim: #a89880;
+  --ink-faint: #6b5e4e;
+  --bg: #0a0806;
+  --bg2: #110e0a;
+  --bg3: #1a1510;
+  --bg4: #221c14;
+  --accent: #c9872a;
+  --accent2: #7eb8d4;
+  --accent3: #a0d090;
+  --accent4: #d47070;
+  --accent5: #9b78c8;
+  --accent6: #d4a0a0;
+  --border: #2e2418;
+  --border2: #3d3020;
+  --gold: #b8915a;
+  --gold-dim: #6b5232;
+  --text: #ddd0b8;
+  --text-muted: #8a7f6a;
+  --text-dim: #524b3c;
+  --serif: 'EB Garamond', Georgia, serif;
+  --display: 'Cinzel', Georgia, serif;
+  --nav-h: 52px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   NAVEGAÇÃO PRINCIPAL (mobile-first)
+   ===================================================== */
+
+.site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: rgba(10, 8, 6, 0.97);
+  border-bottom: 1px solid var(--border2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  height: var(--nav-h);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nav-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.nav-brand:hover { color: var(--ink); }
+
+/* ── Botão hambúrguer ── */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--ink-dim);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Links do menu ── */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: rgba(10, 8, 6, 0.98);
+  border-top: 1px solid var(--border);
+  position: absolute;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  padding: 0.5rem 0;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+.nav-links a {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  padding: 12px 1.5rem;
+  border-left: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+/* ── Desktop nav ── */
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .nav-links a {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: 0 1rem;
+    height: var(--nav-h);
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--accent);
+  }
+}
+
+/* =====================================================
+   RODAPÉ DO SITE
+   ===================================================== */
+
+.site-footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+  border-top: 1px solid var(--border2);
+  margin-top: 4rem;
+}
+
+.site-footer p {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer small {
+  display: block;
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  color: var(--accent6);
+  opacity: 0.4;
+  letter-spacing: 0.08em;
+}
