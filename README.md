@@ -1,6 +1,6 @@
 # mar-de-cinzas-site
 
-Site do projeto **Mar de Cinzas** — Dark Fantasy narrativo.
+Site do projeto **Mar de Cinzas** — Audio Comic de dark fantasy.
 
 ## Estrutura
 
