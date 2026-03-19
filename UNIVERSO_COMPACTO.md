@@ -139,9 +139,9 @@ Na cerimônia (>300 testemunhas), onde o costume exige silêncio absoluto enquan
 
 **Em Amvesh:** Em três meses aprende mais que em dois anos de Formação de Consorte. Aprende fragmentos de Veth-Nar por escutar o que não era endereçado a ela. Identifica que o poder real pertence a um orc encostado na parede, não ao diretor.
 
-**A fuga:** Em Amvesh, Elizabeth e três amigas da prisão encontram um casco antiquíssimo durante escavações e o restauram em segredo. Na hora da saída, o navio responde de forma anômala à presença dela e volta a operar. Ela não sai sozinha: sai com essas três amigas.
+**A fuga:** Em Amvesh, Elizabeth e três amigos da prisão encontram um casco antiquíssimo durante escavações e o restauram em segredo. Na hora da saída, o navio responde de forma anômala à presença dela e volta a operar. Ela não sai sozinha: sai com esses três amigos.
 
-**A Perpétua:** Não é cargueiro moderno nem compra de ocasião. É um navegador pré-industrial, mais antigo que o Almirantado, sem dependência de éter como os navios atuais. Foi revivido pelas prisioneiras — e parece ressoar com Elizabeth desde o primeiro encontro.
+**A Perpétua:** Não é cargueiro moderno nem compra de ocasião. É um navegador pré-industrial, mais antigo que o Almirantado, sem dependência de éter como os navios atuais. Foi revivido pelo grupo de Amvesh — e parece ressoar com Elizabeth desde o primeiro encontro.
 
 **Voz narrativa:** O Log da Perpétua. Raiva controlada de quem aprendeu que raiva descontrolada é o que o sistema espera. Analítica, precisa, vulnerabilidade disfarçada de pragmatismo. Nunca dramatiza — registra. A brutalidade está nos fatos nus.
 
@@ -173,13 +173,13 @@ Na cerimônia (>300 testemunhas), onde o costume exige silêncio absoluto enquan
 
 ### Tripulação inicial
 
-**Núcleo de saída de Amvesh:** Elizabeth + 3 amigas.
+**Núcleo de saída de Amvesh:** Elizabeth + 3 amigos.
 
 **Mira** — Nome canônico mantido. Mergulhadora do núcleo inicial. Tem sensibilidade rara ao éter e, às vezes, escuta o que ninguém mais percebe. **Custo:** a cada sessão de contato com O Inquilino, memórias Veth substituem fragmentos dela. Raça, idade e origem detalhada permanecem em definição.
 
 **Bross** — Nome canônico mantido. Engenheira do núcleo inicial. Pragmatismo alto, precisão técnica extrema. **Segredo:** é Leitora de Éter. Raça, idade e origem detalhada permanecem em definição.
 
-**Terceira companheira de Amvesh** — Nome e ficha completos ainda em definição canônica.
+**Terceiro nome de Amvesh** — Nome e ficha completos ainda em definição canônica.
 
 ### Encontradas ao longo da jornada
 

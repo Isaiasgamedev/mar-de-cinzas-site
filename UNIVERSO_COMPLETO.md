@@ -480,7 +480,7 @@ Essa assimetria sustenta tensão ética até o fim.
 
 ### 12.1 Núcleo inicial
 
-Núcleo de saída de Amvesh: Elizabeth + 3 amigas.
+Núcleo de saída de Amvesh: Elizabeth + 3 amigos.
 
 #### Mira
 
@@ -498,7 +498,7 @@ Núcleo de saída de Amvesh: Elizabeth + 3 amigas.
 - Leitora de Éter (segredo)
 - raça/origem detalhada em definição
 
-#### Terceira companheira de Amvesh
+#### Terceiro nome do núcleo de Amvesh
 
 - nome em definição
 - perfil, raça, origem e função em definição
