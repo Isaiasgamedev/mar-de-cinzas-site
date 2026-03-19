@@ -438,6 +438,109 @@ a.chapter-card:hover {
   color: var(--faint);
 }
 
+/* ══ STORY BANNER ══ */
+.story-banner {
+  margin: 0 -1.5rem 4rem;
+  padding: 3.5rem 1.5rem;
+  background: linear-gradient(135deg, rgba(25,35,55,0.6) 0%, rgba(15,20,30,0.8) 50%, rgba(20,30,45,0.6) 100%);
+  border-top: 2px solid var(--gold-dim);
+  border-bottom: 2px solid var(--gold-dim);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(90,154,186,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(200,151,58,0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.banner-label {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--sea-dim);
+  margin-bottom: 1.2rem;
+}
+
+.banner-title {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, var(--text) 0%, var(--gold) 50%, var(--text) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.banner-text {
+  font-family: var(--serif);
+  font-size: clamp(0.95rem, 2.1vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.banner-text p {
+  margin-bottom: 1rem;
+}
+
+.banner-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.element {
+  padding: 1.25rem;
+  border: 1px solid rgba(200,151,58,0.25);
+  border-left: 3px solid var(--gold-dim);
+  background: rgba(7,9,13,0.4);
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.element-title {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.45rem;
+}
+
+.element-text {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 500px) {
   .chapter-card {
@@ -447,6 +550,8 @@ a.chapter-card:hover {
   .ch-status { display: none; }
   .home-quote { padding: 1.6rem 1.4rem 1.6rem 2rem; }
   .home-quote::before { font-size: 2.5rem; top: 0.3rem; left: 0.6rem; }
+  .banner-content { grid-template-columns: 1fr; }
+  .story-banner { margin: 0 -1.5rem 3rem; padding: 2.5rem 1.5rem; }
 }
 
 </style>
@@ -497,6 +602,35 @@ a.chapter-card:hover {
 
 <!--  CONTENT  -->
 <div class="home-content">
+
+  <!-- STORY BANNER -->
+  <div class="story-banner">
+    <div class="banner-inner">
+      <p class="banner-label">⚓ · A História</p>
+      <h2 class="banner-title">Desobediência, Magia e Abismos</h2>
+      
+      <div class="banner-content">
+        <div class="banner-text">
+          <p>Uma jovem recusa seu destino traçado e é condenada ao trabalho forçado. Mas na escuridão de uma mina controlada por seres antigos, ela descobre algo que a máquina social temia que descobrisse: silêncio pode ser invisibilidade, e invisibilidade pode ser a melhor arma.</p>
+          <p>Três capítulos de uma história que mistura política, horror cósmico e o oceano que guarda segredos mais antigos que qualquer civilização. Uma história em que fugir é apenas o começo.</p>
+        </div>
+        <div class="banner-elements">
+          <div class="element">
+            <div class="element-title">O Dilema</div>
+            <div class="element-text">"Doze artigos. Nenhum aceito."</div>
+          </div>
+          <div class="element">
+            <div class="element-title">O Sistema</div>
+            <div class="element-text">Trabalho compulsório, magia industrial, uma máquina que não perdoa.</div>
+          </div>
+          <div class="element">
+            <div class="element-title">O Despertar</div>
+            <div class="element-text">Nem tudo que dorme está morto. Nem tudo que navega é humano.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── CITAÇÃO ── -->
   <section class="home-section">
