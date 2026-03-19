@@ -5,6 +5,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── Seletor de idioma (visual, sem ação por enquanto) ── */
+  const navLinks = document.querySelector('.nav-links');
+  if (navLinks && !navLinks.querySelector('.lang-picker')) {
+    const languagePicker = document.createElement('div');
+    languagePicker.className = 'lang-picker';
+
+    const currentLang = (document.documentElement.lang || 'pt-BR').toLowerCase();
+    let selectedLang = 'pt';
+    if (currentLang.startsWith('en')) selectedLang = 'en';
+    if (currentLang.startsWith('es')) selectedLang = 'es';
+
+    languagePicker.innerHTML = `
+      <label class="lang-picker-label" for="site-language">Idioma</label>
+      <select id="site-language" class="lang-picker-select" aria-label="Selecionar idioma">
+        <option value="pt">Português</option>
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    `;
+
+    const select = languagePicker.querySelector('.lang-picker-select');
+    if (select) {
+      select.value = selectedLang;
+    }
+
+    navLinks.appendChild(languagePicker);
+  }
+
   /* ── Menu hambúrguer ── */
   const toggle = document.querySelector('.nav-toggle');
   const links  = document.querySelector('.nav-links');

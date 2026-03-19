@@ -129,6 +129,42 @@ body {
   border-radius: 1px;
 }
 
+.lang-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--rule);
+}
+
+.lang-picker-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.lang-picker-select {
+  font-family: var(--display);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--bg3);
+  border: 1px solid var(--rule2);
+  border-radius: 4px;
+  padding: 0.3rem 1.6rem 0.3rem 0.5rem;
+  outline: none;
+}
+
+.lang-picker-select:hover,
+.lang-picker-select:focus {
+  color: var(--text);
+  border-color: rgba(200, 151, 58, 0.45);
+}
+
 /* hamburger toggle */
 .nav-toggle {
   display: none;
@@ -181,6 +217,25 @@ body {
     padding: 0.65rem 0;
     width: 100%;
     border-bottom: 1px solid var(--rule);
+  }
+
+  .lang-picker {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding: 0.75rem 0 0;
+    border-left: none;
+    border-top: 1px solid var(--rule);
+    justify-content: space-between;
+  }
+
+  .lang-picker-label {
+    font-size: 9px;
+  }
+
+  .lang-picker-select {
+    min-width: 130px;
+    font-size: 0.72rem;
+    padding: 0.45rem 1.75rem 0.45rem 0.6rem;
   }
 
   .nav-links a:last-child { border-bottom: none; }
