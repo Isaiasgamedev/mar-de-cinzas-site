@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Raças de Thalvorn</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:900px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+section { overflow-x:auto; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.twist-box { background:radial-gradient(ellipse at center, rgba(155,120,200,0.06) 0%, transparent 70%), var(--bg3); border:1px solid rgba(155,120,200,0.3); border-radius:8px; padding:2rem; margin:2rem 0; position:relative; }
+.twist-box h3 { color:var(--accent5); margin-top:0; }
+.twist-label { position:absolute; top:-10px; left:1.5rem; font-family:var(--display); font-size:9px; letter-spacing:0.2em; text-transform:uppercase; background:var(--bg3); padding:2px 8px; border:1px solid rgba(155,120,200,0.3); border-radius:3px; color:var(--accent5); }
+.char-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.5rem; margin:1.5rem 0; }
+.char-card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.4rem 1.6rem; }
+.char-name { font-family:var(--display); font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:0.2rem; }
+.char-role { font-family:var(--mono); font-size:10px; letter-spacing:0.1em; color:var(--accent); margin-bottom:0.8rem; text-transform:uppercase; }
+.char-desc { font-size:0.9rem; color:var(--ink-dim); margin-bottom:0.6rem; }
+.char-flaw { font-size:0.85rem; color:var(--accent4); font-style:italic; }
+.char-power { font-size:0.85rem; color:var(--accent3); }
+table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.9rem; }
+th { font-family:var(--display); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); padding:0.7rem 1rem; border-bottom:1px solid var(--border2); text-align:left; }
+td { padding:0.6rem 1rem; border-bottom:1px solid var(--border); color:var(--ink-dim); vertical-align:top; }
+td strong { color:var(--ink); }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:var(--bg3); }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.5rem 0; }
+.tag { font-family:var(--mono); font-size:10px; letter-spacing:0.08em; padding:3px 8px; border-radius:3px; border:1px solid; text-transform:uppercase; }
+.tag-amber { color:var(--accent); border-color:rgba(201,135,42,0.3); background:rgba(201,135,42,0.06); }
+.tag-blue { color:var(--accent2); border-color:rgba(126,184,212,0.3); background:rgba(126,184,212,0.06); }
+.tag-green { color:var(--accent3); border-color:rgba(160,208,144,0.3); background:rgba(160,208,144,0.06); }
+.tag-red { color:var(--accent4); border-color:rgba(212,112,112,0.3); background:rgba(212,112,112,0.06); }
+.tag-purple { color:var(--accent5); border-color:rgba(155,120,200,0.3); background:rgba(155,120,200,0.06); }
+.tag-rose { color:var(--accent6); border-color:rgba(212,160,160,0.3); background:rgba(212,160,160,0.06); }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="racas">
+      <div class="section-header">
+        <span class="section-icon">🧬</span>
+        <h2>Raças de Thalvorn — O Povo do Oceano</h2>
+      </div>
+
+      <div class="twist-box" style="border-color:rgba(212,112,112,0.35); background:radial-gradient(ellipse at center, rgba(212,112,112,0.04) 0%, transparent 70%), var(--bg3); margin-bottom:2.5rem;">
+        <div class="twist-label" style="border-color:rgba(212,112,112,0.35); color:var(--accent4);">⚠ HIERARQUIA SOCIAL</div>
+        <h3 style="color:var(--accent4);">A Escada — Do Mais Respeitado ao Mais Desprezado</h3>
+        <p>Em Thalvorn, a hierarquia racial não foi declarada por nenhuma lei. Emergiu de 500 anos de guerra, escravidão e propaganda. O Almirantado nunca precisou escrever "elfos valem mais que humanos" — apenas agiu como se isso fosse verdade até que o mundo aceitasse.</p>
+        <table style="margin-top:1rem;">
+          <thead><tr><th>Posição</th><th>Raça</th><th>Status Real</th><th>Por quê</th></tr></thead>
+          <tbody>
+            <tr><td><span style="color:var(--accent5);">① Topo</span></td><td><strong>Elfas</strong></td><td style="color:var(--accent5);">Respeitadas / Temidas</td><td>Mais antigas, sensibilidade mágica máxima, sobreviveram à Semana Branca — o que as faz assustadoras e admiradas ao mesmo tempo</td></tr>
+            <tr><td><span style="color:var(--accent5); opacity:0.8;">②</span></td><td><strong>Anãs</strong></td><td style="color:var(--accent2);">Respeitadas por ofício</td><td>Mestras de forja, engenharia e éter — conhecimento técnico que o Almirantado precisa demais para eliminar</td></tr>
+            <tr><td><span style="color:var(--accent2);">③</span></td><td><strong>Tritãs</strong></td><td style="color:var(--accent);">Valiosas / Escravizadas</td><td>Povo mais antigo de Thalvorn — mas as únicas que mergulham fundo o suficiente. São "protegidas" como se protege um recurso estratégico</td></tr>
+            <tr><td><span style="color:var(--accent);">④</span></td><td><strong>Orcs</strong></td><td style="color:var(--accent);">Temidas / Perseguidas</td><td>Guerreiras excepcionais. O Almirantado as teme o suficiente para mantê-las ilegais na maioria dos portos</td></tr>
+            <tr><td><span style="color:var(--accent);">⑤</span></td><td><strong>Ogras</strong></td><td style="color:var(--ink-faint);">Segregadas</td><td>Isoladas nos arquipélagos gelados — o Almirantado as ignora enquanto ficam no Norte</td></tr>
+            <tr style="background:rgba(212,112,112,0.06);"><td><span style="color:var(--accent4);">⑥ FUNDO</span></td><td><strong style="color:var(--accent4);">Humanas</strong></td><td style="color:var(--accent4);">Desprezadas pelas não-humanas</td><td>Criaram todas as guerras. Inventaram a escravidão de éter. Construíram o Almirantado. As outras raças não esquecem quem causou a Semana Branca</td></tr>
+            <tr style="background:rgba(212,112,112,0.1);"><td><span style="color:var(--accent4);">⑦ Lixo</span></td><td><strong style="color:var(--accent4);">Mistas</strong></td><td style="color:var(--accent4);">Sem lugar em nenhuma comunidade</td><td>Raças mistas são consideradas sem identidade — rejeitadas pela raça de origem da mãe E pela raça do pai</td></tr>
+            <tr style="background:rgba(212,112,112,0.15);"><td><span style="color:var(--accent4); font-weight:bold;">⑧ Lixo do Lixo</span></td><td><strong style="color:var(--accent4);">Mistura com Humanas</strong></td><td style="color:var(--accent4);">Abaixo de qualquer categoria</td><td>Metade humana significa carregar o estigma da raça que destruiu o mundo. Em algumas ilhas, ser meio-humana é ilegal</td></tr>
+            <tr style="background:rgba(212,112,112,0.2);"><td><span style="color:var(--accent6); font-weight:bold;">⑨ Pior Possível</span></td><td><strong style="color:var(--accent6);">Mulher em ⑥, ⑦ ou ⑧</strong></td><td style="color:var(--accent6);">O nível mais baixo que existe</td><td>Ser mulher em qualquer dessas categorias é carregar a invisibilidade de gênero sobre a invisibilidade racial. Não há proteção legal. Não há recurso.</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--accent6); font-style:italic; margin-top:1rem;">Escarleti Thoss é humana. Filha de família com status mas sem fortuna. Mulher. Rebelde condenada. O sistema foi projetado para que alguém assim não existisse por muito tempo — e definitivamente não como capitã.</p>
+      </div>
+
+      <h3>Raças Conhecidas de Thalvorn</h3>
+
+      <div class="char-grid">
+        <div class="char-card" style="border-color:rgba(155,120,200,0.3);">
+          <div class="char-name" style="color:var(--accent5);">Elfas do Mar</div>
+          <div class="char-role" style="color:var(--accent5);">Velanthar · Refúgios Élficos · longevas</div>
+          <div class="char-desc">Vivem entre 400–800 anos. Sensibilidade mágica máxima — a Névoa Cinza as afeta de forma devastadora, o que as mantém afastadas das rotas industriais. Os sobreviventes da Semana Branca refugiaram-se em Velanthar. Não participam da política das Seis Coroas. Observam e esperam.</div>
+          <div class="char-power">Magia climática, comunicação com fauna marinha, capacidade de sentir éter bruto a distâncias impossíveis. Crença religiosa do Ciclo Perpétuo — tecnicamente correta sobre a natureza do éter.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(224,160,96,0.3);">
+          <div class="char-name" style="color:var(--accent);">Anãs</div>
+          <div class="char-role" style="color:var(--accent);">Karak Dunn · Forjas Vulcânicas · longevas</div>
+          <div class="char-desc">Mestras de forja e engenharia. Constroem os Motores de Éter que o Almirantado usa — ironia que não passa despercebida. Vivem até 300 anos. Praticam a Leitura de Éter como ritual contemplativo. Algumas sabem, em fragmentos, que o éter é memória.</div>
+          <div class="char-power">Engenharia de éter sem paralelo, Leitura de Éter (habilidade rara), resistência a ambientes extremos. As forjas de Karak Dunn são os únicos locais onde humanas não têm acesso irrestrito.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(96,208,224,0.3);">
+          <div class="char-name" style="color:var(--accent2);">Tritãs</div>
+          <div class="char-role" style="color:var(--accent2);">Veth-Naur · Cidades Submersas · povo mais antigo</div>
+          <div class="char-desc">30.000 anos de história. Civilização submersa com três camadas de profundidade. A Companhia as escraviza porque são as únicas que sobrevivem às profundezas onde o éter bruto existe em maior concentração. Comunicam-se via Veth-Nar — frequências que a Companhia não consegue monitorar.</div>
+          <div class="char-power">Mergulho em profundezas letais para outras raças, comunicação ultrassônica de longa distância (Veth-Nar), memória coletiva via canto. Os mais velhos "ouvem" o éter.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(212,112,112,0.3);">
+          <div class="char-name" style="color:var(--accent4);">Orcs</div>
+          <div class="char-role" style="color:var(--accent4);">Cinturão de Vrash · Ilhas Vulcânicas</div>
+          <div class="char-desc">Guerreiras excepcionais com hierarquia tribal matrilinear própria. O Almirantado as considera "ingovernáveis" — eufemismo para "não conseguimos escravizá-las sem custo maior do que o benefício". Unem-se instantaneamente quando ameaçadas por externas.</div>
+          <div class="char-power">Força e resistência superiores, táticas de combate desenvolvidas em 500 anos de resistência ativa, rede de comunicação via ilhas vulcânicas que o Almirantado nunca mapeou completamente.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(126,184,212,0.3);">
+          <div class="char-name" style="color:var(--accent2);">Ogras</div>
+          <div class="char-role" style="color:var(--accent2);">Arquipélago de Ghelvor · Ilhas Geladas</div>
+          <div class="char-desc">Maiores e mais resistentes de todas as raças. Vivem nos arquipélagos gelados do norte, ignoradas pelo Almirantado enquanto ficam longe das rotas comerciais. Têm sociedade própria — mais complexa do que as raças do sul assumem.</div>
+          <div class="char-power">Resistência ao frio extremo, força física incomparável, longevidade (até 500 anos). Algumas praticam magia de gelo arcaica que os elfos reconhecem mas não conseguem replicar.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(212,160,160,0.2);">
+          <div class="char-name" style="color:var(--accent6);">Humanas</div>
+          <div class="char-role" style="color:var(--accent6);">Vaelthar · As Seis Coroas · dominantes</div>
+          <div class="char-desc">A raça mais recente de Thalvorn — e a que mais rapidamente expandiu. Vidas curtas (até 80 anos) compensadas por reprodução rápida e adaptabilidade extrema. Fundaram a Companhia, construíram o Almirantado, inventaram a escravidão industrial de éter.</div>
+          <div class="char-power">Nenhuma capacidade mágica intrínseca — o que as torna imunes à Névoa Cinza. Adaptabilidade, organização política, e a capacidade assustadora de convencer a si mesmas de que qualquer coisa que fazem é necessária.</div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2.5rem;">Raças Raras — O que os Mapas Não Registram</h3>
+      <p>Thalvorn tem mais vida do que qualquer cartógrafo do Almirantado documentou. As raças abaixo existem nas margens — avistadas, rumoreadas, raramente encontradas.</p>
+
+      <div class="char-grid">
+        <div class="char-card" style="border-color:rgba(155,120,200,0.4); background:linear-gradient(135deg,#130f1e,#18142a);">
+          <div class="char-name" style="color:var(--accent5);">Brumhari</div>
+          <div class="char-role" style="color:var(--accent5);">Raça rara · Seres de Névoa · Ilhas elevadas</div>
+          <div class="char-desc">Seres semi-corpóreos que habitam os picos mais altos das ilhas montanhosas — acima das nuvens, onde o éter existe em forma volátil e dispersa. O corpo de uma Brumhari é sólido apenas no núcleo; as extremidades dissolvem-se em névoa branca quando relaxadas.</div>
+          <div class="char-power">Fusão parcial com névoa (invisibilidade em ambientes de baixa visibilidade), comunicação por padrões de condensação, sensibilidade ao éter atmosférico.</div>
+          <div class="char-flaw" style="color:var(--accent5);">Abaixo do nível do mar, ficam progressivamente mais densas e pesadas. Navegar em navio é experiência fisicamente dolorosa. Nunca são recrutadas pelo Almirantado.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(96,208,144,0.3); background:linear-gradient(135deg,#0e1a0e,#121e12);">
+          <div class="char-name" style="color:var(--accent3);">Keth'nar</div>
+          <div class="char-role" style="color:var(--accent3);">Raça rara · Seres de Coral Vivo · Recifes profundos</div>
+          <div class="char-desc">Seres de crescimento lento que habitam os recifes mais antigos de Thalvorn. Um Keth'nar adulto leva 200 anos para atingir maturidade. São parcialmente calcificados — metade orgânica, metade mineral. Processam o tempo de forma radicalmente diferente das outras raças.</div>
+          <div class="char-power">Memória de séculos (o coral guarda tudo que tocou), resistência absoluta a qualquer dano não-mágico. As mais velhas têm fragmentos de memória pré-Afogamento Primordial gravados no próprio corpo.</div>
+          <div class="char-flaw" style="color:var(--accent3);">A Névoa Cinza acelera seu processo de calcificação. A Companhia usa Névoa deliberadamente para "cristalizar" Keth'nar que bloqueiam acessos a novos depósitos de éter.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(96,192,224,0.4); background:linear-gradient(135deg,#080e18,#0c1420);">
+          <div class="char-name" style="color:var(--accent2);">Velhari</div>
+          <div class="char-role" style="color:var(--accent2);">Raça rara · Seres de Bioluminescência · Zonas abissais</div>
+          <div class="char-desc">Raça sem forma sólida permanente — existem como padrões de luz bioluminescente. Habitam exclusivamente zonas abissais e surgem à superfície apenas em lua nova. São tecnicamente a raça mais próxima dos Veth em natureza — existência como padrão de informação mais do que como matéria.</div>
+          <div class="char-power">Comunicação via luz pulsada, capacidade de passar por qualquer abertura, imunidade total a danos físicos. Algumas conseguem "carregar" memórias de éter em formato luminoso.</div>
+          <div class="char-flaw" style="color:var(--accent2);">Qualquer fonte de luz artificial intensa as dissipa temporariamente. O Almirantado desenvolveu "Lanças de Luz" especificamente para repelir Velhari. Mira entende que as Velhari ao redor do Abismo não estão protegendo-o: estão comunicando algo.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(212,160,96,0.3); background:linear-gradient(135deg,#180e08,#1e1208);">
+          <div class="char-name" style="color:var(--accent);">Nadai</div>
+          <div class="char-role" style="color:var(--accent);">Raça rara · Seres Simbióticos · Hospedeiras</div>
+          <div class="char-desc">A raça mais incompreendida de Thalvorn. Uma Nadai adulta é invisível a olho nu — vive em simbiose <em>dentro</em> de hospedeiras de outras raças. A Nadai não controla a hospedeira: compartilha. A hospedeira ganha percepções ampliadas e fragmentos de memória de hospedeiras anteriores.</div>
+          <div class="char-power">Reflexos aumentados, resistência a venenos e acesso a "memórias de mão segunda" — fragmentos de vidas anteriores que surgem como intuições ou habilidades inexplicáveis.</div>
+          <div class="char-flaw" style="color:var(--accent);">O Almirantado as considera "parasitas" e qualquer hospedeira identificada é submetida a purificação compulsória — processo que mata a Nadai e frequentemente deixa danos neurológicos permanentes.</div>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="mundo.html" class="page-nav-prev">&larr; O Mundo</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="magia.html" class="page-nav-next">Magia &amp; Tecnologia &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

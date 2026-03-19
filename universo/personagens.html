@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — A Tripulação · As Vaethra</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:960px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card.rose::before { background:var(--accent6); }
+.card h3 { margin-top:0; }
+.twist-box { background:radial-gradient(ellipse at center, rgba(155,120,200,0.06) 0%, transparent 70%), var(--bg3); border:1px solid rgba(155,120,200,0.3); border-radius:8px; padding:2rem; margin:2rem 0; position:relative; }
+.twist-box h3 { color:var(--accent5); margin-top:0; }
+.twist-label { position:absolute; top:-10px; left:1.5rem; font-family:var(--display); font-size:9px; letter-spacing:0.2em; text-transform:uppercase; background:var(--bg3); padding:2px 8px; border:1px solid rgba(155,120,200,0.3); border-radius:3px; color:var(--accent5); }
+.char-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.5rem; margin:1.5rem 0; }
+.char-card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.4rem 1.6rem; }
+.char-name { font-family:var(--display); font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:0.2rem; }
+.char-role { font-family:var(--mono); font-size:10px; letter-spacing:0.1em; color:var(--accent); margin-bottom:0.8rem; text-transform:uppercase; }
+.char-desc { font-size:0.9rem; color:var(--ink-dim); margin-bottom:0.6rem; }
+.char-flaw { font-size:0.85rem; color:var(--accent4); font-style:italic; }
+.char-power { font-size:0.85rem; color:var(--accent3); }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.5rem 0; }
+.tag { font-family:var(--mono); font-size:10px; letter-spacing:0.08em; padding:3px 8px; border-radius:3px; border:1px solid; text-transform:uppercase; }
+.tag-amber { color:var(--accent); border-color:rgba(201,135,42,0.3); background:rgba(201,135,42,0.06); }
+.tag-blue { color:var(--accent2); border-color:rgba(126,184,212,0.3); background:rgba(126,184,212,0.06); }
+.tag-green { color:var(--accent3); border-color:rgba(160,208,144,0.3); background:rgba(160,208,144,0.06); }
+.tag-red { color:var(--accent4); border-color:rgba(212,112,112,0.3); background:rgba(212,112,112,0.06); }
+.tag-purple { color:var(--accent5); border-color:rgba(155,120,200,0.3); background:rgba(155,120,200,0.06); }
+.tag-rose { color:var(--accent6); border-color:rgba(212,160,160,0.3); background:rgba(212,160,160,0.06); }
+.crew-section-label { font-family:var(--display); font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; margin:3rem 0 1.5rem; border-bottom:1px solid var(--border2); padding-bottom:0.5rem; }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="personagens">
+      <div class="section-header">
+        <span class="section-icon">👤</span>
+        <h2>Tripulação — As Vaethra da Perpétua</h2>
+      </div>
+
+      <div class="twist-box" style="border-color:rgba(201,135,42,0.35); margin-bottom:2.5rem;">
+        <div class="twist-label" style="border-color:rgba(201,135,42,0.35); color:var(--accent);">⚓ IDENTIDADE DO GRUPO</div>
+        <h3 style="color:var(--accent);">As Vaethra — Os Piratas da Liberdade</h3>
+        <p>Em língua Veth arcaica — a mesma língua que nomeia o éter, o abismo e os cantos dos tritões — <strong>vaethra</strong> significa <em>"o estado de existir sem corrente"</em>. Não é simplesmente "liberdade": é a condição de não estar presa a nenhuma âncora que não tenha escolhido para si mesma. Sem bandeira, sem Coroa, sem Almirantado. Apenas o oceano e o que vier.</p>
+        <p style="color:var(--ink-faint); font-style:italic;">A palavra foi a primeira que Mira ensinou a Escarleti em Veth-Nar — e a única que Escarleti aprendeu antes de nomear o grupo. A tripulação não votou. Mira simplesmente disse a palavra em voz alta e Escarleti a repetiu. Isso foi suficiente.</p>
+        <div class="tags" style="margin-top:1rem;">
+          <span class="tag tag-amber">vaethra · sem corrente</span>
+          <span class="tag tag-blue">língua veth arcaica</span>
+          <span class="tag tag-rose">identidade pirata · sem bandeira</span>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:2rem;">
+        <p>A <strong>Perpétua</strong> é um transportador de carga médio, movido a éter, com canhões velhos e um motor que faz um barulho preocupante sempre que passa dos 14 nós. Não é glamorosa. É o que havia disponível. A tripulação que parte com ela é de apenas três — o resto é encontrado ao longo da rota, ilha por ilha, porto por porto. Nenhuma delas escolheu ser o que se tornou.</p>
+      </div>
+
+      <h3 class="crew-section-label" style="color:var(--accent);">⌖ Tripulação Inicial — As Três que Partem</h3>
+
+      <div class="char-grid">
+        <div class="char-card" style="border-color:rgba(212,160,160,0.35); background:linear-gradient(135deg,#1a1208,#1e1510);">
+          <div class="char-name" style="color:var(--accent6);">ESCARLETI THOSS</div>
+          <div class="char-role" style="color:var(--accent6);">Capitã · Humana · Dornath · 19 anos</div>
+          <div class="char-desc">Filha de oficial, noiva fugitiva, trabalhadora em débito e capitã por acidente. Análise fria sob pressão, memória fotográfica. Não sabe lutar. Sabe convencer.</div>
+          <div class="char-flaw">Falha real: Ossa. Deixou uma pessoa inocente ser punida em seu lugar por cálculo frio, e depois não aproveitou a única chance de consertar isso. O heroísmo posterior não cobre essa conta.</div>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag tag-rose">rebeldia calculada</span><span class="tag tag-red">culpa</span><span class="tag tag-amber">liderança</span></div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(126,184,212,0.3);">
+          <div class="char-name" style="color:var(--accent2);">Mira</div>
+          <div class="char-role" style="color:var(--accent2);">Mergulhadora · Tritã · 17 anos</div>
+          <div class="char-desc">Liberta das gaiolas da mina, a única das doze tritãs que embarca na Perpétua voluntariamente. Consegue mergulhar mais fundo que qualquer ser vivo registrado. Uma vez foi longe demais e voltou com algo diferente nos olhos. Às vezes para tudo e escuta o que ninguém consegue escutar.</div>
+          <div class="char-flaw">Está sendo chamada pelo Inquilino. A cada sessão de escuta, quer ir mais fundo. A luta para permanecer com a tripulação vai ficando mais difícil conforme os arcos avançam. Questão central: quando retornar do contato com o Inquilino, quanto dela ainda é ela?</div>
+          <div class="char-power">Micro-exposições ao éter bruto desde os 4 anos criaram adaptação neurológica única: processa sinais de éter como linguagem, não como ruído. Sua mãe lhe ensinou Veth-Nar completo antes de morrer na mina — ato de resistência cultural disfarçado de amor.</div>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag tag-blue">adaptação neurológica</span><span class="tag tag-purple">acidente</span><span class="tag tag-red">custo identitário</span></div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(160,208,144,0.3);">
+          <div class="char-name" style="color:var(--accent3);">Bross</div>
+          <div class="char-role" style="color:var(--accent3);">Engenharia · Anã · 52 anos</div>
+          <div class="char-desc">Estava na mina como trabalhadora técnica "contratada" — eufemismo para dívida impagável. Não está na Perpétua por ideologia: precisa de dinheiro para recomprar a forja que perdeu há dez anos. Mantém o motor funcionando por milagre e xingamento.</div>
+          <div class="char-flaw">Pragmatismo como muralha emocional. Trata Escarleti como nobre entediada que vai desistir na primeira tempestade — é a primeira a mudar de ideia quando Escarleti demonstra competência técnica. Competência é a única moeda que Bross aceita.</div>
+          <div class="char-power">Engenharia de éter superior. Entende Motores de Éter melhor que qualquer engenheiro humano. É Leitora de Éter — nunca contou para ninguém.</div>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag tag-amber">pragmática</span><span class="tag tag-green">técnica</span><span class="tag tag-purple">leitora de éter</span></div>
+        </div>
+      </div>
+
+      <h3 class="crew-section-label" style="color:var(--accent2);">⌖ Encontradas ao Longo da Jornada</h3>
+      <p style="color:var(--ink-faint); font-size:0.9rem; margin-bottom:1.5rem; font-style:italic;">As outras Vaethra não são recrutadas — são encontradas. Cada uma em circunstâncias que tornam a Perpétua a única saída disponível naquele momento.</p>
+
+      <div class="char-grid">
+        <div class="char-card">
+          <div class="char-name">Syre</div>
+          <div class="char-role">Navegação climática · Elfa do Mar · 60 anos · Arco I · Orvacht</div>
+          <div class="char-desc">Ex-meteorologista do Almirantado. Perdeu a filha na Semana Branca. Escarleti a encontra sendo processada por "relatórios falsificados" — ela registrou corretamente o que as Bombas de Névoa fizeram às populações élficas. Isso não era o que esperavam dela.</div>
+          <div class="char-flaw">60 anos sendo invisível. Sabia de atrocidades e não falou. O silêncio foi estratégia de sobrevivência. Quando encontra Escarleti — outra mulher que sobreviveu sendo invisível — reconhece o padrão. A diferença é que Escarleti parou. Syre não sabe como se sentir em relação a isso.</div>
+          <div class="char-power">Controle climático em raio de 3km. A Névoa Cinza lhe dá alucinações da filha — e ela as escuta, porque é tudo que tem dela.</div>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag tag-purple">mágica</span><span class="tag tag-red">trauma</span><span class="tag tag-amber">sarcástica</span></div>
+        </div>
+
+        <div class="char-card">
+          <div class="char-name">Drok</div>
+          <div class="char-role">Combate · Orc · 35 anos · Arco I · Orvacht</div>
+          <div class="char-desc">Ex-lutadora de arenas clandestinas humanas. Escapa de uma arena em Orvacht na mesma noite que a Perpétua está atracada. Não é resgate — é coincidência de rota e desespero. Não é grata. Questiona cada decisão de Escarleti. Frequentemente está certa.</div>
+          <div class="char-flaw">Raiva sem controle em situações de humilhação. Testa Escarleti porque é mulher e porque é jovem — vai ter que encarar de frente os próprios preconceitos quando perceber que estava certa por razões completamente erradas.</div>
+          <div class="char-power">500 anos de guerra racial condensados num corpo que aprendeu a sobreviver em cada cenário adversarial. A única da tripulação que conhece o lado de baixo da hierarquia racial desde o nascimento.</div>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag tag-red">raiva</span><span class="tag tag-green">pragmática</span><span class="tag tag-amber">honrada</span></div>
+        </div>
+
+        <div class="char-card">
+          <div class="char-name">Vael Orrith</div>
+          <div class="char-role">Navegação / Conselho · Humana · 45 anos · Arco II · Rekmar</div>
+          <div class="char-desc">Ex-capitã do Almirantado, "reformada" pelos piratas que afundaram seu navio. Escarleti a encontra presa numa negociação de dívida em Rekmar. A liberta em troca de navegação pelo Cinturão de Vrash. Conhece cada rota, cada banco de areia, cada contato suspeito do mundo navegável.</div>
+          <div class="char-flaw">Segredo que emerge no Arco II: foi ela quem entregou a localização do navio do pai de Escarleti ao Almirante Voss. O pai — um dos primeiros a tentar publicar o Manifesto — foi morto por esse ato. A família Thoss ficou empobrecida o suficiente para precisar vender Escarleti em casamento. A cadeia de consequências fecha em cima dela.</div>
+          <div class="char-power">Rede de contatos em cada porto clandestino de Thalvorn. Conhecimento tático que rivaliza com qualquer oficial do Almirantado.</div>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag tag-red">traição</span><span class="tag tag-amber">experiente</span><span class="tag tag-purple">peso</span></div>
+        </div>
+      </div>
+
+      <div class="card rose" style="margin-top:1.5rem;">
+        <h3>A Dinâmica das Vaethra</h3>
+        <p>Nenhuma delas é abertamente hostil. Isso é quase pior. Drok testa porque quer saber o que Escarleti é. Bross ignora até que não pode mais. Vael <em>sugere</em>, <em>enquadra</em>, <em>re-explica</em> — como se as ideias de Escarleti precisassem de uma segunda voz para serem válidas. Ela nota. Aprende a usar: deixa Vael pensar que a ideia é dela quando convém.</p>
+        <p>Syre é a única que não subestima desde o início — mas por razões complexas: ela passou 60 anos sendo invisível no Almirantado. Uma mulher que parou de ser invisível de forma tão barulhenta representa tudo que Syre nunca pôde ser.</p>
+        <p style="color:var(--accent6); font-style:italic;">Mira não subestima nem testa. Observa — com a atenção calma de quem aprendeu que o oceano não se importa com hierarquias.</p>
+      </div>
+
+      <div class="page-nav">
+        <a href="protagonista.html" class="page-nav-prev">&larr; Escarleti Thoss</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="antagonista.html" class="page-nav-next">O Antagonista &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

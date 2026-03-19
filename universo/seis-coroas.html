@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — As Seis Coroas · Política Humana</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:960px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.char-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:1.5rem; margin:2rem 0; }
+.char-card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.4rem 1.6rem; }
+.char-name { font-family:var(--display); font-size:1rem; font-weight:600; color:var(--accent); margin-bottom:0.2rem; }
+.char-role { font-family:var(--mono); font-size:10px; letter-spacing:0.1em; color:var(--ink-faint); margin-bottom:0.8rem; text-transform:uppercase; }
+.char-desc { font-size:0.9rem; color:var(--ink-dim); margin-bottom:0.6rem; }
+.char-flaw { font-size:0.85rem; color:var(--accent6); font-style:italic; margin-top:0.8rem; border-top:1px solid var(--border); padding-top:0.6rem; }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="seis-coroas">
+      <div class="section-header">
+        <span class="section-icon">👑</span>
+        <h2>As Seis Coroas — Política Humana</h2>
+      </div>
+
+      <p>A Aliança das Seis Coroas não é monolítica. Apresenta frente unida para as raças não-humanas e para o mundo externo, mas tem fissuras internas que a narrativa explora — porque a fratura da Aliança é condição necessária para qualquer mudança possível.</p>
+
+      <div class="char-grid">
+        <div class="char-card">
+          <div class="char-name">Vaelthar</div>
+          <div class="char-role">Capital · Centro Financeiro da Aliança</div>
+          <div class="char-desc">Governa pela Bolsa do Éter — quem controla o preço do éter controla a política de todas as outras Coroas. O Almirantado é nominalmente independente, mas seu financiamento passa por Vaelthar.</div>
+          <div class="char-desc">Fratura interna: os mercadores menores percebem que a Companhia das Ilhas Profundas está usando monopólio de éter para suprimir concorrência doméstica. Não é solidariedade racial — é conflito de interesse econômico. Potencial aliado do Arco II por razões completamente erradas.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(212,160,160,0.2);">
+          <div class="char-name" style="color:var(--accent6);">Dornath</div>
+          <div class="char-role">Segunda Corona · Sede do Almirantado</div>
+          <div class="char-desc">Cultura de honra militar e hierarquia. Voss vem de Dornath. O Almirantado tem sede aqui não por acidente — a estrutura de valores dornathiana é compatível com a estrutura institucional do Almirantado de formas que as outras Coroas nunca foram completamente.</div>
+          <div class="char-flaw">Para Escarleti, Dornath é o sistema que a criou e tentou leiloá-la. Não é background abstrato: é a razão específica de cada escolha que a formou. O rancor é íntimo, não político.</div>
+        </div>
+
+        <div class="char-card">
+          <div class="char-name">Selvane</div>
+          <div class="char-role">Sede da Igreja das Seis Marés · Poder Clerical</div>
+          <div class="char-desc">Em Selvane, a Igreja tem mais poder prático que a Coroa em questões contratuais e registros civis. O movimento Reformistas dentro da Igreja ganhou força nos últimos 30 anos — questiona a remoção do sétimo domínio da liturgia. Estão perigosamente próximos de descobrir independentemente o que o Manifesto conta.</div>
+          <div class="char-desc">Aliado potencial no Arco II — não por ideologia, mas porque a Igreja quer provar que os fundadores sabiam mais do que o clero atual admite, e o Manifesto é prova disso.</div>
+        </div>
+
+        <div class="char-card">
+          <div class="char-name">Korrath</div>
+          <div class="char-role">Centro de Pesquisa e Tecnologia de Éter</div>
+          <div class="char-desc">A Coroa mais tecnicamente avançada. Laboratórios de éter, institutos de engenharia naval, desenvolvimento de novos motores. Os dados internos das últimas décadas mostram anomalias consistentes no comportamento do éter — compressão anômala em certas profundezas, variações de temperatura que não têm explicação convencional.</div>
+          <div class="char-desc">Alguns pesquisadores já publicaram artigos técnicos sobre essas anomalias. Nenhum foi longe o suficiente para concluir o que significam — ou os que chegaram perto foram "redirecionados" para outros projetos. Bross tem contatos em Korrath de quando trabalhava como engenheira livre.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(212,112,112,0.2);">
+          <div class="char-name" style="color:var(--accent4);">Amvesh</div>
+          <div class="char-role">A Coroa Colonial · Centro de Extração</div>
+          <div class="char-desc">A mais brutal na supressão de resistência racial. A economia inteira depende de mão de obra não-humana compulsória nas minas de éter. Qualquer questionamento dos métodos é lido como ameaça econômica existencial — e tratado como tal.</div>
+          <div class="char-flaw">Para Escarleti, Amvesh nunca é só política. É onde Ossa está. É onde ela própria estava. É o lugar de onde fugiu. Toda decisão que envolve Amvesh carrega esse peso embaixo da lógica estratégica.</div>
+        </div>
+
+        <div class="char-card" style="border-color:rgba(160,208,144,0.2);">
+          <div class="char-name" style="color:var(--accent3);">Thessa</div>
+          <div class="char-role">Menor em Território · Mais Rica Per Capita</div>
+          <div class="char-desc">A Coroa intermediária. Sem produção própria de éter, sem sede militar, sem poder clerical — mas com o melhor corpo diplomático da Aliança e posição geográfica central nas rotas comerciais. Vive de taxas de passagem e acordos bilaterais.</div>
+          <div class="char-desc">A mais provável aliada no Arco III — não por convicção moral, mas porque o colapso econômico que O Inquilino acordado causaria destruiria as rotas nas quais Thessa depende. O argumento de Escarleti funciona em Thessa por razões puramente práticas.</div>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="navegacao.html" class="page-nav-prev">&larr; Navegação</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="desastres.html" class="page-nav-next">O Colapso Físico &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

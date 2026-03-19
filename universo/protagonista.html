@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Escarleti Thoss</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:860px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card.red::before { background:var(--accent4); }
+.card.rose::before { background:var(--accent6); }
+.card h3 { margin-top:0; }
+blockquote { border-left:2px solid var(--accent); margin:2rem 0; padding:1.2rem 1.8rem; background:var(--bg3); border-radius:0 6px 6px 0; font-style:italic; color:var(--ink); font-size:1.05rem; line-height:1.7; }
+blockquote cite { display:block; margin-top:0.8rem; font-family:var(--mono); font-size:11px; font-style:normal; color:var(--ink-faint); letter-spacing:0.05em; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.5rem 0; }
+.tag { font-family:var(--mono); font-size:10px; letter-spacing:0.08em; padding:3px 8px; border-radius:3px; border:1px solid; text-transform:uppercase; }
+.tag-amber { color:var(--accent); border-color:rgba(201,135,42,0.3); background:rgba(201,135,42,0.06); }
+.tag-blue { color:var(--accent2); border-color:rgba(126,184,212,0.3); background:rgba(126,184,212,0.06); }
+.tag-red { color:var(--accent4); border-color:rgba(212,112,112,0.3); background:rgba(212,112,112,0.06); }
+.tag-purple { color:var(--accent5); border-color:rgba(155,120,200,0.3); background:rgba(155,120,200,0.06); }
+.tag-rose { color:var(--accent6); border-color:rgba(212,160,160,0.3); background:rgba(212,160,160,0.06); }
+.protagonist-card { background:linear-gradient(135deg,#1a1208,#1e1510 40%,#18120e); border:1px solid rgba(212,160,160,0.25); border-radius:10px; padding:2rem 2.4rem; margin:1.5rem 0 2.5rem; position:relative; overflow:hidden; }
+.protagonist-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:100%; background:linear-gradient(to bottom, var(--accent6), var(--accent)); border-radius:4px 0 0 4px; }
+.protagonist-label { font-family:var(--mono); font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent6); margin-bottom:0.5rem; opacity:0.8; }
+.protagonist-name { font-family:var(--display); font-size:1.8rem; font-weight:900; color:var(--ink); letter-spacing:0.06em; margin-bottom:0.2rem; }
+.protagonist-role { font-family:var(--mono); font-size:10px; letter-spacing:0.15em; color:var(--accent6); text-transform:uppercase; margin-bottom:1.2rem; }
+.scene-box { background:radial-gradient(ellipse at top, rgba(212,160,160,0.04) 0%, transparent 70%), var(--bg3); border:1px solid rgba(212,160,160,0.2); border-radius:8px; padding:1.8rem 2rem; margin:2rem 0; position:relative; }
+.scene-label { position:absolute; top:-10px; left:1.5rem; font-family:var(--display); font-size:9px; letter-spacing:0.2em; text-transform:uppercase; background:var(--bg3); padding:2px 8px; border:1px solid rgba(212,160,160,0.3); border-radius:3px; color:var(--accent6); }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="protagonista">
+      <div class="section-header">
+        <span class="section-icon">⭑</span>
+        <h2>Protagonista — ESCARLETI THOSS</h2>
+      </div>
+
+      <div class="protagonist-card">
+        <div class="protagonist-label">protagonista · versão 5.0</div>
+        <div class="protagonist-name">ESCARLETI THOSS</div>
+        <div class="protagonist-role">Comandante da Perpétua · Humana · Dornath · 19 anos</div>
+        <div class="tags">
+          <span class="tag tag-rose">rebeldia</span>
+          <span class="tag tag-amber">inteligência</span>
+          <span class="tag tag-red">culpa</span>
+          <span class="tag tag-blue">liderança</span>
+          <span class="tag tag-purple">outsider</span>
+        </div>
+        <p style="margin-top:1.2rem;">Filha de um oficial de médio escalão de Dornath, criada para ser entregue em casamento a alguém com conexões que a família precisava. Educada para ser inteligente o suficiente para não envergonhar um marido em jantar de oficiais, mas nunca suficientemente para fazer perguntas inconvenientes.</p>
+        <p>O sistema calculou mal nos dois parâmetros.</p>
+      </div>
+
+      <h3>Origem — A Formação de Consorte</h3>
+      <p>O pai de Escarleti, Capitão Errath Thoss, era um homem que acreditava genuinamente estar fazendo o melhor pela filha. A família tinha status mas pouca fortuna — o casamento político era a forma de garantir segurança a longo prazo. Ele a inscreveu na Formação de Consorte aos 12 anos sem segunda opinião. Era o que se fazia.</p>
+      <p>O que ele não calculou: Escarleti tinha memória fotográfica e curiosidade irrefreável. Cada jantar de oficiais na sala ao lado era uma aula. Cada mapa que o pai deixava sobre a mesa, uma lição de navegação. Cada relatório do Almirantado discutido entre homens que consideravam mulheres incapazes de entender, um arquivo mental.</p>
+      <p>Por sete anos, ela aprendeu o que não era permitida de aprender — <em>sendo ignorada por pessoas que deveriam tê-la vigiado.</em></p>
+
+      <div class="scene-box">
+        <div class="scene-label">cena de ruptura · o casamento</div>
+        <h3 style="color:var(--accent6); margin-top:0;">O Dia em que Parou de Ser Invisível</h3>
+        <p>O noivo: <strong>Comandante Herath Vael</strong>, 47 anos, viúvo duas vezes. Voz respeitada no Almirantado. Solicitou Escarleti especificamente porque o pai dela tinha acesso a rotas comerciais que ele queria controlar. Ela tinha 19 anos.</p>
+        <p>A cerimônia era pública — Dornath valoriza testemunhas. Duzentos oficiais e suas famílias.</p>
+        <p>No momento do juramento de subordinação — onde a noiva recita formalmente as <em>Doze Obrigações da Consorte</em> — Escarleti parou. Silêncio.</p>
+        <p>Depois começou a falar. Não o juramento. Uma análise tática do casamento. Em voz alta. Para todos os presentes. Ela desmontou cada "obrigação" usando a própria linguagem do Almirantado — terminologia de contratos de comércio, de gestão de ativos, de propriedade registrada. Fez o que o casamento <em>era</em> soar exatamente como o que era, usando o vocabulário que os homens na sala usavam todos os dias para outras transações.</p>
+        <p>Não xingou. Não gritou. Usou a linguagem deles contra eles com precisão cirúrgica.</p>
+        <p>Depois olhou para Herath e disse a única frase emocional da cena:</p>
+        <blockquote style="margin:1rem 0 0; border-left-color:var(--accent6);">
+          "Você não está comprando uma esposa. Está comprando silêncio. E eu não estou à venda."
+          <cite>— ESCARLETI THOSS · cerimônia de casamento · Dornath</cite>
+        </blockquote>
+        <p style="margin-top:1rem; color:var(--ink-dim);">O silêncio que seguiu não foi de choque. Foi de raiva contida de duzentas pessoas que sabiam que ela estava tecnicamente correta e que isso não importava.</p>
+      </div>
+
+      <h3>A Falha Real — O Peso que ela Carrega</h3>
+      <div class="card red">
+        <h3>Ossa</h3>
+        <p>Três meses antes do casamento, Escarleti convenceu <strong>Ossa</strong> — sua criada, única pessoa próxima de uma amiga — a entregar uma mensagem a um estudante dissidente. Livros proibidos. Conversas sobre o que realmente aconteceu nas Guerras. A única forma de Escarleti continuar sendo ela mesma por mais alguns meses.</p>
+        <p>Ossa foi capturada com a mensagem. Identificada como a remetente para proteger a família Thoss de escândalo. Condenada a três anos de trabalho compulsório numa ilha colonial de Amvesh.</p>
+        <p>Escarleti não a defendeu. Ficou em silêncio porque defendê-la significaria confessar, o que destruiria o casamento, o que destruiria a família.</p>
+        <p style="color:var(--accent4); font-style:italic;">Dois meses depois, Escarleti humilhou o noivo e foi enviada para a escravidão de qualquer jeito. Ossa ainda está em Amvesh. Escarleti não sabe se está viva. E essa conta não tem como ser paga com heroísmo.</p>
+      </div>
+
+      <h3>A Punição — Como Entra no Mundo</h3>
+      <p>O Almirantado tem um processo para casos como o de Escarleti. Executá-la ou prendê-la cria mártir e escândalo. A solução elegante: <strong>reclassificação como "trabalhadora em débito"</strong> — o mesmo eufemismo aplicado a tritões e orcs capturados. Enviada para uma mina de extração de éter no arquipélago colonial de Amvesh.</p>
+      <p>A ironia calculada da punição: colocá-la acima de criaturas consideradas subumanas era suposto ser degradante. Para Escarleti, é a primeira vez num ambiente onde o que ela sabe tem valor prático real. Em três meses aprende mais do que em 19 anos de Formação de Consorte.</p>
+      <p>Aprende, principalmente, fragmentos de <strong>Veth-Nar</strong> — o sistema de comunicação tritão — porque escuta. Ela sempre foi extraordinariamente boa em escutar o que não era endereçado a ela.</p>
+
+      <h3>A Fuga — Inteligência como Arma</h3>
+      <p>A fuga não é força bruta. É <strong>administração</strong>.</p>
+      <p>Escarleti descobre que o encarregado da mina está desviando 8% da produção de éter para um comprador particular. Ela documenta. Não por altruísmo: por <em>leverage</em>.</p>
+      <p>Apresenta os números ao encarregado com uma proposta simples: liberdade para ela e doze trabalhadores tritões, em troca do silêncio. Se ela morrer, os documentos aparecem em Vaelthar em uma semana.</p>
+      <p>Ele a libera.</p>
+      <p style="color:var(--accent4); font-style:italic;">Ela não tinha nenhum plano de distribuição. Foi blefe puro. Mas apostou que homens que constroem poder em segredos têm medo desproporcional de serem expostos. Estava certa.</p>
+      <p>Os doze tritões liberados incluem <strong>Mira</strong>.</p>
+
+      <h3>A Perpétua — Como Consegue o Navio</h3>
+      <p>A Perpétua não é roubado. É <em>vendido</em> — o encarregado o passa para Escarleti por valor simbólico como parte do acordo, para formalizar a transação em papel. É tecnicamente de Escarleti. É o instrumento mais absurdo de liberdade que alguém poderia ter — coisa que só acontece quando o sistema é corrupto o suficiente para ser virado contra si mesmo.</p>
+
+      <div class="card rose">
+        <h3>O Log da Perpétua — A Voz Narrativa</h3>
+        <p>Escarleti narra com a raiva controlada de quem aprendeu que raiva descontrolada é exatamente o que o sistema espera de você. Analítica, precisa, com momentos de vulnerabilidade que ela mesma tenta disfarçar de pragmatismo.</p>
+        <p>Ela nunca dramatiza. Registra. A brutalidade está nos fatos nus, não na emoção com que os conta.</p>
+        <blockquote style="margin:1rem 0 0; border-left-color:var(--accent6);">
+          Nunca quis ser capitã. Queria ler livros que me disseram que não eram para mim. O resto foi consequência.
+          <cite>— ESCARLETI THOSS · log 3 da Perpétua · terceira semana de fuga</cite>
+        </blockquote>
+      </div>
+
+      <div class="page-nav">
+        <a href="historia.html" class="page-nav-prev">&larr; A História</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="personagens.html" class="page-nav-next">A Tripulação &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Navegação · Um Mundo que Não Fica Quieto</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:860px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card.blue::before { background:var(--accent2); }
+.card.blue { border-color:rgba(126,184,212,0.2); }
+.card.red::before { background:var(--accent4); }
+.card.red { border-color:rgba(212,112,112,0.2); }
+.card.purple::before { background:var(--accent5); }
+.card.purple { border-color:rgba(155,120,200,0.2); }
+.card h3 { margin-top:0; }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="navegacao">
+      <div class="section-header">
+        <span class="section-icon">🧭</span>
+        <h2>Navegação — Um Mundo que Não Fica Quieto</h2>
+      </div>
+
+      <p>Navegar em Thalvorn não é resolver um problema de geometria entre dois pontos. É negociar com um mundo que muda enquanto você dorme, que tem regras próprias, e que esconde armadilhas que os mapas oficiais mentem sobre por conveniência política.</p>
+
+      <div class="card">
+        <h3>Ilhas que Somem e Surgem</h3>
+        <p>A pressão vulcânica-de-éter no leito oceânico é irregular e cíclica. Em certas regiões, novas ilhas emergem periodicamente — surgem em décadas, ficam visíveis por gerações, afundam de volta. O ciclo completo raramente dura menos de 50 anos e raramente passa de 200.</p>
+        <p>As comunidades que habitam essas ilhas são nômades de terra: carregam tudo o que possuem em embarcações de fundo plano que podem ser ancoradas próximas enquanto a ilha está acima d'água. Quando a ilha começa a afundar — processo que dura meses, sempre gradual — partem.</p>
+        <p style="color:var(--accent); font-style:italic;">Conveniência administrativa: o Almirantado não consegue cobrar impostos de ilhas que não existem no mapa oficial. As comunidades de ilhas efêmeras têm imunidade fiscal não por lei, mas por impraticabilidade logística.</p>
+      </div>
+
+      <div class="card blue">
+        <h3 style="color:var(--accent2);">As Correntes Vivas</h3>
+        <p>Três grandes correntes dominam o oceano de Thalvorn: <strong>A Primeira</strong> (sentido horário, rota comercial principal), <strong>A Segunda</strong> (anti-horária, mais profunda, mais rápida) e <strong>O Retorno</strong> (vertical ascendente, invisível na superfície, detectável apenas por variações de temperatura).</p>
+        <p>A Segunda está se comportando de forma errática desde que as minas intensificaram as extrações — mudanças de velocidade não previstas, desvios de rota de dias inteiros. Os navegadores mais experientes começaram a desconfiar que o fluxo de éter nas profundezas influencia o comportamento das correntes.</p>
+        <p>A suspeita está certa. Vael e Syre desenvolvem, juntas durante a série, um método de detectar anomalias de éter pela temperatura da Segunda Corrente — e esse método se torna crucial no Arco III para encontrar a entrada do Abismo.</p>
+      </div>
+
+      <div class="card red">
+        <h3 style="color:var(--accent4);">Zonas de Silêncio de Bússola</h3>
+        <p>Regiões onde as bússolas de éter param de funcionar. Não registram norte — registram ruído. Navegar por instrumentos nessas zonas significa andar em círculos ou em diagonal sem saber.</p>
+        <p>O Almirantado treina seus oficiais exclusivamente em bússolas de éter — confiáveis, precisas, padronizadas. Nas Zonas de Silêncio, os pilotos imperiais ficam completamente cegos tecnologicamente.</p>
+        <p>Os piratas que sobreviveram tempo suficiente aprenderam navegação por estrelas, por temperatura da água e por observação de fauna — os métodos antigos que existiam antes do éter se tornar tecnologia. Eles têm vantagem tática natural nas Zonas de Silêncio por essa razão.</p>
+        <p style="color:var(--accent4);">Syre memorizou 14 cartas de navegação antiga por décadas de trabalho meteorológico. Escarleti memorizou os mapas que ficavam na mesa do pai — incluindo três que nunca foram publicados oficialmente. No Arco III, é essa combinação que salva a Perpétua quando a bússola para.</p>
+      </div>
+
+      <div class="card purple">
+        <h3 style="color:var(--accent5);">Cartas Negras — O Mercado de Conhecimento</h3>
+        <p>Mapas não oficiais. Rotas que o Almirantado proibiu de publicar (porque revelam zonas de extração ilegais, territórios de proteção que deveriam existir mas não existem, atalhos que contornam postos de coleta de imposto). Cartas de ilhas efêmeras, de correntes anômalas, de território tritão.</p>
+        <p>O mercado de Cartas Negras é completamente descentralizado — não tem sede, não tem catálogo, não tem preço fixo. Funciona por conhecidos de conhecidos, por confiança, por troca de informação por informação.</p>
+        <p>O maior cartógrafo do mercado negro: <strong>Keth</strong>, anão de 80 anos, vive num navio que nunca ancora. Motivação puramente acadêmica — quer o mapa mais preciso possível de Thalvorn antes de morrer, porque a imprecisão nos mapas oficiais o perturbou durante 60 anos de vida profissional. Não há valor moral no que ele faz: é obsessão de colecionador aplicada ao mundo inteiro.</p>
+        <p style="color:var(--accent5); font-style:italic;">Bross tem o contato de Keth. Anotado no interior de uma engrenagem de reserva que ninguém mais examinou.</p>
+      </div>
+
+      <div class="page-nav">
+        <a href="pirataria.html" class="page-nav-prev">&larr; Pirataria</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="seis-coroas.html" class="page-nav-next">As Seis Coroas &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
