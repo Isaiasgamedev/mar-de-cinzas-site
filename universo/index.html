@@ -40,6 +40,154 @@
 }
 .uni-rule { width: 80px; height: 1px; background: linear-gradient(90deg,transparent,var(--accent),transparent); margin: 1.8rem auto 0; }
 
+/* ── overview / discovery layer ── */
+.uni-overview {
+  margin: 0.5rem 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+}
+.uni-stat {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+.uni-stat-num {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+.uni-stat-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.uni-jump {
+  margin: 0 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.uni-jump a {
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  border: 1px solid var(--border2);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background: var(--bg2);
+}
+.uni-jump a:hover { color: var(--ink); border-color: rgba(255,255,255,0.2); }
+
+.uni-filter {
+  margin: 0 0 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.filter-btn {
+  border: 1px solid var(--border2);
+  background: var(--bg2);
+  color: var(--ink-dim);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  color: var(--ink);
+  border-color: rgba(255,255,255,0.2);
+}
+.filter-btn.active {
+  color: var(--text);
+  border-color: rgba(201,135,42,0.45);
+  background: rgba(201,135,42,0.08);
+}
+
+.recent-panel {
+  margin-top: 0.8rem;
+  background: linear-gradient(180deg, rgba(212,160,160,0.06), rgba(212,160,160,0.02));
+  border: 1px solid rgba(212,160,160,0.22);
+  border-radius: 10px;
+  padding: 1.1rem;
+}
+.recent-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.recent-title {
+  font-family: var(--display);
+  font-size: 1rem;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.recent-note {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent6);
+}
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+.recent-item {
+  display: block;
+  text-decoration: none;
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 0.9rem;
+}
+.recent-item:hover { border-color: rgba(255,255,255,0.2); background: var(--bg3); }
+.recent-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent6);
+  border: 1px solid rgba(212,160,160,0.3);
+  border-radius: 999px;
+  padding: 2px 7px;
+  margin-bottom: 0.5rem;
+}
+.recent-item h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--display);
+  font-size: 0.92rem;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+}
+.recent-item p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  line-height: 1.5;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
 /* ── category group ── */
 .cat-group { margin-top: 3.5rem; }
 .cat-title {
@@ -106,6 +254,10 @@
   padding: 4px 12px; border: 1px solid rgba(212,160,160,0.3); border-radius: 3px;
   color: var(--accent6); background: rgba(212,160,160,0.04); margin-top: 1.2rem;
 }
+
+@media (max-width: 760px) {
+  .recent-head { flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
@@ -136,40 +288,106 @@
       <div class="ver-badge">Versão 6.0 · ELIZABETH Thoss · Completa</div>
     </header>
 
+    <section class="uni-overview" aria-label="Visão geral do universo">
+      <article class="uni-stat">
+        <div class="uni-stat-num">30+ áreas</div>
+        <div class="uni-stat-label">documentação ativa</div>
+      </article>
+      <article class="uni-stat">
+        <div class="uni-stat-num">4 dossiês novos</div>
+        <div class="uni-stat-label">expansão v7</div>
+      </article>
+      <article class="uni-stat">
+        <div class="uni-stat-num">3 eixos</div>
+        <div class="uni-stat-label">mundo · conflito · memória</div>
+      </article>
+      <article class="uni-stat">
+        <div class="uni-stat-num">WIP vivo</div>
+        <div class="uni-stat-label">atualização contínua</div>
+      </article>
+    </section>
+
+    <nav class="uni-jump" aria-label="Atalhos rápidos do universo">
+      <a href="#recentes">Recentes</a>
+      <a href="#fundamentos">Fundamentos</a>
+      <a href="#expansao">Dossiês v7</a>
+      <a href="#personagens">Personagens</a>
+      <a href="#detalhe">Thalvorn em Detalhe</a>
+      <a href="#narrativa">Conflito &amp; Narrativa</a>
+    </nav>
+
+    <div class="uni-filter" aria-label="Filtrar conteúdo por tipo">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+      <button class="filter-btn" data-filter="lore" aria-pressed="false">Lore</button>
+      <button class="filter-btn" data-filter="politica" aria-pressed="false">Política</button>
+      <button class="filter-btn" data-filter="racas" aria-pressed="false">Raças</button>
+      <button class="filter-btn" data-filter="criaturas" aria-pressed="false">Criaturas</button>
+      <button class="filter-btn" data-filter="arcos" aria-pressed="false">Arcos</button>
+    </div>
+
+    <section class="recent-panel" id="recentes" aria-label="Conteúdo adicionado recentemente">
+      <div class="recent-head">
+        <h2 class="recent-title">Adicionados recentemente ao Universo</h2>
+        <span class="recent-note">última atualização · expansão v7</span>
+      </div>
+      <div class="recent-grid">
+        <a href="catalogo-aberracoes.html" class="recent-item filterable" data-types="lore criaturas arcos">
+          <span class="recent-badge">novo</span>
+          <h3>Aberrações &amp; Horror Cósmico</h3>
+          <p>Dossiê de risco com Veth, Inquilino, contenção e projeções de colapso.</p>
+        </a>
+        <a href="catalogo-criaturas.html" class="recent-item filterable" data-types="criaturas lore">
+          <span class="recent-badge">novo</span>
+          <h3>Criaturas &amp; Fenômenos Oceânicos</h3>
+          <p>Catálogo ampliado de fauna, anomalias e avistamentos fora de rota.</p>
+        </a>
+        <a href="catalogo-racas-avancado.html" class="recent-item filterable" data-types="racas lore">
+          <span class="recent-badge">novo</span>
+          <h3>Catálogo Avançado de Raças</h3>
+          <p>Mapa social e biopolítico das raças conhecidas, limiares e não catalogadas.</p>
+        </a>
+        <a href="povos-humanos.html" class="recent-item filterable" data-types="politica lore">
+          <span class="recent-badge">novo</span>
+          <h3>Os Povos Humanos</h3>
+          <p>Coroas, alianças e fraturas que estruturam o poder em Thalvorn.</p>
+        </a>
+      </div>
+    </section>
+
     <!-- GRUPO 1 -->
-    <div class="cat-group">
+    <div class="cat-group filter-group" id="fundamentos">
       <p class="cat-title">⌖ &nbsp;Mundo &amp; Fundamentos</p>
       <div class="section-grid">
 
-        <a href="mundo.html" class="sec-card c-amber">
+        <a href="mundo.html" class="sec-card c-amber filterable" data-types="lore">
           <span class="sec-card-icon">🌍</span>
           <div class="sec-card-title">O Mundo — Thalvorn</div>
           <p class="sec-card-desc">Um planeta de oceano quase infinito. Sem continentes — ou com continentes afundados. O mapa do mundo conhecido e a Teoria do Afogamento Primordial.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="racas.html" class="sec-card c-purple">
+        <a href="racas.html" class="sec-card c-purple filterable" data-types="racas lore">
           <span class="sec-card-icon">🧬</span>
           <div class="sec-card-title">Raças de Thalvorn</div>
           <p class="sec-card-desc">Seis raças estabelecidas, quatro raças raras e a hierarquia racial que Elizabeth vai desafiar. A Escada social do mundo.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="magia.html" class="sec-card c-blue">
+        <a href="magia.html" class="sec-card c-blue filterable" data-types="lore">
           <span class="sec-card-icon">🔮</span>
           <div class="sec-card-title">Magia &amp; Tecnologia</div>
           <p class="sec-card-desc">O éter não é combustível — é memória. Os três estados do éter, a Névoa Cinza e toda a tecnologia que está destruindo o mundo.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="historia.html" class="sec-card c-red">
+        <a href="historia.html" class="sec-card c-red filterable" data-types="lore arcos politica">
           <span class="sec-card-icon">📜</span>
           <div class="sec-card-title">A História</div>
           <p class="sec-card-desc">500 anos de guerra que começaram com florações e terminaram com genocídio industrial. A Semana Branca. O Manifesto das Profundezas.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="obrigacoes-consorte.html" class="sec-card c-rose">
+        <a href="obrigacoes-consorte.html" class="sec-card c-rose filterable" data-types="politica lore">
           <span class="sec-card-icon">🧾</span>
           <div class="sec-card-title">As Doze Obrigações</div>
           <p class="sec-card-desc">Documento ritual completo de Dornath + a tradução comercial usada no discurso de recusa.</p>
@@ -180,32 +398,32 @@
     </div>
 
     <!-- GRUPO 1.5 -->
-    <div class="cat-group">
+    <div class="cat-group filter-group" id="expansao">
       <p class="cat-title">⌖ &nbsp;Dossiês de Expansão (v7)</p>
       <div class="section-grid">
 
-        <a href="catalogo-aberracoes.html" class="sec-card c-red">
+        <a href="catalogo-aberracoes.html" class="sec-card c-red filterable" data-types="lore criaturas arcos">
           <span class="sec-card-icon">🕳️</span>
           <div class="sec-card-title">Aberrações &amp; Horror Cósmico</div>
           <p class="sec-card-desc">Veth, Inquilino, Névoa Livre, Meio-Dissolvidos e os cenários de colapso da contenção.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="catalogo-criaturas.html" class="sec-card c-blue">
+        <a href="catalogo-criaturas.html" class="sec-card c-blue filterable" data-types="criaturas lore">
           <span class="sec-card-icon">🐙</span>
           <div class="sec-card-title">Criaturas &amp; Fenômenos Oceânicos</div>
           <p class="sec-card-desc">Leviatãs, Krakens, Nagas, Corais de Memória e avistamentos fora dos mares cartografados.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="catalogo-racas-avancado.html" class="sec-card c-purple">
+        <a href="catalogo-racas-avancado.html" class="sec-card c-purple filterable" data-types="racas lore">
           <span class="sec-card-icon">🧬</span>
           <div class="sec-card-title">Catálogo Avançado de Raças</div>
           <p class="sec-card-desc">Panorama ampliado das raças conhecidas, limiares e povos fora da nomenclatura oficial.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="povos-humanos.html" class="sec-card c-amber">
+        <a href="povos-humanos.html" class="sec-card c-amber filterable" data-types="politica lore">
           <span class="sec-card-icon">🏛️</span>
           <div class="sec-card-title">Os Povos Humanos</div>
           <p class="sec-card-desc">Dornath, Vaelthar, Selvane, Korrath, Thessa e Maraketh — aliança, fraturas e legado político.</p>
@@ -216,25 +434,25 @@
     </div>
 
     <!-- GRUPO 2 -->
-    <div class="cat-group">
+    <div class="cat-group filter-group" id="personagens">
       <p class="cat-title">⌖ &nbsp;Personagens</p>
       <div class="section-grid">
 
-        <a href="protagonista.html" class="sec-card c-rose">
+        <a href="protagonista.html" class="sec-card c-rose filterable" data-types="arcos lore">
           <span class="sec-card-icon">⭑</span>
           <div class="sec-card-title">ELIZABETH Thoss</div>
           <p class="sec-card-desc">A protagonista. Filha de oficial, noiva relutante, trabalhadora em débito, capitã por acidente. O perfil completo — incluindo Ossa.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="personagens.html" class="sec-card c-blue">
+        <a href="personagens.html" class="sec-card c-blue filterable" data-types="arcos lore">
           <span class="sec-card-icon">👤</span>
           <div class="sec-card-title">A Tripulação</div>
           <p class="sec-card-desc">As seis Vaethra da Perpétua. Mira, Bross, Syre, Drok, Vael Orrith. Perfis completos com motivações, falhas e arcos individuais.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="antagonista.html" class="sec-card c-red">
+        <a href="antagonista.html" class="sec-card c-red filterable" data-types="arcos politica lore">
           <span class="sec-card-icon">⚔️</span>
           <div class="sec-card-title">O Antagonista</div>
           <p class="sec-card-desc">Almirante Voss Threndar. Não é um sádico — é pior. O homem que acredita sinceramente que fez o que era necessário. E que matou o pai de Elizabeth.</p>
@@ -245,39 +463,39 @@
     </div>
 
     <!-- GRUPO 3 -->
-    <div class="cat-group">
+    <div class="cat-group filter-group" id="detalhe">
       <p class="cat-title">⌖ &nbsp;Thalvorn em Detalhe</p>
       <div class="section-grid">
 
-        <a href="ilhas.html" class="sec-card c-green">
+        <a href="ilhas.html" class="sec-card c-green filterable" data-types="lore">
           <span class="sec-card-icon">🏝️</span>
           <div class="sec-card-title">As Ilhas</div>
           <p class="sec-card-desc">Vaelthar, Orvacht, Velanthar, Ilha da Carcaça, Rekhmaar, Amvesh e Veth-Naur. Os sete cenários-chave dos três arcos.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="criaturas.html" class="sec-card c-purple">
+        <a href="criaturas.html" class="sec-card c-purple filterable" data-types="criaturas lore">
           <span class="sec-card-icon">🦑</span>
           <div class="sec-card-title">Criaturas do Oceano</div>
           <p class="sec-card-desc">O que a Névoa Cinza fez com a fauna marinha. Leviatãs Brancos, Coral Memória, Cracas de Névoa, Enguias de Fogo Frio e O Remo.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="religiao.html" class="sec-card c-amber">
+        <a href="religiao.html" class="sec-card c-amber filterable" data-types="lore politica">
           <span class="sec-card-icon">🕯️</span>
           <div class="sec-card-title">Religião &amp; Cultos</div>
           <p class="sec-card-desc">A Igreja das Seis Marés, o Ciclo Perpétuo dos elfos, o Culto do Fundo e os Leitores de Éter anões. Todos mais certos do que sabem.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="tritons.html" class="sec-card c-blue">
+        <a href="tritons.html" class="sec-card c-blue filterable" data-types="racas lore">
           <span class="sec-card-icon">🌊</span>
           <div class="sec-card-title">Cultura Tritã</div>
           <p class="sec-card-desc">O povo mais antigo e mais escravizado de Thalvorn. Arquitetura submersa, o Veth-Nar e o Conclave das Profundezas que decide por harmonia.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="navegacao.html" class="sec-card c-green">
+        <a href="navegacao.html" class="sec-card c-green filterable" data-types="lore">
           <span class="sec-card-icon">🧭</span>
           <div class="sec-card-title">Navegação</div>
           <p class="sec-card-desc">Ilhas que somem, correntes vivas que mudam, Zonas de Silêncio Bússola. O mundo náutico em constante movimento de Thalvorn.</p>
@@ -288,63 +506,49 @@
     </div>
 
     <!-- GRUPO 4 -->
-    <div class="cat-group">
+    <div class="cat-group filter-group" id="narrativa">
       <p class="cat-title">⌖ &nbsp;Conflito &amp; Narrativa</p>
       <div class="section-grid">
 
-        <a href="inquilino.html" class="sec-card c-purple">
+        <a href="inquilino.html" class="sec-card c-purple filterable" data-types="arcos lore">
           <span class="sec-card-icon">🌀</span>
           <div class="sec-card-title">O Inquilino</div>
           <p class="sec-card-desc">⚠ Spoiler máximo. A verdade real que os Arcos constroem até revelar. O que está no fundo do Abismo não é o que todos assumem.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="arcos.html" class="sec-card c-amber">
+        <a href="arcos.html" class="sec-card c-amber filterable" data-types="arcos lore">
           <span class="sec-card-icon">📖</span>
           <div class="sec-card-title">Os Três Arcos</div>
           <p class="sec-card-desc">Fuga → Manifesto → O Fundo. Estrutura completa dos três volumes: conflitos centrais, arcos de personagem e como tudo converge.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="horror.html" class="sec-card c-red">
+        <a href="horror.html" class="sec-card c-red filterable" data-types="arcos criaturas lore">
           <span class="sec-card-icon">🕳️</span>
           <div class="sec-card-title">Horror do Abismo</div>
           <p class="sec-card-desc">Três cenas cósmicas do Arco III. A Maré de Memória, Os Que Revivem e O Chamado em Escala. O lado lovecraftiano de Thalvorn.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="pirataria.html" class="sec-card c-amber">
+        <a href="pirataria.html" class="sec-card c-amber filterable" data-types="politica lore">
           <span class="sec-card-icon">🏴‍☠️</span>
           <div class="sec-card-title">Pirataria</div>
           <p class="sec-card-desc">O terceiro poder de Thalvorn. A Irmandade das Marés Livres, os Corsários Imperiais, o Código de Oito Artigos e onde a Perpétua se encaixa.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="seis-coroas.html" class="sec-card c-rose">
+        <a href="seis-coroas.html" class="sec-card c-rose filterable" data-types="politica lore">
           <span class="sec-card-icon">👑</span>
           <div class="sec-card-title">As Seis Coroas</div>
           <p class="sec-card-desc">A coalizão humana que governa Thalvorn não é monolítica. Vaelthar, Dornath, Selvane, Korrath, Amvesh e Thessa — cada uma com fissuras internas.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
-        <a href="desastres.html" class="sec-card c-red">
+        <a href="desastres.html" class="sec-card c-red filterable" data-types="arcos lore">
           <span class="sec-card-icon">🌊</span>
           <div class="sec-card-title">Colapso Físico</div>
           <p class="sec-card-desc">As consequências palpáveis do Arco III. O afundamento de Amrath, os Cinco Dias dos Leviatãs e o esvaziamento progressivo do Abismo.</p>
-          <span class="sec-card-link">Explorar &nbsp;›</span>
-        </a>
-
-        <a href="twist.html" class="sec-card c-purple">
-          <span class="sec-card-icon">🌀</span>
-          <div class="sec-card-title">O Twist</div>
-          <p class="sec-card-desc">⚠ Spoiler absoluto. O éter queimado não desaparece — está sendo liberado. O que isso significa para cada habitante de Thalvorn, por milênios.</p>
-          <span class="sec-card-link">Explorar &nbsp;›</span>
-        </a>
-
-        <a href="final.html" class="sec-card c-blue">
-          <span class="sec-card-icon">🌅</span>
-          <div class="sec-card-title">O Final</div>
-          <p class="sec-card-desc">⚠ Spoiler. O que acontece no Abismo. O que Mira carrega. O que Voss assina. O que Elizabeth e Ossa precisam resolver. O log final da Perpétua.</p>
           <span class="sec-card-link">Explorar &nbsp;›</span>
         </a>
 
@@ -360,5 +564,50 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script>
+(function(){
+  var buttons = Array.from(document.querySelectorAll('.filter-btn'));
+  var cards = Array.from(document.querySelectorAll('.filterable'));
+  var groups = Array.from(document.querySelectorAll('.filter-group'));
+  var recentPanel = document.getElementById('recentes');
+  var recentItems = Array.from(document.querySelectorAll('#recentes .filterable'));
+
+  function matches(card, filter) {
+    if (filter === 'all') return true;
+    var types = (card.dataset.types || '').split(/\s+/).filter(Boolean);
+    return types.indexOf(filter) !== -1;
+  }
+
+  function applyFilter(filter) {
+    cards.forEach(function(card){
+      card.classList.toggle('is-hidden', !matches(card, filter));
+    });
+
+    groups.forEach(function(group){
+      var hasVisible = group.querySelector('.filterable:not(.is-hidden)');
+      group.classList.toggle('is-hidden', !hasVisible);
+    });
+
+    if (recentPanel) {
+      var hasRecentVisible = recentItems.some(function(item){ return !item.classList.contains('is-hidden'); });
+      recentPanel.classList.toggle('is-hidden', !hasRecentVisible);
+    }
+
+    buttons.forEach(function(btn){
+      var active = btn.dataset.filter === filter;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyFilter(btn.dataset.filter || 'all');
+    });
+  });
+
+  applyFilter('all');
+})();
+</script>
 </body>
 </html>
