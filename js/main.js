@@ -45,8 +45,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const select = languagePicker.querySelector('.lang-picker-select');
     if (select) {
       select.value = selectedLang;
+      let languageChangeByUser = false;
+
+      select.addEventListener('pointerdown', () => {
+        languageChangeByUser = true;
+      });
+
+      select.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter' || event.key === ' ') {
+          languageChangeByUser = true;
+        }
+      });
+
       select.addEventListener('change', () => {
+        if (!languageChangeByUser) {
+          return;
+        }
+
         const target = languageTargets[select.value];
+        languageChangeByUser = false;
+
         if (target) {
           window.location.href = target;
         }
