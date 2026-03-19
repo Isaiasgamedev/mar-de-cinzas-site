@@ -139,9 +139,9 @@ Na cerimônia (>300 testemunhas), onde o costume exige silêncio absoluto enquan
 
 **Em Amvesh:** Em três meses aprende mais que em dois anos de Formação de Consorte. Aprende fragmentos de Veth-Nar por escutar o que não era endereçado a ela. Identifica que o poder real pertence a um orc encostado na parede, não ao diretor.
 
-**A fuga:** Documenta que o encarregado desvia 8% da produção de éter. Apresenta os dados com proposta: liberdade dela e de doze tritãs, em troca de silêncio. Se ela morrer, os documentos chegam a Vaelthar em uma semana. Ele a libera. *Era blefe puro — ela não tinha nenhum plano de distribuição.* As doze tritãs incluem Mira.
+**A fuga:** Em Amvesh, Elizabeth e três amigas da prisão encontram um casco antiquíssimo durante escavações e o restauram em segredo. Na hora da saída, o navio responde de forma anômala à presença dela e volta a operar. Ela não sai sozinha: doze tritãs saem com ela, incluindo Mira.
 
-**A Perpétua:** Não roubado — *vendido* pelo encarregado como parte formal do acordo de silêncio. Instrumento absurdo de liberdade que só existe porque o sistema é corrupto o suficiente para ser virado contra si mesmo.
+**A Perpétua:** Não é cargueiro moderno nem compra de ocasião. É um navegador pré-industrial, mais antigo que o Almirantado, sem dependência de éter como os navios atuais. Foi revivido pelas prisioneiras — e parece ressoar com Elizabeth desde o primeiro encontro.
 
 **Voz narrativa:** O Log da Perpétua. Raiva controlada de quem aprendeu que raiva descontrolada é o que o sistema espera. Analítica, precisa, vulnerabilidade disfarçada de pragmatismo. Nunca dramatiza — registra. A brutalidade está nos fatos nus.
 
@@ -169,7 +169,7 @@ Na cerimônia (>300 testemunhas), onde o costume exige silêncio absoluto enquan
 
 **Vaethra** (língua Veth arcaica): "o estado de existir sem corrente" — não simplesmente liberdade, mas não estar presa a nenhuma âncora não-escolhida. Sem bandeira, sem Coroa, sem Almirantado.
 
-**A Perpétua:** Transportador de carga médio, motor a éter, canhões velhos, faz barulho preocupante acima de 14 nós. Não é glamorosa.
+**A Perpétua:** Casco navegador ancestral encontrado nas escavações de Amvesh. Antigo, irregular e meio incompreensível — mas funcional. Não nasce do padrão industrial de éter e se torna o centro vivo da jornada das Vaethra.
 
 ### Tripulação inicial
 
