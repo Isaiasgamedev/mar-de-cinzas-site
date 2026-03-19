@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Os Três Arcos · Estrutura de Série</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:860px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:1.5rem 0 0.7rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card h3 { margin-top:0; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.5rem 0; }
+.tag { font-family:var(--mono); font-size:10px; letter-spacing:0.08em; padding:3px 8px; border-radius:3px; border:1px solid; text-transform:uppercase; }
+.tag-amber { color:var(--accent); border-color:rgba(201,135,42,0.3); background:rgba(201,135,42,0.06); }
+.tag-blue { color:var(--accent2); border-color:rgba(126,184,212,0.3); background:rgba(126,184,212,0.06); }
+.tag-red { color:var(--accent4); border-color:rgba(212,112,112,0.3); background:rgba(212,112,112,0.06); }
+.tag-purple { color:var(--accent5); border-color:rgba(155,120,200,0.3); background:rgba(155,120,200,0.06); }
+.tag-rose { color:var(--accent6); border-color:rgba(212,160,160,0.3); background:rgba(212,160,160,0.06); }
+.arc-timeline { position:relative; padding-left:2.5rem; }
+.arc-timeline::before { content:''; position:absolute; left:8px; top:6px; bottom:6px; width:2px; background:linear-gradient(to bottom, var(--accent), var(--accent2), var(--accent5)); border-radius:1px; }
+.arc-item { position:relative; margin-bottom:3rem; background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 1.8rem; }
+.arc-item::before { content:''; position:absolute; left:-2.5rem; top:1.2rem; width:16px; height:16px; border-radius:50%; background:var(--accent); border:2px solid var(--bg); box-shadow:0 0 0 2px var(--accent); }
+.arc-item:nth-child(2)::before { background:var(--accent2); box-shadow:0 0 0 2px var(--accent2); }
+.arc-item:nth-child(3)::before { background:var(--accent5); box-shadow:0 0 0 2px var(--accent5); }
+.arc-label { font-family:var(--display); font-size:0.75rem; letter-spacing:0.1em; color:var(--accent); text-transform:uppercase; margin-bottom:0.4rem; }
+.arc-item:nth-child(2) .arc-label { color:var(--accent2); }
+.arc-item:nth-child(3) .arc-label { color:var(--accent5); }
+.arc-title { font-family:var(--display); font-size:1.2rem; font-weight:700; color:var(--ink); margin-bottom:0.3rem; }
+.arc-sub { font-family:var(--mono); font-size:11px; letter-spacing:0.08em; color:var(--ink-faint); margin-bottom:1rem; }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="arcos">
+      <div class="section-header">
+        <span class="section-icon">📖</span>
+        <h2>Os Três Arcos — Estrutura de Série</h2>
+      </div>
+
+      <div class="card">
+        <p>A série funciona em escala crescente: cada arco expande o escopo do conflito e o peso das consequências. <strong>Pessoal → Político → Existencial.</strong></p>
+        <p>O tema de opressão funciona em duas camadas simultâneas durante toda a narrativa: a camada de gênero (o sistema que tentou definir Escarleti pelo casamento) e a camada racial (o sistema que escraviza raças inteiras para extrair éter). As duas não são separadas — são o mesmo sistema visto de dois ângulos.</p>
+      </div>
+
+      <div class="arc-timeline">
+        <div class="arc-item">
+          <div class="arc-label">Arco I · Volume 1</div>
+          <div class="arc-title">Fuga</div>
+          <div class="arc-sub">O Custo da Decisão Certa</div>
+          <div class="tags">
+            <span class="tag tag-amber">conflito pessoal</span>
+            <span class="tag tag-red">consequências reais</span>
+            <span class="tag tag-rose">formação da tripulação</span>
+          </div>
+          <p style="margin-top:1rem;">Da fuga da mina à chegada a Orvacht. Escarleti aprende que ser a mais inteligente da sala não significa que a sala vai obedecer — e que liderança que funciona não é a que ela aprendeu na Formação de Consorte.</p>
+          <h3>Conflito central</h3>
+          <p>A patrulha do Almirantado que persegue a Perpétua é liderada por um oficial que conhecia o pai de Escarleti. Ele não quer capturá-la — quer salvá-la, do jeito que o sistema entende "salvar". O confronto acontece em camadas: tactical, pessoal, e na compreensão de que às vezes a pessoa que quer te ajudar e a pessoa que quer te prender estão fazendo a mesma coisa.</p>
+          <h3>Arco de personagem: Drok e Escarleti</h3>
+          <p>Drok a encontra às 3 da manhã estudando mapas de rotas orcs — por curiosidade pura, sem objetivo tático imediato. A partir desse momento, Drok nunca mais questiona a competência de Escarleti. Não porque foi convencida por discurso. Porque viu.</p>
+          <h3>Final do Arco I</h3>
+          <p>A tripulação poderia seguir caminhos separados em Orvacht. Ficam. Não porque Escarleti as convenceu — cada uma fica por razões completamente diferentes que a narrativa deixa claras sem explicar.</p>
+        </div>
+
+        <div class="arc-item">
+          <div class="arc-label">Arco II · Volume 2</div>
+          <div class="arc-title">Manifesto</div>
+          <div class="arc-sub">O Peso da Verdade</div>
+          <div class="tags">
+            <span class="tag tag-blue">conflito político</span>
+            <span class="tag tag-red">revelações</span>
+            <span class="tag tag-purple">custo da verdade</span>
+          </div>
+          <p style="margin-top:1rem;">A tentativa de publicar o Manifesto das Profundezas — o documento que prova o que a Companhia fez e continua fazendo. A resistência racial está fraturada entre facções que não confiam umas nas outras por razões históricas completamente justificadas. Voss aparece pessoalmente.</p>
+          <h3>Arco de personagem: Vael e Escarleti</h3>
+          <p>A revelação da traição de Vael no Arco II é deliberadamente mal programada: acontece no pior momento possível para Escarleti e no momento em que ela mais precisa de Vael. Ela usa Vael para continuar. E precisa lidar depois com o que isso diz sobre ela — que às vezes a decisão pragmática e a decisão certa não são a mesma coisa.</p>
+          <h3>Confronto com Voss</h3>
+          <p>Escarleti é capturada brevemente no Arco II. Voss oferece um acordo de imunidade — prático, racional, vantajoso para ela em termos puramente pessoais. Ela o olha com a consciência de quem sabe que ele matou o pai dela. Ele a olha exatamente como Herath Vael a teria olhado: como um problema a ser gerenciado com eficiência.</p>
+          <h3>Final do Arco II</h3>
+          <p>O Manifesto é publicado. Terremoto político. Maior derramamento de Névoa Cinza registrado. E no fundo do Abismo, algo que estava quieto começou a se mover.</p>
+        </div>
+
+        <div class="arc-item">
+          <div class="arc-label">Arco III · Volume 3</div>
+          <div class="arc-title">O Fundo</div>
+          <div class="arc-sub">O Que Sempre Esteve Lá</div>
+          <div class="tags">
+            <span class="tag tag-purple">conflito existencial</span>
+            <span class="tag tag-blue">resoluções</span>
+            <span class="tag tag-red">custo máximo</span>
+          </div>
+          <p style="margin-top:1rem;">Mira precisa chegar ao Abismo antes que O Inquilino acorde completamente. O Almirantado quer bombardear o Abismo — o que aceleraria o problema, não resolveria. A janela de tempo está se fechando em tempo real.</p>
+          <h3>A Escolha de Amvesh</h3>
+          <p>A rota para o Abismo passa por Amvesh. Onde Ossa está. Escarleti passa uma noite sozinha numa cabine com mapas. Não tem cena de decisão explícita — a cena seguinte mostra a rota traçada. A narrativa deixa o leitor calcular o que aquilo custou.</p>
+          <h3>A Aliança Impossível</h3>
+          <p>Chega um momento em que a única saída é contar a verdade sobre O Inquilino para Voss — e pedir passagem. Não porque é justo. Porque se Voss é realmente o pragmático que sempre se vendeu como sendo, o argumento funciona. E Escarleti tem razão: funciona.</p>
+          <p style="color:var(--accent5); font-style:italic;">A cena mais estranha da série: duas pessoas que têm todas as razões do mundo para se destruir mutuamente, sentadas em lados opostos de uma mesa, chegando à mesma conclusão por motivos completamente diferentes.</p>
+        </div>
+      </div>
+
+      <div class="page-nav">
+        <a href="inquilino.html" class="page-nav-prev">&larr; O Inquilino</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="horror.html" class="page-nav-next">O Horror do Abismo &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Magia &amp; Tecnologia</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:860px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+section { overflow-x:auto; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card.blue::before { background:var(--accent2); }
+.card.red::before { background:var(--accent4); }
+.card h3 { margin-top:0; }
+.twist-box { background:radial-gradient(ellipse at center, rgba(155,120,200,0.06) 0%, transparent 70%), var(--bg3); border:1px solid rgba(155,120,200,0.3); border-radius:8px; padding:2rem; margin:2rem 0; position:relative; }
+.twist-box h3 { color:var(--accent5); margin-top:0; }
+.twist-label { position:absolute; top:-10px; left:1.5rem; font-family:var(--display); font-size:9px; letter-spacing:0.2em; text-transform:uppercase; background:var(--bg3); padding:2px 8px; border:1px solid rgba(155,120,200,0.3); border-radius:3px; color:var(--accent5); }
+table { width:100%; border-collapse:collapse; margin:1.5rem 0; font-size:0.9rem; }
+th { font-family:var(--display); font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); padding:0.7rem 1rem; border-bottom:1px solid var(--border2); text-align:left; }
+td { padding:0.6rem 1rem; border-bottom:1px solid var(--border); color:var(--ink-dim); vertical-align:top; }
+td strong { color:var(--ink); }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:var(--bg3); }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="magia">
+      <div class="section-header">
+        <span class="section-icon">🔮</span>
+        <h2>Magia &amp; Tecnologia — O Éter Vivo</h2>
+      </div>
+
+      <div class="twist-box" style="border-color:rgba(201,135,42,0.4); background:radial-gradient(ellipse at center, rgba(201,135,42,0.05) 0%, transparent 70%), var(--bg3);">
+        <div class="twist-label" style="color:var(--accent); border-color:rgba(201,135,42,0.3);">⚠ REVELAÇÃO CENTRAL</div>
+        <h3 style="color:var(--accent);">O Éter Não É Combustível. É Sangue.</h3>
+        <p>A descoberta mais devastadora do Manifesto das Profundezas: o éter cristalizado não é um recurso natural inerte. É a <strong>manifestação física da memória coletiva</strong> de uma civilização extinta — comprimida, solidificada, fossilizada em milhões de anos de pressão oceânica.</p>
+        <p>Cada cristal queimado nos Motores de Éter destrói fragmentos irreversíveis de uma história que existiu antes de qualquer raça atual. Não é extração de combustível. É <strong>cremação de memória</strong>.</p>
+        <p>E a Companhia das Ilhas Profundas sabe disso há 200 anos.</p>
+      </div>
+
+      <h3>Como o Sistema Funciona</h3>
+      <p>O éter existe em três estados:</p>
+
+      <div class="card blue">
+        <h3>Éter Bruto</h3>
+        <p>Estado natural, encontrado nas profundezas. Fluido, luminescente, instável. Reage ao toque de raças com sensibilidade mágica — especialmente tritões e elfos, que conseguem "ouvir" fragmentos de memória ao entrar em contato. Os tritões são os únicos que conseguem mergulhar fundo o suficiente para extraí-lo sem morrer. Esta é a razão pela qual são tão valiosamente escravizados.</p>
+      </div>
+
+      <div class="card">
+        <h3>Éter Cristalizado</h3>
+        <p>Éter bruto que solidificou naturalmente em centenas de anos. Estável, transportável, comercializável. É o ouro de Thalvorn. Cresce nas paredes de cavernas submarinas, em certos recifes profundos e, raramente, no interior de criaturas que vivem nas zonas abissais.</p>
+      </div>
+
+      <div class="card red">
+        <h3>Névoa Cinza</h3>
+        <p>Subproduto da queima de éter cristalizado nos Motores. Uma poluição mágica que corrói o ambiente, mata corais, deforma fauna marinha e — em concentração alta — causa alucinações e loucura nas raças com maior sensibilidade mágica. Os elfos são os mais vulneráveis. Os humanos são quase imunes. Isso não é coincidência.</p>
+        <p style="color:var(--accent4); font-style:italic;">A Névoa Cinza não é poluição aleatória. É memória liberada em forma de fragmentos caóticos. Criaturas expostas "recordam" coisas que nunca viveram.</p>
+      </div>
+
+      <h3>Tecnologia Resultante</h3>
+      <table>
+        <thead><tr><th>Tecnologia</th><th>Função</th><th>Consequência</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Navios a Vapor de Éter</strong></td><td>Transporte, guerra, comércio</td><td>Rotas de Névoa nos oceanos centrais</td></tr>
+          <tr><td><strong>Canhões de Compressão</strong></td><td>Disparam rajadas de éter concentrado</td><td>Corrupção mágica na área de impacto</td></tr>
+          <tr><td><strong>Torres de Transmissão</strong></td><td>Comunicação instantânea entre ilhas</td><td>Enlouquece aves e cetáceos próximos</td></tr>
+          <tr><td><strong>Armaduras Mecanizadas</strong></td><td>Tropas de elite do Almirantado</td><td>Operadores humanos ficam surdos com 5 anos de uso</td></tr>
+          <tr><td><strong>Dirigíveis de Carga</strong></td><td>Logística em zonas sem porto</td><td>Precisam de manutenção constante — éter degrada os motores</td></tr>
+          <tr><td><strong>Coleiras de Supressão</strong></td><td>Bloqueiam magia em não-humanos</td><td>Uso prolongado causa danos neurológicos permanentes</td></tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav">
+        <a href="racas.html" class="page-nav-prev">&larr; Raças de Thalvorn</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="historia.html" class="page-nav-next">A História &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

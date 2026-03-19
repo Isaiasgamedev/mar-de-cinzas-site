@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Pirataria · O Terceiro Poder</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:900px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card.amber { border-color:rgba(201,135,42,0.3); }
+.card.blue::before { background:var(--accent2); }
+.card.blue { border-color:rgba(126,184,212,0.2); }
+.card.red::before { background:var(--accent4); }
+.card.red { border-color:rgba(212,112,112,0.2); }
+.card h3 { margin-top:0; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin:0.5rem 0; }
+.tag { font-family:var(--mono); font-size:10px; letter-spacing:0.08em; padding:3px 8px; border-radius:3px; border:1px solid; text-transform:uppercase; }
+.tag-amber { color:var(--accent); border-color:rgba(201,135,42,0.3); background:rgba(201,135,42,0.06); }
+.tag-blue { color:var(--accent2); border-color:rgba(126,184,212,0.3); background:rgba(126,184,212,0.06); }
+.tag-red { color:var(--accent4); border-color:rgba(212,112,112,0.3); background:rgba(212,112,112,0.06); }
+section { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:0.9rem; margin:1.5rem 0; }
+th { font-family:var(--display); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); padding:0.8rem 1rem; border-bottom:1px solid var(--border2); text-align:left; }
+td { padding:0.9rem 1rem; border-bottom:1px solid var(--border); color:var(--ink-dim); vertical-align:top; line-height:1.5; }
+td:first-child { color:var(--ink); font-weight:500; white-space:nowrap; font-family:var(--mono); font-size:0.85rem; }
+tr:hover td { background:rgba(255,255,255,0.02); }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="pirataria">
+      <div class="section-header">
+        <span class="section-icon">🏴‍☠️</span>
+        <h2>Pirataria — O Terceiro Poder</h2>
+      </div>
+
+      <p>Além da Aliança das Seis Coroas e das raças não-humanas, existe um terceiro poder em Thalvorn: o ecossistema pirata. Não uma nação, não uma facção coesa — um conjunto de interesses paralelos que às vezes se alinham, às vezes se destroem mutuamente, e que o Almirantado nunca conseguiu suprimir completamente porque suprimi-los destruiria rotas comerciais que a própria Aliança precisa.</p>
+
+      <div class="card amber">
+        <h3>As Vaethra — Posição no Terceiro Poder</h3>
+        <p>A Perpétua não tem bandeira, não tem afiliação, não tem proteção — e isso a deixa simultaneamente livre e extremamente vulnerável. Qualquer porto pode recusá-la. Qualquer navio pode atacá-la sem consequências diplomáticas.</p>
+        <p>O nome <em>vaethra</em> começa a circular nos portos antes das tripulantes saberem que é assim que as chamam. Piratas que descrevem encontros com uma embarcação que não atacou, que negociou, que não deixou mortos. O nome chega antes delas. Isso tem valor — e perigo.</p>
+        <div class="tags" style="margin-top:1rem;">
+          <span class="tag tag-amber">sem bandeira</span>
+          <span class="tag tag-blue">vaethra · sem corrente</span>
+          <span class="tag tag-red">alvo do almirantado</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>A Irmandade das Marés Livres</h3>
+        <p>A maior confederação pirata de Thalvorn. Funciona por reconhecimento mútuo — embarcações afiliadas exibem a âncora partida em fundo azul e esperam reciprocidade em portos amigos. Não tem hierarquia permanente: o Conselho das Sete Capitães é rotativo, com sede em Orvacht, e o assento só conta enquanto a capitã tem navios relevantes.</p>
+        <p>Capitã atual: <strong>Vareth Cin</strong>, elfa, 120 anos, dois navios de guerra capturados do Almirantado. Rancor pessoal com o Almirante Voss por motivos que ela menciona com a freqüência exata de alguém que quer que todos saibam sem ter que explicar.</p>
+        <p>A Irmandade não é aliada natural da Perpétua — mas é a entidade mais capaz de oferecer recursos, informação e portos seguros no momento em que a tripulação mais precisa.</p>
+      </div>
+
+      <div class="card blue">
+        <h3 style="color:var(--accent2);">Contrabandistas de Éter Bruto</h3>
+        <p>O comércio mais perigoso e mais lucrativo de Thalvorn. Éter bruto extraído ilegalmente de tritões que escapam das minas — ou que nunca foram às minas, mas encontraram depósitos naturais em profundidades que a Companhia ainda não mapeou.</p>
+        <p>Posse ilegal de éter não-processado por não-humanos equivale à escravidão imediata segundo a lei da Aliança. O risco é imenso e o mercado é enorme porque a demanda da Companhia nunca é totalmente suprida pelos canais oficiais.</p>
+        <p>A Perpétua não é traficante de éter. Mas vai precisar de contatos nessa rede para navegar certas rotas — e aceitar uma transação significa escolher um lado numa guerra econômica que já estava em andamento antes da fuga da mina.</p>
+      </div>
+
+      <div class="card red">
+        <h3 style="color:var(--accent4);">Os Corsários Imperiais</h3>
+        <p>O Almirantado terceiriza parte da perseguição a piratas para operadores privados — corsários com carta de marca oficial. Recebem 30% de tudo o que confiscam e imunidade processual por danos colaterais. É a política mais eficiente para criar exatamente o tipo de violência privada que convém ao Estado sem responsabilidade direta.</p>
+        <p><strong>Rhenk Adara</strong> — ex-membro da Irmandade, traiu três capitãs por cartaz de captura, tem ódio pessoal de Vareth Cin que provavelmente é mútuo. Tem um talento específico para aparecer nos momentos mais inconvenientes para a Perpétua.</p>
+        <p>Não é o antagonista principal da série — mas é o tipo de problema que não se resolve de vez: apenas se adia.</p>
+      </div>
+
+      <h3>O Código da Irmandade das Marés Livres</h3>
+      <p style="font-size:0.9rem; color:var(--ink-faint); margin-bottom:1rem;">Não é lei. É o mínimo que mantém a confederação funcionando. Violações são resolvidas por duelo ou por voto do Conselho, dependendo da gravidade.</p>
+      <table>
+        <thead>
+          <tr><th>Artigo</th><th>Princípio</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>I</td><td>Cada tripulante tem voto igual em decisões de rota, alvo e divisão. A capitã decide em emergência tática, não em política.</td></tr>
+          <tr><td>II</td><td>Saque é dividido por partes iguais entre tripulantes, com parcela extra para a capitã e mestre de máquinas. Sem exceção.</td></tr>
+          <tr><td>III</td><td>Ninguém é propriedade. Nenhum contrato de tripulante vincula depois do porto. Saída voluntária não é deserção.</td></tr>
+          <tr><td>IV</td><td>Deserção em combate é punida com expulsão da Irmandade e registro em todos os portos afiliados. Não com morte — mas é equivalente.</td></tr>
+          <tr><td>V</td><td>Dívidas contraídas em terra são dívidas de pessoa física, não da embarcação. A capitã não é responsável pelos débitos da tripulação.</td></tr>
+          <tr><td>VI</td><td>Navios da Irmandade não se atacam. Disputas entre afiliadas vão ao Conselho, não ao canhão.</td></tr>
+          <tr><td>VII</td><td>Prisioneiros de combate têm direito a água, comida e negociação de resgate. Execução de prisioneiro sem julgamento viola o Código.</td></tr>
+          <tr><td>VIII</td><td>A capitã pode ser substituída por voto de dois terços da tripulação em qualquer momento. Não precisa de motivo. Precisa de votos.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="page-nav">
+        <a href="horror.html" class="page-nav-prev">&larr; O Horror do Abismo</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="navegacao.html" class="page-nav-next">Navegação &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

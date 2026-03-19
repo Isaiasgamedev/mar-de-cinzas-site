@@ -3,301 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mar de Cinzas — Capítulo 1: O Começo do Fim</title>
+<title>Capítulo 1: O Começo do Fim — Mar de Cinzas</title>
+<meta name="description" content="Capítulo 1 de Mar de Cinzas. A cerimônia das Doze Obrigações e a fuga de Elizabeth Thoss.">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/chapter.css">
-<!--REMOVED_CSS
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
 
-  :root {
-    --bg: #09090f;
-    --surface: #0f1019;
-    --text: #ddd0b8;
-    --text-muted: #8a7f6a;
-    --text-dim: #524b3c;
-    --accent: #4a8fa8;
-    --gold: #b8915a;
-    --gold-dim: #6b5232;
-    --rule: #1e1e2a;
-    --serif: 'EB Garamond', Georgia, serif;
-    --display: 'Cinzel', Georgia, serif;
-  }
+/* ══ READING EXPERIENCE ══ */
 
-  html { background: var(--bg); }
+.reading-wrap {
+  max-width: var(--read-w);
+  margin: 0 auto;
+  padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem;
+}
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--serif);
-    font-size: 19px;
-    line-height: 1.85;
-    min-height: 100vh;
-  }
+/* ── chapter header ── */
+.chapter-header {
+  text-align: center;
+  padding-bottom: 3.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
 
-  .page {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 80px 40px 120px;
-  }
+.ch-series {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1.6rem;
+}
 
-  .book-header {
-    text-align: center;
-    margin-bottom: 72px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid var(--gold-dim);
-    position: relative;
-  }
+.ch-number {
+  font-family: var(--display);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.8rem;
+}
 
-  .book-header::after {
-    content: '⚓';
-    position: absolute;
-    bottom: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--bg);
-    padding: 0 16px;
-    font-size: 20px;
-    color: var(--gold);
-  }
+.ch-title-main {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
 
-  .series-label {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
+.ch-subtitle {
+  font-family: var(--display);
+  font-size: 0.6rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
 
-  .book-title {
-    font-family: var(--display);
-    font-size: 42px;
-    font-weight: 400;
-    color: var(--text);
-    letter-spacing: 0.08em;
-    line-height: 1.2;
-    margin-bottom: 8px;
-  }
+.ch-ornament {
+  font-size: 1.5rem;
+  opacity: 0.2;
+  margin: 2rem auto 0;
+  filter: sepia(0.5);
+}
 
-  .book-subtitle {
-    font-family: var(--display);
-    font-size: 13px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-  }
+/* ── prose ── */
+.reading-wrap p {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 1.2em;
+}
 
-  .chapter-label {
-    font-family: var(--display);
-    font-size: 13px;
-    letter-spacing: 0.18em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-  }
+.drop-cap::first-letter {
+  font-family: var(--display);
+  font-size: 4.2em;
+  font-weight: 900;
+  line-height: 0.75;
+  float: left;
+  margin: 0.08em 0.1em 0 0;
+  color: var(--gold);
+}
 
-  .chapter-title {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 22px;
-    color: var(--text-muted);
-    margin-top: 6px;
-    font-weight: 400;
-  }
+.thought {
+  font-style: italic;
+  color: var(--sea);
+}
 
-  p {
-    margin-bottom: 1.4em;
-    text-align: justify;
-    hyphens: auto;
-  }
+/* scene breaks */
+.scene-break {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--faint);
+  letter-spacing: 0.5em;
+  margin: 2.5rem 0;
+  user-select: none;
+}
 
-  p + p { text-indent: 2em; margin-top: -0.4em; }
+.ornament-break {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--gold-dim);
+  opacity: 0.4;
+  margin: 3.5rem 0;
+  user-select: none;
+}
 
-  .section-start p:first-of-type,
-  h2 + p,
-  h3 + p,
-  .drop-cap-para { text-indent: 0 !important; }
+/* chapter section headings */
+.reading-wrap h2 {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin: 3.5rem 0 1.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
 
-  .drop-cap-para::first-letter {
-    font-family: var(--display);
-    font-size: 5.2em;
-    font-weight: 400;
-    float: left;
-    line-height: 0.72;
-    margin: 0.08em 0.1em 0 0;
-    color: var(--gold);
-  }
+/* time label */
+.time-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sea-dim);
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
 
-  .thought {
-    font-style: italic;
-    color: var(--text-muted);
-  }
+/* pull quote / speech */
+.pull-quote {
+  border-left: 2px solid var(--gold-dim);
+  padding: 0 0 0 1.4rem;
+  margin: 2rem 0;
+}
 
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 52px 0;
-    color: var(--gold-dim);
-    font-size: 14px;
-  }
+.pull-quote p {
+  font-style: italic;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.3vw, 1.15rem);
+}
 
-  .divider::before,
-  .divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, transparent, var(--gold-dim));
-  }
+.pull-quote cite {
+  display: block;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+  font-style: normal;
+  margin-top: -0.6rem;
+  margin-bottom: 1.2em;
+}
 
-  .divider::after {
-    background: linear-gradient(to left, transparent, var(--gold-dim));
-  }
+/* obligations block */
+.obligations {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2.5rem 2rem;
+  background: var(--bg3);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
 
-  .scene-break {
-    text-align: center;
-    color: var(--text-dim);
-    margin: 36px 0;
-    letter-spacing: 0.5em;
-    font-size: 13px;
-  }
+.obligation-item {
+  border-left: 2px solid var(--rule2);
+  padding-left: 1.2rem;
+}
 
-  .obligations-block {
-    margin: 40px 0;
-  }
+.ob-number {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 0.15rem;
+}
 
-  .obligation {
-    margin-bottom: 40px;
-    padding-left: 0;
-  }
+.ob-name {
+  font-family: var(--display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
 
-  .obligation-number {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--gold);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 4px;
-  }
+.ob-refusal {
+  font-family: var(--display);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 0.6rem;
+}
 
-  .obligation-name {
-    font-family: var(--display);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--text-muted);
-    display: block;
-    margin-bottom: 10px;
-  }
+.ob-response {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 !important;
+}
 
-  .obligation-refusal {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 8px;
-  }
+.ob-response.weight {
+  color: var(--text);
+}
 
-  .obligation-response {
-    font-style: italic;
-    color: var(--text);
-    padding-left: 20px;
-    border-left: 2px solid var(--gold-dim);
-    line-height: 1.7;
-    font-size: 18px;
-  }
+/* chapter end */
+.chapter-end {
+  text-align: center;
+  padding-top: 3.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
 
-  .obligation-response.weight {
-    border-left-color: var(--accent);
-    color: #c8d8e0;
-    font-size: 19px;
-  }
+.end-label {
+  font-family: var(--mono) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.28em !important;
+  text-transform: uppercase;
+  color: var(--faint) !important;
+  font-style: normal !important;
+  margin: 0 !important;
+}
 
-  .pull-quote {
-    margin: 48px 0;
-    padding: 24px 32px;
-    border-left: 3px solid var(--gold);
-    background: rgba(184, 145, 90, 0.04);
-  }
+/* ── chapter nav ── */
+.chapter-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
 
-  .pull-quote p {
-    font-style: italic;
-    font-size: 21px;
-    color: var(--text);
-    margin: 0;
-    text-indent: 0 !important;
-    line-height: 1.6;
-  }
+.ch-nav-prev,
+.ch-nav-next {
+  font-family: var(--display);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--rule2);
+  border-radius: 4px;
+  color: var(--muted);
+  transition: all 0.15s;
+}
 
-  .pull-quote cite {
-    display: block;
-    margin-top: 12px;
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    color: var(--text-muted);
-    font-style: normal;
-    font-family: var(--display);
-    text-transform: uppercase;
-  }
+.ch-nav-prev { text-align: left; }
+.ch-nav-next { text-align: right; }
+.ch-nav-prev:hover, .ch-nav-next:hover {
+  border-color: var(--gold-dim);
+  color: var(--text);
+}
 
-  h2 {
-    font-family: var(--display);
-    font-size: 13px;
-    letter-spacing: 0.22em;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-weight: 400;
-    margin: 56px 0 20px;
-    text-align: center;
-  }
+.ch-nav-prev.disabled,
+.ch-nav-next.disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
 
-  .label {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    color: var(--accent);
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 16px;
-    text-align: center;
-  }
+.ch-nav-center {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
 
-  .chapter-end {
-    text-align: center;
-    margin-top: 80px;
-    padding-top: 48px;
-    border-top: 1px solid var(--gold-dim);
-    position: relative;
-  }
+.ch-nav-center:hover { color: var(--gold-dim); }
 
-  .chapter-end::before {
-    content: '⚓';
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--bg);
-    padding: 0 16px;
-    font-size: 18px;
-    color: var(--gold);
-  }
+/* ══ RESPONSIVE ══ */
+@media (max-width: 520px) {
+  .reading-wrap { padding-top: calc(var(--nav-h) + 2.5rem); }
+  .drop-cap::first-letter { font-size: 3.6em; }
+  .obligations { padding: 1.5rem 1.2rem; }
+  .chapter-nav { grid-template-columns: 1fr 1fr; }
+  .ch-nav-center { display: none; }
+}
 
-  .end-label {
-    font-family: var(--display);
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 600px) {
-    .page { padding: 48px 24px 80px; }
-    .book-title { font-size: 30px; }
-    body { font-size: 17px; }
-  }
-REMOVED_CSS-->
+</style>
 </head>
 <body>
 
@@ -310,33 +311,30 @@ REMOVED_CSS-->
     <div class="nav-links" id="site-nav-links">
       <a href="../index.html">Início</a>
       <a href="../capitulos/" class="active">Capítulos</a>
-      <a href="../project-bible.html">Project Bible</a>
+      <a href="../universo/">Universo</a>
     </div>
   </div>
 </nav>
 
-<div class="page">
+<div class="reading-wrap">
 
-  <!-- HEADER -->
-  <header class="book-header">
-    <p class="series-label">Mar de Cinzas</p>
-    <h1 class="book-title">O Começo<br>do Fim</h1>
-    <p class="book-subtitle">The Sea of Ashes</p>
-    <p class="chapter-label">Capítulo Um</p>
-    <p class="chapter-title">— O Começo do Fim —</p>
+  <!-- CHAPTER HEADER -->
+  <header class="chapter-header">
+    <p class="ch-series">Mar de Cinzas &nbsp;·&nbsp; Arco I — Fuga</p>
+    <p class="ch-number">Capítulo Um</p>
+    <h1 class="ch-title-main">O Começo<br>do Fim</h1>
+    <p class="ch-subtitle">The Beginning of the End</p>
+    <div class="ch-ornament">⚓</div>
   </header>
 
+  <!-- OPENING -->
+  <p class="drop-cap">A porta do Salão Vael-Thoss se abriu com tanta força que o som ecoou como um tiro de canhão. Quatro guardas do Almirantado entraram. Armadura completa. Éter nas lanternas do peito brilhando azul-frio. Rostos escondidos sob viseiras de ferro que os faziam parecer menos homens e mais máquinas — o que era, sem nenhuma dúvida, exatamente o efeito desejado.</p>
 
-  <!-- OPENING SCENE -->
-  <div class="section-start">
-    <p class="drop-cap-para">A porta do Salão Vael-Thoss se abriu com tanta força que o som ecoou como um tiro de canhão. Quatro guardas do Almirantado entraram. Armadura completa. Éter nas lanternas do peito brilhando azul-frio. Rostos escondidos sob viseiras de ferro que os faziam parecer menos homens e mais máquinas — o que era, sem nenhuma dúvida, exatamente o efeito desejado.</p>
+  <p>Elizabeth Thoss os viu chegar.</p>
 
-    <p>Elizabeth Thoss os viu chegar.</p>
+  <p><span class="thought">Quatro. Mais dois na saída lateral — provavelmente mais uns dez espalhados por todas as saídas, janelas e possíveis aberturas. Afinal, não permitiriam que ela se tornasse uma noiva em fuga.</span></p>
 
-    <p><span class="thought">Quatro. Mais dois na saída lateral — provavelmente mais uns dez espalhados por todas as saídas, janelas e possíveis aberturas. Afinal, não permitiriam que ela se tornasse uma noiva em fuga.</span></p>
-
-    <p>Ela tinha catorze anos. O vestido de noiva ainda estava no corpo quando os guardas cruzaram o salão em sua direção. Nenhum dos presentes disse uma palavra.</p>
-  </div>
+  <p>Ela tinha catorze anos. O vestido de noiva ainda estava no corpo quando os guardas cruzaram o salão em sua direção. Nenhum dos presentes disse uma palavra.</p>
 
   <div class="scene-break">· · ·</div>
 
@@ -372,12 +370,12 @@ REMOVED_CSS-->
 
   <p>Mas ela sorriu.</p>
 
-  <div class="divider">⚓</div>
+  <div class="ornament-break">⚓</div>
 
   <!-- FLASHBACK -->
-  <span class="label">Cinco horas antes</span>
+  <span class="time-label">Cinco horas antes</span>
 
-  <p class="drop-cap-para">Elizabeth Thoss estava de pé na entrada do Salão Vael-Thoss com o braço do pai em volta do dela, e o pensamento mais claro da sua vida instalado com precisão atrás dos olhos:</p>
+  <p class="drop-cap">Elizabeth Thoss estava de pé na entrada do Salão Vael-Thoss com o braço do pai em volta do dela, e o pensamento mais claro da sua vida instalado com precisão atrás dos olhos:</p>
 
   <p><span class="thought">Coragem, Eli. As suas opções são bem simples. Morrer pela escolha dos outros, ou morrer pelas suas próprias escolhas.</span></p>
 
@@ -409,7 +407,7 @@ REMOVED_CSS-->
 
   <p>Scarn Vael havia se casado cinco vezes. O número máximo tolerado mesmo numa sociedade que permitia múltiplos vínculos simultâneos — porque três das anteriores haviam morrido, e três mortes abriam espaço para três novas aquisições, e Elizabeth seria a sexta. A primeira esposa morreu de febre súbita dezoito meses após o casamento. A segunda de colapso cardíaco de origem desconhecida dois anos depois. A terceira afogou-se no porto durante um passeio de barco noturno. Sozinha. Num navio ancorado.</p>
 
-  <p>Elizabeth havia passado seis meses investigando aquelas mortes por todos os meios que conseguiu. Leu os relatórios médicos que o pai deixava abertos na mesa de trabalho. Percorreu as ruas disfarçada de garoto de rua, ouvindo o que os criados de famílias ricas conversavam entre si nos mercados — porque criados de casas poderosas sabem de coisas que nunca chegam a papel nenhum. Chegou até mesmo a se passar por funcionária nova na propriedade dos Vael, durante três dias, varrendo corredores e servindo chá a pessoas que não a olhavam, absorvendo rumores e sussurros e omissões cuidadosas que só quem é invisível consegue ouvir. Havia lido sobre éter em concentrações baixas, sobre os efeitos de exposição prolongada em humanos de sensibilidade reduzida, sobre como certos compostos derivados da Névoa Cinza imitavam sintomas naturais de forma que nenhum médico comum reconheceria.</p>
+  <p>Elizabeth havia passado seis meses investigando aquelas mortes por todos os meios que conseguiu. Leu os relatórios médicos que o pai deixava abertos na mesa de trabalho. Percorreu as ruas disfarçada de garoto de rua, ouvindo o que os criados de famílias ricas conversavam entre si nos mercados — porque criados de casas poderosas sabem de coisas que nunca chegam a papel nenhum. Chegou até mesmo a se passar por funcionária nova na propriedade dos Vael, durante três dias, varrendo corredores e servindo chá a pessoas que não a olhavam, absorvendo rumores e sussurros e omissões cuidadosas que só quem é invisível consegue ouvir.</p>
 
   <p>Ela não tinha prova formal. Tinha algo melhor: catorze anos de invisibilidade, seis meses de pesquisa, os relatos de quatro criadas diferentes que nunca souberam que estavam sendo ouvidas, e uma mente que não esquecia nada.</p>
 
@@ -421,11 +419,9 @@ REMOVED_CSS-->
 
   <p>Scarn Vael havia sido uma exceção impossível. Uma abertura que não abria duas vezes.</p>
 
-  <p>Elizabeth sabia disso. Sabia que o pai acreditava, genuinamente, que estava fazendo o melhor que qualquer pai em sua posição poderia fazer. Que havia pesquisado o nome, a patente, as conexões — tudo o que se pesquisa quando se quer garantir o futuro de uma filha. O que ele não havia pesquisado eram as mortes. Não porque não quisesse saber. Porque não sabia onde procurar. O pai nunca havia sido invisível o suficiente para aprender onde as coisas reais ficam escondidas.</p>
+  <p>Elizabeth sabia disso. Sabia que o pai acreditava, genuinamente, que estava fazendo o melhor que qualquer pai em sua posição poderia fazer. O que ele não havia pesquisado eram as mortes. Não porque não quisesse saber. Porque não sabia onde procurar. O pai nunca havia sido invisível o suficiente para aprender onde as coisas reais ficam escondidas.</p>
 
   <p><span class="thought">Ele não sabe o que eu sei. E mesmo que soubesse — o que ele poderia fazer? Filhas da nossa classe que não casam entre os doze e os dezesseis esperam o pior. Entre os dezessete e os vinte, aceitam o que aparecer. Acima disso, deixam de ser filhas para se tornarem peso. Eu tenho catorze anos e sem magia alguma — ele está gastando o que tem de influência numa oportunidade que não voltará. Ele me ama. É por isso que está aqui. E é exatamente por isso que eu precisava fazer o que farei.</span></p>
-
-  <p>Ela olhou para ele novamente. Ele estava com a mandíbula levemente firme — o sinal dele, que ela conhecia desde criança, de quando segurava emoção que não sabia como nomear. Não estava chorando. Estava esperando. Com a esperança quieta e prática de um homem que fez o que podia e agora aguarda o resultado.</p>
 
   <p>Ela deu um leve aperto no braço dele antes de se soltar. Ele não disse nada. Não havia nada a dizer.</p>
 
@@ -455,95 +451,94 @@ REMOVED_CSS-->
 
   <p>Ela se virou para o salão. Não para Scarn. Para todos que estavam olhando para ela.</p>
 
-
   <!-- OBLIGATIONS -->
-  <div class="obligations-block">
+  <div class="obligations">
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo I</span>
-      <span class="obligation-name">A Obrigação do Nome</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque gosto do meu nome. Thoss. É curto, tem peso, bate nos dentes no começo e abre no final — Thoss. Já Vael termina antes de começar. Elizabeth Vael perde toda a identidade em três sílabas. Tentei me acostumar durante três meses. Não funciona. O nome é meu. Fica comigo.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo I</p>
+      <p class="ob-name">A Obrigação do Nome</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque gosto do meu nome. Thoss. É curto, tem peso, bate nos dentes no começo e abre no final — Thoss. Já Vael termina antes de começar. Elizabeth Vael perde toda a identidade em três sílabas. Tentei me acostumar durante três meses. Não funciona. O nome é meu. Fica comigo.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo II</span>
-      <span class="obligation-name">A Obrigação da Residência</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo me obriga a seguir residência a critério exclusivo do Comandante, sem direito de recusa, sem prazo de adaptação, sem nenhuma voz sobre para onde ou por quanto tempo. Isso não é casamento. É transferência de propriedade com o endereço em aberto. Não me interessa.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo II</p>
+      <p class="ob-name">A Obrigação da Residência</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo me obriga a seguir residência a critério exclusivo do Comandante, sem direito de recusa, sem prazo de adaptação, sem nenhuma voz sobre para onde ou por quanto tempo. Isso não é casamento. É transferência de propriedade com o endereço em aberto. Não me interessa.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo III</span>
-      <span class="obligation-name">A Obrigação da Voz</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo proíbe opinião espontânea em contexto que não seja doméstico imediato. Estou expressando uma opinião espontânea agora, em contexto que definitivamente não é doméstico imediato, na frente de todos aqui. Isso significa que já estou em infração. Sendo assim, não vejo motivo para parar.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo III</p>
+      <p class="ob-name">A Obrigação da Voz</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo proíbe opinião espontânea em contexto que não seja doméstico imediato. Estou expressando uma opinião espontânea agora, em contexto que definitivamente não é doméstico imediato, na frente de todos aqui. Isso significa que já estou em infração. Sendo assim, não vejo motivo para parar.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo IV</span>
-      <span class="obligation-name">A Obrigação da Guarda</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo me obriga a guardar segredos domésticos com o mesmo rigor de sigilo aplicado a oficiais do Almirantado — inclusive irregularidades internas. Sou péssima em guardar segredos que não escolhi guardar. Se souber de algo errado, vou falar. Esse é um traço de caráter inconveniente, admito. Mas não tenho como consertá-lo em tempo hábil.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo IV</p>
+      <p class="ob-name">A Obrigação da Guarda</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo me obriga a guardar segredos domésticos com o mesmo rigor de sigilo aplicado a oficiais do Almirantado — inclusive irregularidades internas. Sou péssima em guardar segredos que não escolhi guardar. Se souber de algo errado, vou falar. Esse é um traço de caráter inconveniente, admito. Mas não tenho como consertá-lo em tempo hábil.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo V</span>
-      <span class="obligation-name">A Obrigação da Linhagem</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo descreve, com alguma elegância jurídica, um serviço de reprodução compulsória sem cláusula de recusa. Não sou contra o conceito de família em abstrato. Sou contra a ausência da minha própria voz em qualquer decisão relacionada ao assunto. Esse artigo remove essa voz por completo. Não concordo.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo V</p>
+      <p class="ob-name">A Obrigação da Linhagem</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo descreve, com alguma elegância jurídica, um serviço de reprodução compulsória sem cláusula de recusa. Não sou contra o conceito de família em abstrato. Sou contra a ausência da minha própria voz em qualquer decisão relacionada ao assunto. Esse artigo remove essa voz por completo. Não concordo.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo VI</span>
-      <span class="obligation-name">A Obrigação da Representação</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque esse artigo transforma minha aparência, minhas roupas, minhas companhias e meu comportamento público em extensão da imagem institucional do Comandante, sujeitos à aprovação prévia dele. Isso significa que eu deixo de ser uma pessoa e passo a ser parte do uniforme de outro. Não é isso que sou. Não é isso que vou ser.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo VI</p>
+      <p class="ob-name">A Obrigação da Representação</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque esse artigo transforma minha aparência, minhas roupas, minhas companhias e meu comportamento público em extensão da imagem institucional do Comandante, sujeitos à aprovação prévia dele. Isso significa que eu deixo de ser uma pessoa e passo a ser parte do uniforme de outro. Não é isso que sou. Não é isso que vou ser.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo VII</span>
-      <span class="obligation-name">A Obrigação Patrimonial</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response weight">Não aceito. E deixo claro que é neste artigo, especificamente, que a linguagem para de ser inconveniência e passa a ser crime. Pela leitura do texto: tudo que possuo, tudo que vier a possuir, tudo que alguém me der — herança, benfeitoria, qualquer bem presente ou futuro — passa integralmente ao Comandante no momento desta cerimônia. Sem compensação. Sem possibilidade de recusa. Sem reversão em nenhuma circunstância. No Código Comercial Naval, esse instrumento tem um nome técnico. Chamamos de confisco de ativos. Aplicamos a navios capturados em zona de guerra. Este artigo aplica o mesmo instrumento a uma pessoa. A diferença é que aqui está escrito em papel bom, com caligrafia bonita, numa sala com éter no piso. Não aceito.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo VII</p>
+      <p class="ob-name">A Obrigação Patrimonial</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response weight">Não aceito. E deixo claro que é neste artigo, especificamente, que a linguagem para de ser inconveniência e passa a ser crime. Pela leitura do texto: tudo que possuo, tudo que vier a possuir, tudo que alguém me der — herança, benfeitoria, qualquer bem presente ou futuro — passa integralmente ao Comandante no momento desta cerimônia. Sem compensação. Sem possibilidade de recusa. Sem reversão em nenhuma circunstância. No Código Comercial Naval, esse instrumento tem um nome técnico. Chamamos de confisco de ativos. Aplicamos a navios capturados em zona de guerra. Este artigo aplica o mesmo instrumento a uma pessoa. A diferença é que aqui está escrito em papel bom, com caligrafia bonita, numa sala com éter no piso. Não aceito.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo VIII</span>
-      <span class="obligation-name">A Obrigação do Estudo</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo proíbe busca de conhecimento fora das áreas de utilidade doméstica e obriga a declarar, ao Comandante, qualquer conhecimento que já possua além desse escopo. Memorizei as rotas de navegação do arquipélago de Dornath. Sei os nomes e resultados de cada campanha representada nas condecorações do peito do meu noivo. Li relatórios médicos do Almirantado. Se for declarar tudo que sei que excede utilidade doméstica, vamos estar aqui por muitos anos. Prefiro não.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo VIII</p>
+      <p class="ob-name">A Obrigação do Estudo</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo proíbe busca de conhecimento fora das áreas de utilidade doméstica e obriga a declarar, ao Comandante, qualquer conhecimento que já possua além desse escopo. Memorizei as rotas de navegação do arquipélago de Dornath. Sei os nomes e resultados de cada campanha representada nas condecorações do peito do meu noivo. Li relatórios médicos do Almirantado. Se for declarar tudo que sei que excede utilidade doméstica, vamos estar aqui por muitos anos. Prefiro não.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo IX</span>
-      <span class="obligation-name">A Obrigação da Lealdade Hierárquica</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo exige que, em qualquer conflito entre os interesses da minha família e os interesses do Comandante, eu priorize o Comandante — em todo e qualquer âmbito, incluindo testemunho legal. Olhei para meu pai há dois minutos. Não consigo assinar um contrato que juridicamente o torna menos importante para mim do que um homem que conheço há seis meses. Não funciona dessa forma.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo IX</p>
+      <p class="ob-name">A Obrigação da Lealdade Hierárquica</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo exige que, em qualquer conflito entre os interesses da minha família e os interesses do Comandante, eu priorize o Comandante — em todo e qualquer âmbito, incluindo testemunho legal. Olhei para meu pai há dois minutos. Não consigo assinar um contrato que juridicamente o torna menos importante para mim do que um homem que conheço há seis meses. Não funciona dessa forma.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo X</span>
-      <span class="obligation-name">A Obrigação da Imobilidade</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo proíbe viagens, ausências superiores a três dias e qualquer correspondência com pessoas não aprovadas, tudo sujeito a autorização prévia e por escrito. Não sei viver parada. Nunca soube. Não é preferência — é constituição. Três dias imóvel e a cabeça começa a funcionar mal. Imobilidade como regra de vida vai ser problema para todos os envolvidos, e principalmente para o Comandante, que vai ter que lidar com as consequências.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo X</p>
+      <p class="ob-name">A Obrigação da Imobilidade</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo proíbe viagens, ausências superiores a três dias e qualquer correspondência com pessoas não aprovadas, tudo sujeito a autorização prévia e por escrito. Não sei viver parada. Nunca soube. Não é preferência — é constituição. Três dias imóvel e a cabeça começa a funcionar mal. Imobilidade como regra de vida vai ser problema para todos os envolvidos, e principalmente para o Comandante, que vai ter que lidar com as consequências.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo XI</span>
-      <span class="obligation-name">A Obrigação do Silêncio Deliberativo</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo me reduz a observadora em qualquer matéria com consequência além do cotidiano imediato — política, estratégia, comércio, administração. Posso estar na sala, mas sem voto, sem iniciativa e com opinião espontânea classificável como irregularidade registrável. — Ela olhou em volta do salão, vagarosa, como quem faz uma contagem silenciosa. — Aproximadamente metade de todos aqui nasce com essa condição. Esse artigo formaliza o que já existe informalmente. Prefiro que o que existe informalmente permaneça sem contrato.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo XI</p>
+      <p class="ob-name">A Obrigação do Silêncio Deliberativo</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo me reduz a observadora em qualquer matéria com consequência além do cotidiano imediato — política, estratégia, comércio, administração. Posso estar na sala, mas sem voto, sem iniciativa e com opinião espontânea classificável como irregularidade registrável. — Ela olhou em volta do salão, vagarosa, como quem faz uma contagem silenciosa. — Aproximadamente metade de todos aqui nasce com essa condição. Esse artigo formaliza o que já existe informalmente. Prefiro que o que existe informalmente permaneça sem contrato.</p>
     </div>
 
-    <div class="obligation">
-      <span class="obligation-number">Artigo XII</span>
-      <span class="obligation-name">A Obrigação da Permanência</span>
-      <span class="obligation-refusal">Não aceito</span>
-      <p class="obligation-response">Não aceito porque o artigo declara o vínculo irrevogável por iniciativa minha em vida — sem possibilidade de dissolução, sem mediação unilateral, sem petição ao Almirantado sem consentimento do Comandante. E em viuvez, as disposições permanecem vigentes pelo período que o Almirantado determinar. Em resumo: entro nesse vínculo com permissão de sair apenas morta, e mesmo morta há pendências. — Uma pausa. — Doze artigos. Nenhum aceito. Isso é tudo.</p>
+    <div class="obligation-item">
+      <p class="ob-number">Artigo XII</p>
+      <p class="ob-name">A Obrigação da Permanência</p>
+      <p class="ob-refusal">Não aceito</p>
+      <p class="ob-response">Não aceito porque o artigo declara o vínculo irrevogável por iniciativa minha em vida — sem possibilidade de dissolução, sem mediação unilateral, sem petição ao Almirantado sem consentimento do Comandante. E em viuvez, as disposições permanecem vigentes pelo período que o Almirantado determinar. Em resumo: entro nesse vínculo com permissão de sair apenas morta, e mesmo morta há pendências. — Uma pausa. — Doze artigos. Nenhum aceito. Isso é tudo.</p>
     </div>
 
-  </div>
+  </div><!-- /obligations -->
 
   <div class="scene-break">· · ·</div>
 
@@ -561,9 +556,11 @@ REMOVED_CSS-->
 
   <p>O rosto de Scarn Vael ficou da cor do mármore.</p>
 
-  <div class="divider">⚓</div>
+  <div class="ornament-break">⚓</div>
 
   <!-- AFTERMATH -->
+  <h2>Fim da cerimônia</h2>
+
   <p>O silêncio que veio depois foi o tipo de silêncio que acontece quando todos processam simultaneamente a mesma informação e nenhum sabe o que fazer com ela. Scarn se virou para os conselheiros do Consórcio Vael na segunda fileira.</p>
 
   <p>— Sala de deliberação. Agora.</p>
@@ -622,7 +619,7 @@ REMOVED_CSS-->
 
   <p>— Se eu soubesse —</p>
 
-  <p>— Eu sei. — Ela o olhou de lado. — Você não sabia onde procurar. Eu sabia. Isso não é culpa sua.</p>
+  <p>— Eu sei. — Ela o olhou. — Você não sabia onde procurar. Eu sabia. Isso não é culpa sua.</p>
 
   <p>Ele assentiu devagar. Era o assentimento de um homem que estava aceitando uma coisa desconfortável porque era verdade e porque a filha havia dito com gentileza suficiente para que ele pudesse aceitá-la.</p>
 
@@ -636,8 +633,6 @@ REMOVED_CSS-->
 
   <p>Ele ficou quieto por um tempo. Não a abraçou — não eram esse tipo de família, especialmente não num salão ainda com velas acesas e guardas no corredor. Mas havia algo diferente no rosto dele agora. Não era alívio. Era aquela expressão que Elizabeth havia visto nele poucas vezes — quando ela fazia algo que ele não havia ensinado, algo que ele não sabia de onde havia vindo, e ele olhava para a filha como se estivesse vendo uma pessoa que não sabia que existia.</p>
 
-  <p>Confuso. Preocupado. E, no fundo, satisfeito de um jeito que ele provavelmente não saberia nomear.</p>
-
   <p>— Farei o que puder — disse ele, por fim. — Mas não existe muito que eu possa fazer.</p>
 
   <p>— Eu sei, pai.</p>
@@ -646,12 +641,12 @@ REMOVED_CSS-->
 
   <p>Ela não respondeu. Mas ficou ao lado dele até que o barulho de botas no corredor anunciasse que os conselheiros estavam voltando, e só então ele deu um passo para trás.</p>
 
-  <div class="divider">⚓</div>
+  <div class="ornament-break">⚓</div>
 
   <!-- DELIBERATION -->
-  <h2>A Deliberação</h2>
+  <h2>A deliberação</h2>
 
-  <p class="drop-cap-para">Na sala fechada do segundo andar, o que deveria ter sido uma reunião de dez minutos não foi.</p>
+  <p class="drop-cap">Na sala fechada do segundo andar, o que deveria ter sido uma reunião de dez minutos não foi.</p>
 
   <p>— Uma jovem de catorze anos nos fez de espetáculo perante toda a cidade — disse o Conselheiro Aldric Vorn. — Isso não pode ser tratado como capricho.</p>
 
@@ -681,7 +676,9 @@ REMOVED_CSS-->
 
   <p>— A ironia de colocar uma Thoss acima de criaturas consideradas subumanas parece adequada.</p>
 
-  <p>Nenhum dos homens na sala considerou, em nenhum momento, que uma jovem de catorze anos colocada entre trabalhadores tritões poderia aprender coisas. Era o tipo de pensamento que homens que nunca haviam sido invisíveis não tinham.</p>
+  <p>Nenhum dos homens na sala considerou, em nenhum momento, que uma jovem de catorze anos colocada entre trabalhadores tritões poderia aprender coisas.</p>
+
+  <p>Era o tipo de pensamento que homens que nunca haviam sido invisíveis não tinham.</p>
 
   <p>Vermundi assinou o documento.</p>
 
@@ -697,12 +694,12 @@ REMOVED_CSS-->
 
   <p>Trinta minutos depois, a porta do Salão Vael-Thoss se abria.</p>
 
-  <div class="divider">⚓</div>
+  <div class="ornament-break">⚓</div>
 
   <!-- A SAÍDA -->
-  <h2>A Saída</h2>
+  <h2>A saída</h2>
 
-  <p class="drop-cap-para">O salão ficou para trás. O corredor de mármore ficou para trás. As portas do Salão Vael-Thoss se fecharam atrás dela, e pela última vez Elizabeth Thoss viu o azul dos cristais de éter no piso refletindo a luz das tochas como estrelas no fundo do oceano.</p>
+  <p class="drop-cap">O salão ficou para trás. O corredor de mármore ficou para trás. As portas do Salão Vael-Thoss se fecharam atrás dela, e pela última vez Elizabeth Thoss viu o azul dos cristais de éter no piso refletindo a luz das tochas como estrelas no fundo do oceano.</p>
 
   <p><span class="thought">Não vou sentir falta disso.</span></p>
 
@@ -720,12 +717,12 @@ REMOVED_CSS-->
 
   <p>Era a primeira vez. Não seria a última.</p>
 
-  <div class="divider">⚓</div>
+  <div class="ornament-break">⚓</div>
 
   <!-- AMVESH -->
   <h2>Amvesh</h2>
 
-  <p class="drop-cap-para">Amvesh não foi o que Elizabeth esperava.</p>
+  <p class="drop-cap">Amvesh não foi o que Elizabeth esperava.</p>
 
   <p>Ela havia calculado uma prisão de humanos. Uma cela, guardas, o tempo necessário para entender o sistema e encontrar a saída. Era o que o Almirantado fazia com humanos incômodos. Era o que havia de precedente, de protocolo, de previsível.</p>
 
@@ -792,17 +789,23 @@ REMOVED_CSS-->
 
   <!-- END -->
   <div class="chapter-end">
-    <p class="end-label">Fim do Capítulo Um</p>
+    <p class="end-label">— Fim do Capítulo Um —</p>
   </div>
 
+  <!-- CHAPTER NAV -->
+  <nav class="chapter-nav" aria-label="Navegação entre capítulos">
+    <span class="ch-nav-prev disabled">← Anterior</span>
+    <a href="../capitulos/" class="ch-nav-center">⚓ &nbsp;Todos os capítulos</a>
+    <a href="capitulo2.html" class="ch-nav-next">Próximo →</a>
+  </nav>
 
-<nav class="chapter-nav">
-  <span class="disabled">&larr; Capítulo anterior</span>
-  <a href="../capitulos/">Ver todos os capítulos</a>
-  <span class="disabled">Próximo capítulo &rarr;</span>
-</nav>
+</div><!-- /reading-wrap -->
 
-</div>
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+
 <script src="../js/main.js"></script>
 </body>
 </html>

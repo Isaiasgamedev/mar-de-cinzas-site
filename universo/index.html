@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — Universo</title>
+<meta name="description" content="A bíblia do universo Mar de Cinzas: mundo, personagens, magia e narrativa de Thalvorn.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root {
+  --accent:  #c9872a;
+  --accent2: #7eb8d4;
+  --accent3: #a0d090;
+  --accent4: #d47070;
+  --accent5: #9b78c8;
+  --accent6: #d4a0a0;
+  --ink:     #e8e0cc;
+  --ink-dim: #a89880;
+  --ink-faint:#6b5e4e;
+  --border:  rgba(255,255,255,0.06);
+  --border2: rgba(255,255,255,0.10);
+}
+
+/* ── page ── */
+.universe-page { padding-top: var(--nav-h); }
+.universe-main { max-width: 1080px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+
+/* ── page header ── */
+.uni-header { text-align: center; padding: 3rem 0 3.5rem; margin-bottom: 0.5rem; }
+.uni-eyebrow { font-family: var(--mono); font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.uni-title { font-family: var(--display); font-size: clamp(2.2rem,6vw,4rem); font-weight: 900; color: var(--ink); letter-spacing: 0.04em; margin-bottom: 0.4rem; }
+.uni-sub { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); letter-spacing: 0.12em; text-transform: uppercase; }
+.uni-rule { width: 80px; height: 1px; background: linear-gradient(90deg,transparent,var(--accent),transparent); margin: 1.8rem auto 0; }
+
+/* ── category group ── */
+.cat-group { margin-top: 3.5rem; }
+.cat-title {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--ink-faint); border-bottom: 1px solid var(--border); padding-bottom: 0.7rem; margin-bottom: 1.5rem;
+}
+
+/* ── section cards ── */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.sec-card {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+.sec-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; width: 3px; height: 100%;
+  background: var(--card-accent, var(--accent));
+  border-radius: 3px 0 0 3px;
+}
+.sec-card:hover {
+  border-color: rgba(255,255,255,0.18);
+  background: var(--bg3);
+  transform: translateY(-2px);
+}
+.sec-card-icon { font-size: 1.6rem; margin-bottom: 0.8rem; opacity: 0.75; display: block; }
+.sec-card-title {
+  font-family: var(--display); font-size: 0.95rem; font-weight: 600;
+  color: var(--ink); letter-spacing: 0.04em; margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+.sec-card-desc { font-family: var(--serif); font-size: 0.82rem; color: var(--ink-faint); line-height: 1.5; margin: 0; }
+
+.sec-card-link {
+  display: inline-block; margin-top: 0.9rem;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--card-accent, var(--accent)); transition: opacity 0.2s;
+}
+.sec-card:hover .sec-card-link { opacity: 0.7; }
+
+/* accent variants */
+.sec-card.c-amber { --card-accent: var(--accent); }
+.sec-card.c-blue  { --card-accent: var(--accent2); }
+.sec-card.c-green { --card-accent: var(--accent3); }
+.sec-card.c-red   { --card-accent: var(--accent4); }
+.sec-card.c-purple{ --card-accent: var(--accent5); }
+.sec-card.c-rose  { --card-accent: var(--accent6); }
+
+/* ── version badge ── */
+.ver-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 4px 12px; border: 1px solid rgba(212,160,160,0.3); border-radius: 3px;
+  color: var(--accent6); background: rgba(212,160,160,0.04); margin-top: 1.2rem;
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="universe-page">
+  <div class="universe-main">
+
+    <header class="uni-header">
+      <p class="uni-eyebrow">⚓ &nbsp;Mar de Cinzas · Project Bible v6.0</p>
+      <h1 class="uni-title">Universo</h1>
+      <p class="uni-sub">Thalvorn · Éter Vivo · O Inquilino · 78 Anos Pós-Tratado</p>
+      <div class="uni-rule"></div>
+      <div class="ver-badge">Versão 6.0 · Escarleti Thoss · Completa</div>
+    </header>
+
+    <!-- GRUPO 1 -->
+    <div class="cat-group">
+      <p class="cat-title">⌖ &nbsp;Mundo &amp; Fundamentos</p>
+      <div class="section-grid">
+
+        <a href="mundo.html" class="sec-card c-amber">
+          <span class="sec-card-icon">🌍</span>
+          <div class="sec-card-title">O Mundo — Thalvorn</div>
+          <p class="sec-card-desc">Um planeta de oceano quase infinito. Sem continentes — ou com continentes afundados. O mapa do mundo conhecido e a Teoria do Afogamento Primordial.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="racas.html" class="sec-card c-purple">
+          <span class="sec-card-icon">🧬</span>
+          <div class="sec-card-title">Raças de Thalvorn</div>
+          <p class="sec-card-desc">Seis raças estabelecidas, quatro raças raras e a hierarquia racial que Escarleti vai desafiar. A Escada social do mundo.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="magia.html" class="sec-card c-blue">
+          <span class="sec-card-icon">🔮</span>
+          <div class="sec-card-title">Magia &amp; Tecnologia</div>
+          <p class="sec-card-desc">O éter não é combustível — é memória. Os três estados do éter, a Névoa Cinza e toda a tecnologia que está destruindo o mundo.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="historia.html" class="sec-card c-red">
+          <span class="sec-card-icon">📜</span>
+          <div class="sec-card-title">A História</div>
+          <p class="sec-card-desc">500 anos de guerra que começaram com florações e terminaram com genocídio industrial. A Semana Branca. O Manifesto das Profundezas.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- GRUPO 2 -->
+    <div class="cat-group">
+      <p class="cat-title">⌖ &nbsp;Personagens</p>
+      <div class="section-grid">
+
+        <a href="protagonista.html" class="sec-card c-rose">
+          <span class="sec-card-icon">⭑</span>
+          <div class="sec-card-title">Escarleti Thoss</div>
+          <p class="sec-card-desc">A protagonista. Filha de oficial, noiva relutante, trabalhadora em débito, capitã por acidente. O perfil completo — incluindo Ossa.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="personagens.html" class="sec-card c-blue">
+          <span class="sec-card-icon">👤</span>
+          <div class="sec-card-title">A Tripulação</div>
+          <p class="sec-card-desc">As seis Vaethra da Perpétua. Mira, Bross, Syre, Drok, Vael Orrith. Perfis completos com motivações, falhas e arcos individuais.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="antagonista.html" class="sec-card c-red">
+          <span class="sec-card-icon">⚔️</span>
+          <div class="sec-card-title">O Antagonista</div>
+          <p class="sec-card-desc">Almirante Voss Threndar. Não é um sádico — é pior. O homem que acredita sinceramente que fez o que era necessário. E que matou o pai de Escarleti.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- GRUPO 3 -->
+    <div class="cat-group">
+      <p class="cat-title">⌖ &nbsp;Thalvorn em Detalhe</p>
+      <div class="section-grid">
+
+        <a href="ilhas.html" class="sec-card c-green">
+          <span class="sec-card-icon">🏝️</span>
+          <div class="sec-card-title">As Ilhas</div>
+          <p class="sec-card-desc">Vaelthar, Orvacht, Velanthar, Ilha da Carcaça, Rekhmaar, Amvesh e Veth-Naur. Os sete cenários-chave dos três arcos.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="criaturas.html" class="sec-card c-purple">
+          <span class="sec-card-icon">🦑</span>
+          <div class="sec-card-title">Criaturas do Oceano</div>
+          <p class="sec-card-desc">O que a Névoa Cinza fez com a fauna marinha. Leviatãs Brancos, Coral Memória, Cracas de Névoa, Enguias de Fogo Frio e O Remo.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="religiao.html" class="sec-card c-amber">
+          <span class="sec-card-icon">🕯️</span>
+          <div class="sec-card-title">Religião &amp; Cultos</div>
+          <p class="sec-card-desc">A Igreja das Seis Marés, o Ciclo Perpétuo dos elfos, o Culto do Fundo e os Leitores de Éter anões. Todos mais certos do que sabem.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="tritons.html" class="sec-card c-blue">
+          <span class="sec-card-icon">🌊</span>
+          <div class="sec-card-title">Cultura Tritã</div>
+          <p class="sec-card-desc">O povo mais antigo e mais escravizado de Thalvorn. Arquitetura submersa, o Veth-Nar e o Conclave das Profundezas que decide por harmonia.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="navegacao.html" class="sec-card c-green">
+          <span class="sec-card-icon">🧭</span>
+          <div class="sec-card-title">Navegação</div>
+          <p class="sec-card-desc">Ilhas que somem, correntes vivas que mudam, Zonas de Silêncio Bússola. O mundo náutico em constante movimento de Thalvorn.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- GRUPO 4 -->
+    <div class="cat-group">
+      <p class="cat-title">⌖ &nbsp;Conflito &amp; Narrativa</p>
+      <div class="section-grid">
+
+        <a href="inquilino.html" class="sec-card c-purple">
+          <span class="sec-card-icon">🌀</span>
+          <div class="sec-card-title">O Inquilino</div>
+          <p class="sec-card-desc">⚠ Spoiler máximo. A verdade real que os Arcos constroem até revelar. O que está no fundo do Abismo não é o que todos assumem.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="arcos.html" class="sec-card c-amber">
+          <span class="sec-card-icon">📖</span>
+          <div class="sec-card-title">Os Três Arcos</div>
+          <p class="sec-card-desc">Fuga → Manifesto → O Fundo. Estrutura completa dos três volumes: conflitos centrais, arcos de personagem e como tudo converge.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="horror.html" class="sec-card c-red">
+          <span class="sec-card-icon">🕳️</span>
+          <div class="sec-card-title">Horror do Abismo</div>
+          <p class="sec-card-desc">Três cenas cósmicas do Arco III. A Maré de Memória, Os Que Revivem e O Chamado em Escala. O lado lovecraftiano de Thalvorn.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="pirataria.html" class="sec-card c-amber">
+          <span class="sec-card-icon">🏴‍☠️</span>
+          <div class="sec-card-title">Pirataria</div>
+          <p class="sec-card-desc">O terceiro poder de Thalvorn. A Irmandade das Marés Livres, os Corsários Imperiais, o Código de Oito Artigos e onde a Perpétua se encaixa.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="seis-coroas.html" class="sec-card c-rose">
+          <span class="sec-card-icon">👑</span>
+          <div class="sec-card-title">As Seis Coroas</div>
+          <p class="sec-card-desc">A coalizão humana que governa Thalvorn não é monolítica. Vaelthar, Dornath, Selvane, Korrath, Amvesh e Thessa — cada uma com fissuras internas.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="desastres.html" class="sec-card c-red">
+          <span class="sec-card-icon">🌊</span>
+          <div class="sec-card-title">Colapso Físico</div>
+          <p class="sec-card-desc">As consequências palpáveis do Arco III. O afundamento de Amrath, os Cinco Dias dos Leviatãs e o esvaziamento progressivo do Abismo.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="twist.html" class="sec-card c-purple">
+          <span class="sec-card-icon">🌀</span>
+          <div class="sec-card-title">O Twist</div>
+          <p class="sec-card-desc">⚠ Spoiler absoluto. O éter queimado não desaparece — está sendo liberado. O que isso significa para cada habitante de Thalvorn, por milênios.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+        <a href="final.html" class="sec-card c-blue">
+          <span class="sec-card-icon">🌅</span>
+          <div class="sec-card-title">O Final</div>
+          <p class="sec-card-desc">⚠ Spoiler. O que acontece no Abismo. O que Mira carrega. O que Voss assina. O que Escarleti e Ossa precisam resolver. O log final da Perpétua.</p>
+          <span class="sec-card-link">Explorar &nbsp;›</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div><!-- /universe-main -->
+</div><!-- /universe-page -->
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

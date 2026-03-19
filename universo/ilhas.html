@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cinzas — As Ilhas de Thalvorn</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+:root { --accent:#c9872a; --accent2:#7eb8d4; --accent3:#a0d090; --accent4:#d47070; --accent5:#9b78c8; --accent6:#d4a0a0; --ink:#e8e0cc; --ink-dim:#a89880; --ink-faint:#6b5e4e; --border:rgba(255,255,255,0.06); --border2:rgba(255,255,255,0.10); }
+.bible-page { padding-top:var(--nav-h); }
+.bible-main { max-width:860px; margin:0 auto; padding:3.5rem 1.5rem 6rem; }
+.section-header { display:flex; align-items:center; gap:1.2rem; margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border2); }
+.section-icon { font-size:1.5rem; opacity:0.7; flex-shrink:0; }
+h2 { font-family:var(--display); font-size:1.5rem; font-weight:600; color:var(--accent); letter-spacing:0.06em; }
+h3 { font-family:var(--display); font-size:1.1rem; font-weight:600; color:var(--ink); letter-spacing:0.04em; margin:2rem 0 0.8rem; }
+p { margin-bottom:1rem; color:var(--ink-dim); }
+p strong { color:var(--ink); font-weight:500; }
+em { color:var(--ink); font-style:italic; }
+.card { background:var(--bg3); border:1px solid var(--border2); border-radius:8px; padding:1.5rem 2rem; margin:1.5rem 0; position:relative; overflow:hidden; }
+.card::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; background:var(--accent); border-radius:3px 0 0 3px; }
+.card.blue::before { background:var(--accent2); }
+.card.blue { border-color:rgba(126,184,212,0.2); }
+.card.green::before { background:var(--accent3); }
+.card.green { border-color:rgba(160,208,144,0.2); }
+.card.red::before { background:var(--accent4); }
+.card.red { border-color:rgba(212,112,112,0.2); }
+.card.purple::before { background:var(--accent5); }
+.card.purple { border-color:rgba(155,120,200,0.2); }
+.card h3 { margin-top:0; }
+.island-tag { display:inline; font-family:var(--mono); font-size:10px; letter-spacing:0.08em; padding:2px 7px; border-radius:3px; background:rgba(201,135,42,0.12); color:var(--accent); border:1px solid rgba(201,135,42,0.25); margin-left:0.5rem; vertical-align:middle; }
+.page-nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:5rem; padding-top:2rem; border-top:1px solid var(--border2); flex-wrap:wrap; }
+.page-nav a { font-family:var(--display); font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); text-decoration:none; transition:color 0.2s; }
+.page-nav a:hover { color:var(--accent); }
+.page-nav-back { color:var(--accent) !important; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Mar de Cinzas</a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="../index.html">Início</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="index.html" class="active">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<div class="bible-page">
+  <div class="bible-main">
+    <section id="ilhas">
+      <div class="section-header">
+        <span class="section-icon">🏝️</span>
+        <h2>As Ilhas — Cenários Únicos</h2>
+      </div>
+
+      <p>Thalvorn não tem continentes — teve, uma vez, mas foram afundados. O que resta são ilhas: desde pontos de rocha vulcânica menores que um porto até arquipélagos que sustentam cidades de milhões. Cada uma carrega a memória do que aconteceu nela e o éter que escolheu absorver ao longo dos séculos. Nenhuma é neutra.</p>
+
+      <div class="card blue">
+        <h3 style="color:var(--accent2);">Vaelthar — A Capital <span class="island-tag">Arco I–III</span></h3>
+        <p>A maior ilha de Thalvorn e sede da Aliança. Torres de éter cristalizado que emitem luz azul à noite. Dirigíveis de carga sobrevoando os diques constantemente. Uma arquitetura que foi projetada para impressionar visitantes antes de governar populações.</p>
+        <p>Sob a superfície: as docas de extração, onde tritões em gaiolas subaquáticas processam éter bruto para consumo industrial. A <strong>Bolsa do Éter</strong> — câmara onde o preço do recurso que controla tudo é negociado diariamente por humanos que nunca tocaram uma mina.</p>
+        <p style="color:var(--accent4);">Linda e horrível. As duas coisas ao mesmo tempo e com igual intensidade.</p>
+      </div>
+
+      <div class="card green">
+        <h3 style="color:var(--accent3);">Orvacht — O Porto Livre <span class="island-tag">Base no Arco I</span></h3>
+        <p>Tecnicamente fora da jurisdição direta de qualquer Coroa — o tratado original foi redigido com uma ambiguidade que nenhuma das seis Coroas quer resolver porque todas usam Orvacht para fazer coisas que não podem fazer em casa.</p>
+        <p>Construída sobre as ruínas de um templo orc que foi destruído na Terceira Guerra. Os orcs que moram aqui não falam sobre isso. Os humanos que moram aqui não sabem sobre isso. Os mercadores não se importam.</p>
+        <p><em>Dinheiro não tem raça em Orvacht.</em> O mercado negro de éter bruto mais movimentado do arquipélago ocidental. A rede de resistência racial mais eficiente que não existe oficialmente. O lugar onde a Perpétua faz seu primeiro amarração após a fuga.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ilha das Árvores de Prata — Velanthar <span class="island-tag">Arco II</span></h3>
+        <p>Uma ilha élfica que sobreviveu à Semana Branca por ser considerada sem valor econômico imediato. As árvores de prata têm 60 metros de altura e crescem dentro do oceano raso — o solo é submerso em 2 metros durante a maré alta. Os elfos mais velhos vivem nas copas.</p>
+        <p>Reserva protegida por decreto Almirantado — não por compaixão, mas porque os documentos históricos mais completos sobre a época pré-guerra estão arquivados no interior das árvores, em câmaras seladas com éter cristalizado. A Companhia quer esses documentos. Os elfos de Velanthar sabem que entregá-los significa deixar de ter razão para existir.</p>
+        <p>Esses mesmos documentos corroboram o Manifesto. Escarleti precisa deles no Arco II.</p>
+      </div>
+
+      <div class="card red">
+        <h3 style="color:var(--accent4);">Ilha da Carcaça — Sem Nome Oficial <span class="island-tag">Passagem no Arco I</span></h3>
+        <p>Um leviatã branco morreu aqui 200 anos atrás. A carcaça tem 800 metros de comprimento. Não apodreceu.</p>
+        <p>Os ossos continuam impregnados de éter, que os aquece levemente e ilumina as câmaras internas com uma luminescência azul-branca difusa. Cerca de três mil pessoas moram aqui permanentemente — contrabandistas, foragidos, comerciantes de mercadorias que não existem oficialmente. As casas são construídas dentro das costelas do animal, que formam abóbadas naturais de 40 metros de altura.</p>
+        <p style="color:var(--accent4);">Não tem autoridade. Não tem lei formal. Tem comida, éter aquecido nos ossos, e a compreensão mútua de que ninguém pergunta de onde a outra pessoa veio.</p>
+      </div>
+
+      <div class="card purple">
+        <h3 style="color:var(--accent5);">Rekhmaar — A Ilha que Ferve <span class="island-tag">Cena de Horror · Arco II</span></h3>
+        <p>O mar ao redor de Rekhmaar ferve visivelmente — não de calor, mas de éter bruto aflorando das fendas vulcânicas no fundo. A Companhia considerou construir uma mina aqui e desistiu: o éter está em concentração alucinógena. Exposição prolongada não mata — faz as pessoas reviverem memórias que não são as delas.</p>
+        <p>Para os orcs que habitam há séculos, Rekhmaar é sagrada. A loucura que o éter concentrado produz é considerada comunhão com os ancestrais — e de certa forma está certa, porque as memórias que emergem têm origem. O Almirantado não entendeu por quê, e não tentou entender.</p>
+        <p style="color:var(--accent5); font-style:italic;">Cena de Horror Cósmico no Arco II: 32 pescadores expostos a um afloramento massivo revivem a mesma memória — e é a mesma memória de todos. Não é alucinação individual. É o éter como memória coletiva funcionando exatamente como deveria.</p>
+      </div>
+
+      <div class="card blue">
+        <h3 style="color:var(--accent2);">Amvesh — A Ilha da Punição e do Retorno <span class="island-tag">Origem de Escarleti · Arco III</span></h3>
+        <p>Ilha colonial. A mais brutal na supressão de resistência racial — o que não é coincidência: Amvesh é onde o Almirantado envia funcionários "problemáticos" de outras Coroas. A violência é institucional e documentada com eficiência.</p>
+        <p>As minas de éter de Amvesh são de onde Escarleti fugiu. São onde Ossa foi enviada. Para Escarleti, Amvesh nunca é só cenário: é a conta não paga que existe por baixo de qualquer decisão que tome quando a rota passa pela ilha.</p>
+        <p>No Arco III, a rota para o Abismo passa por Amvesh. A escolha de parar ou não parar é a cena mais quieta e mais pesada da série.</p>
+      </div>
+
+      <div class="card green">
+        <h3 style="color:var(--accent3);">As Ilhas Submersas — Veth-Naur <span class="island-tag">Arco final</span></h3>
+        <p>Não são ilhas que afundaram — são cidades construídas propositalmente nessa faixa entre superfície e profundidade. As pontas mais altas das torres emergem 10 a 30 metros acima do nível do mar, identificáveis de longe como pedras lisas demais para ser naturais.</p>
+        <p>A cidade real fica entre 20 e 80 metros de profundidade. Os tritões que moram aqui não precisam de luz artificial — o éter cristalizado nas paredes emite uma luminescência azul-verdeada que muda de intensidade com as correntes.</p>
+        <p>Veth-Naur contém os registros históricos mais antigos de Thalvorn — anteriores às próprias raças atuais. Os tritões chamam O Inquilino de <em>"Veth-Dur"</em> — o Ancião da Corrente. Não como deus. Como aviso.</p>
+      </div>
+
+      <div class="page-nav">
+        <a href="antagonista.html" class="page-nav-prev">&larr; O Antagonista</a>
+        <a href="index.html" class="page-nav-back">☰ Índice</a>
+        <a href="criaturas.html" class="page-nav-next">Criaturas do Oceano &rarr;</a>
+      </div>
+    </section>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · o inquilino</small>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
