@@ -1,322 +1,47 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capítulo 1: O Começo do Fim — Mar de Cinzas</title>
-<meta name="description" content="Capítulo 1 de Mar de Cinzas. A cerimônia das Doze Obrigações e a fuga de ELIZABETH Thoss.">
+<title>Capítulo 1: As Doze Obrigações — Mar de Cinzas</title>
+<meta name="description" content="Capítulo 1 de Mar de Cinzas: As Doze Obrigações.">
 <link rel="stylesheet" href="../css/style.css">
 <style>
-
-/* ══ READING EXPERIENCE ══ */
-
-.reading-wrap {
-  max-width: var(--read-w);
-  margin: 0 auto;
-  padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem;
-}
-
-/* ── chapter header ── */
-.chapter-header {
-  text-align: center;
-  padding-bottom: 3.5rem;
-  margin-bottom: 3.5rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.ch-series {
-  font-family: var(--mono);
-  font-size: 8.5px;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  margin-bottom: 1.6rem;
-}
-
-.ch-number {
-  font-family: var(--display);
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--faint);
-  margin-bottom: 0.8rem;
-}
-
-.ch-title-main {
-  font-family: var(--display);
-  font-size: clamp(1.8rem, 6vw, 3rem);
-  font-weight: 900;
-  color: var(--text);
-  letter-spacing: 0.04em;
-  line-height: 1.1;
-  margin-bottom: 0.6rem;
-}
-
-.ch-subtitle {
-  font-family: var(--display);
-  font-size: 0.6rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--faint);
-}
-
-.ch-ornament {
-  font-size: 1.5rem;
-  opacity: 0.2;
-  margin: 2rem auto 0;
-  filter: sepia(0.5);
-}
-
-/* ── prose ── */
-.reading-wrap p {
+.reading-wrap { max-width: var(--read-w); margin: 0 auto; padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem; }
+.chapter-header { text-align: center; padding-bottom: 2.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+.ch-series { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem; }
+.ch-number { font-family: var(--display); font-size: 0.72rem; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.8rem; }
+.ch-title-main { font-family: var(--display); font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 900; color: var(--text); letter-spacing: 0.04em; line-height: 1.1; margin-bottom: 0.6rem; }
+.ch-subtitle { font-family: var(--display); font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--faint); }
+.ch-ornament { font-size: 1.5rem; opacity: 0.2; margin: 2rem auto 0; filter: sepia(0.5); }
+.chapter-text {
   font-family: var(--serif);
-  font-size: clamp(1.05rem, 2.5vw, 1.2rem);
-  line-height: 1.85;
+  font-size: clamp(1.02rem, 2.4vw, 1.16rem);
+  line-height: 1.9;
   color: var(--text);
-  margin-bottom: 1.2em;
+  white-space: pre-wrap;
+  margin: 0;
 }
-
-.drop-cap::first-letter {
-  font-family: var(--display);
-  font-size: 4.2em;
-  font-weight: 900;
-  line-height: 0.75;
-  float: left;
-  margin: 0.08em 0.1em 0 0;
-  color: var(--gold);
-}
-
-.thought {
-  font-style: italic;
-  color: var(--sea);
-}
-
-/* scene breaks */
-.scene-break {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--faint);
-  letter-spacing: 0.5em;
-  margin: 2.5rem 0;
-  user-select: none;
-}
-
-.ornament-break {
-  text-align: center;
-  font-size: 1.3rem;
-  color: var(--gold-dim);
-  opacity: 0.4;
-  margin: 3.5rem 0;
-  user-select: none;
-}
-
-/* chapter section headings */
-.reading-wrap h2 {
-  font-family: var(--display);
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  margin: 3.5rem 0 1.6rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-}
-
-/* time label */
-.time-label {
-  display: block;
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--sea-dim);
-  margin-bottom: 1.8rem;
-  text-align: center;
-}
-
-/* pull quote / speech */
-.pull-quote {
-  border-left: 2px solid var(--gold-dim);
-  padding: 0 0 0 1.4rem;
-  margin: 2rem 0;
-}
-
-.pull-quote p {
-  font-style: italic;
-  color: var(--muted);
-  font-size: clamp(1rem, 2.3vw, 1.15rem);
-}
-
-.pull-quote cite {
-  display: block;
-  font-family: var(--mono);
-  font-size: 8.5px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--faint);
-  font-style: normal;
-  margin-top: -0.6rem;
-  margin-bottom: 1.2em;
-}
-
-/* obligations block */
-.obligations {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 3rem 0;
-  padding: 2.5rem 2rem;
-  background: var(--bg3);
-  border: 1px solid var(--rule);
-  border-radius: 8px;
-}
-
-.obligation-item {
-  border-left: 2px solid var(--rule2);
-  padding-left: 1.2rem;
-}
-
-.ob-number {
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--faint);
-  margin-bottom: 0.15rem;
-}
-
-.ob-name {
-  font-family: var(--display);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-bottom: 0.3rem;
-}
-
-.ob-refusal {
-  font-family: var(--display);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-dim);
-  margin-bottom: 0.6rem;
-}
-
-.ob-response {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
-  color: var(--muted);
-  line-height: 1.7;
-  margin: 0 !important;
-}
-
-.ob-response.weight {
-  color: var(--text);
-}
-
-/* chapter end */
-.chapter-end {
-  text-align: center;
-  padding-top: 3.5rem;
-  margin-top: 2rem;
-  border-top: 1px solid var(--rule);
-}
-
-.end-label {
-  font-family: var(--mono) !important;
-  font-size: 9px !important;
-  letter-spacing: 0.28em !important;
-  text-transform: uppercase;
-  color: var(--faint) !important;
-  font-style: normal !important;
-  margin: 0 !important;
-}
-
-/* ── chapter nav ── */
-.chapter-nav {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 0.75rem;
-  align-items: center;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--rule);
-}
-.ch-nav-prev,
-.ch-nav-next {
-  font-family: var(--display);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 1.5rem;
-  border: 1px solid var(--gold-dim);
-  border-radius: 6px;
-  color: var(--gold);
-  background: rgba(200,151,58,0.05);
-  transition: all 0.2s;
-}
+.chapter-end { text-align: center; padding-top: 2.5rem; margin-top: 2rem; border-top: 1px solid var(--rule); }
+.end-label { font-family: var(--mono) !important; font-size: 9px !important; letter-spacing: 0.28em !important; text-transform: uppercase; color: var(--faint) !important; font-style: normal !important; margin: 0 !important; }
+.chapter-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.75rem; align-items: center; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.ch-nav-prev, .ch-nav-next { font-family: var(--display); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 1rem 1.5rem; border: 1px solid var(--gold-dim); border-radius: 6px; color: var(--gold); background: rgba(200,151,58,0.05); transition: all 0.2s; }
 .ch-nav-prev { text-align: left; }
 .ch-nav-next { text-align: right; }
-.ch-nav-prev:hover, .ch-nav-next:hover {
-  background: rgba(200,151,58,0.12);
-  border-color: var(--gold);
-  color: var(--text);
-  box-shadow: 0 0 18px rgba(200,151,58,0.15);
-}
-.ch-nav-prev.disabled, .ch-nav-next.disabled {
-  opacity: 0.2; pointer-events: none;
-  border-color: var(--rule2); color: var(--faint); background: none;
-}
-.ch-nav-center {
-  font-family: var(--mono);
-  font-size: 8px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--faint);
-  text-decoration: none;
-  text-align: center;
-  white-space: nowrap;
-  transition: color 0.15s;
-}
-.ch-nav-center:hover { color: var(--gold-dim); }
+.ch-nav-prev:hover, .ch-nav-next:hover { background: rgba(200,151,58,0.12); border-color: var(--gold); color: var(--text); }
+.ch-nav-prev.disabled, .ch-nav-next.disabled { opacity: 0.2; pointer-events: none; border-color: var(--rule2); color: var(--faint); background: none; }
+.ch-nav-center { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); text-decoration: none; text-align: center; white-space: nowrap; }
 
-/* ══ READER CONTROLS ══ */
 :root { --prose-size: 1.1rem; }
-.reading-wrap p { font-size: var(--prose-size) !important; }
-.reader-bar {
-  position: fixed;
-  bottom: 1.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  padding: 0.55rem 1.1rem;
-  background: rgba(11,15,21,0.94);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 40px;
-  z-index: 180;
-  box-shadow: 0 6px 28px rgba(0,0,0,0.65);
-  white-space: nowrap;
-}
+.chapter-text { font-size: var(--prose-size) !important; }
+.reader-bar { position: fixed; bottom: 1.6rem; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 0.9rem; padding: 0.55rem 1.1rem; background: rgba(11,15,21,0.94); border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; z-index: 180; white-space: nowrap; }
 .rbar-group { display: flex; align-items: center; gap: 0.4rem; }
 .rbar-label { font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); user-select: none; }
-.rbar-btn { font-family: var(--display); font-size: 0.7rem; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 6px; padding: 0.28rem 0.55rem; line-height: 1; transition: all 0.15s; }
-.rbar-btn:hover { color: var(--text); border-color: rgba(200,151,58,0.4); background: rgba(200,151,58,0.08); }
+.rbar-btn { font-family: var(--display); font-size: 0.7rem; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 6px; padding: 0.28rem 0.55rem; line-height: 1; }
 .rbar-btn:disabled { opacity: 0.3; cursor: default; }
 .rbar-divider { width: 1px; height: 18px; background: rgba(255,255,255,0.09); flex-shrink: 0; }
-.rbar-swatch { width: 16px; height: 16px; border-radius: 50%; border: 2px solid transparent; padding: 0; transition: transform 0.15s, border-color 0.15s; }
-.rbar-swatch:hover { transform: scale(1.25); }
-.rbar-swatch.active { border-color: var(--gold); transform: scale(1.15); }
+.rbar-swatch { width: 16px; height: 16px; border-radius: 50%; border: 2px solid transparent; padding: 0; }
+.rbar-swatch.active { border-color: var(--gold); }
 .sw-dark  { background: #07090d; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18); }
 .sw-coal  { background: #1e222c; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1); }
 .sw-sepia { background: #2a1f10; }
@@ -327,16 +52,11 @@ html[data-theme="sepia"] { --bg:#1e1508; --bg2:#261c0f; --bg3:#2e2212; --bg4:#35
 html[data-theme="fog"]   { --bg:#080d16; --bg2:#0d1320; --bg3:#121828; --bg4:#171d2e; --text:#c5d2e0; --muted:#617a96; --faint:#2e4060; }
 html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8d0b8; --text:#28200e; --muted:#6a5838; --faint:#a09060; --rule:rgba(0,0,0,0.09); --rule2:rgba(0,0,0,0.16); }
 
-/* ══ RESPONSIVE ══ */
 @media (max-width: 520px) {
   .reading-wrap { padding-top: calc(var(--nav-h) + 2.5rem); }
-  .drop-cap::first-letter { font-size: 3.6em; }
-  .obligations { padding: 1.5rem 1.2rem; }
   .chapter-nav { grid-template-columns: 1fr 1fr; }
   .ch-nav-center { display: none; }
-  .reader-bar { bottom: 1rem; padding: 0.45rem 0.8rem; gap: 0.6rem; }
 }
-
 </style>
 </head>
 <body>
@@ -355,7 +75,6 @@ html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8
   </div>
 </nav>
 
-<!-- READER BAR -->
 <div class="reader-bar" id="reader-bar">
   <div class="rbar-group">
     <span class="rbar-label">Texto</span>
@@ -375,488 +94,144 @@ html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8
 
 <div class="reading-wrap">
 
-  <!-- CHAPTER HEADER -->
   <header class="chapter-header">
     <p class="ch-series">Mar de Cinzas &nbsp;·&nbsp; Arco I — Fuga</p>
     <p class="ch-number">Capítulo Um</p>
-    <h1 class="ch-title-main">O Começo<br>do Fim</h1>
-    <p class="ch-subtitle">The Beginning of the End</p>
+    <h1 class="ch-title-main">As Doze Obrigações</h1>
+    <p class="ch-subtitle">Capítulo canônico</p>
     <div class="ch-ornament">⚓</div>
   </header>
 
-  <!-- OPENING -->
-  <p class="drop-cap">A porta do Salão Vael-Thoss se abriu com tanta força que o som ecoou como um tiro de canhão. Quatro guardas do Almirantado entraram. Armadura completa. Éter nas lanternas do peito brilhando azul-frio. Rostos escondidos sob viseiras de ferro que os faziam parecer menos homens e mais máquinas — o que era, sem nenhuma dúvida, exatamente o efeito desejado.</p>
+  <pre class="chapter-text">MAR DE CINZAS
+________________
+
+
+Capítulo Um — As Doze Obrigações
+O sacerdote já estava no altar quando Elizabeth Thoss entrou no Salão Vael-Thoss.
+Ela contou os passos automaticamente. Trinta e seis do portal até o altar — talvez trinta e oito com o peso do vestido. Trezentas e quatorze pessoas sentadas. Oito em pé nos cantos. Seis Noturnas posicionadas entre as colunas, de preto até o chão, com aquela expressão que nunca subia nem descia.
+Ela tinha catorze anos. O vestido era branco. O noivo tinha cinquenta e dois.
+Scarn Vael a esperava no altar como se esperasse uma embarcação que havia comprado e estava finalmente sendo entregue.
+Claro. É exatamente isso que sou para ele.
+Elizabeth o conhecia melhor do que ele imaginava. Havia pesquisado cada condecoração no peito do uniforme — sabia em qual campanha foi ganha, quantas pessoas morreram para que ele pudesse pendurar metal no tecido. Sabia que havia se casado cinco vezes. Que três das esposas anteriores haviam morrido. Febre. Colapso cardíaco. Afogamento num navio ancorado, sozinha, à noite.
+Três mulheres. Três causas diferentes. Nenhuma que pudesse ser facilmente denunciada.
+Ela não tinha prova formal. Tinha algo melhor: anos de invisibilidade e uma memória que não esquecia nada.
+O pai apertou levemente o braço dela quando chegaram ao altar. Elizabeth olhou para ele de lado. Errath Thoss era um homem de estatura média, ombros curvados pela vida, olhos claros que ela havia herdado. Oficial de médio escalão, família respeitável mas nunca próspera. Ele acreditava, genuinamente, que estava fazendo o melhor pela filha.
+Ela sabia disso. E mesmo assim.
+Soltou o braço dele antes que ele pudesse segurá-la.
+________________
+
+
+O sacerdote começou as fórmulas de abertura. Elizabeth escutou com a atenção de quem revisa um mapa antes de uma batalha.
+Havia memorizado o documento inteiro em dois dias, em agosto, três meses atrás. As Doze Obrigações da Consorte — cento e quarenta anos de jurisprudência condensados num papel que toda noiva de família nobre de Dornath recitava em voz alta perante testemunhas.
+Perante testemunhas. Essa era a parte importante.
+O sacerdote chegou ao ponto de recitação. Elizabeth ficou parada.
+O silêncio levou dois ou três segundos para se instalar — o tempo necessário para que trezentas pessoas percebessem que a noiva não havia começado a falar.
+Ela esperou que ficasse completo.
+Depois falou.
+— Nossa, que canseira. — Sua voz projetou com facilidade até o fundo do salão. — Desde criança que não fico tanto tempo ajoelhada. Minha mãe usava isso como castigo. Parece irônico que o meu casamento seja mais do mesmo. Meus Mares. Vamos lá.
+Alguém na plateia fez um som. Suprimido rapidamente.
+— Não é costumeiro — disse o sacerdote — que a noiva diga algo que não seja o juramento.
+— Não — concordou ela. — Mas nenhuma consorte jamais questionou formalmente as Obrigações perante testemunhas. Isso também não é costumeiro. Então estamos todos em território novo.
+Uma pausa.
+— Vou passar pelos artigos um por um. Prometo ser breve.
+Pausa menor.
+— Minto. Não prometo.
+Ela se virou para o salão. Não para Scarn. Para todos.
+________________
+
+
+— Artigo I — A Obrigação do Nome. Não aceito.
+Gosto do meu nome. Thoss. Tem peso. Bate nos dentes no começo e abre no final. Vael termina antes de começar. Elizabeth Vael perde toda a identidade em três sílabas. O nome é meu. Fica comigo.
+— Artigo II — A Obrigação da Residência. Não aceito.
+O artigo me obriga a seguir residência a critério exclusivo do Comandante, sem direito de recusa, sem prazo de adaptação, sem voz sobre para onde ou por quanto tempo. Isso não é casamento. É transferência de propriedade com o endereço em aberto.
+— Artigo III — A Obrigação da Voz. Não aceito.
+O artigo proíbe opinião espontânea fora do contexto doméstico. Estou expressando uma opinião espontânea agora, na frente de todos aqui. Isso significa que já estou em infração. Sendo assim, não vejo motivo para parar.
+— Artigo IV — A Obrigação da Guarda. Não aceito.
+O artigo me obriga a guardar segredos domésticos com o mesmo rigor de sigilo de oficiais do Almirantado — inclusive irregularidades internas. Sou péssima em guardar segredos que não escolhi guardar. Se souber de algo errado, vou falar. É um traço inconveniente. Não tenho como consertá-lo em tempo hábil.
+— Artigo V — A Obrigação da Linhagem. Não aceito.
+O artigo descreve, com alguma elegância jurídica, um serviço de reprodução compulsória sem cláusula de recusa. Não sou contra família em abstrato. Sou contra a ausência da minha voz em qualquer decisão relacionada. Esse artigo remove essa voz por completo.
+— Artigo VI — A Obrigação da Representação. Não aceito.
+Esse artigo transforma minha aparência, minhas roupas e meu comportamento público em extensão da imagem institucional do Comandante, sujeitos à aprovação prévia dele. Isso significa que deixo de ser uma pessoa e passo a ser parte do uniforme de outro. Não é isso que sou.
+— Artigo VII — A Obrigação Patrimonial. Não aceito.
+É neste artigo que a linguagem para de ser inconveniência e passa a ser crime. Tudo que possuo, tudo que vier a possuir, qualquer bem presente ou futuro — passa integralmente ao Comandante no momento desta cerimônia. Sem compensação. Sem reversão. No Código Comercial Naval, esse instrumento tem um nome técnico. Chamamos de confisco de ativos. Aplicamos a navios capturados em zona de guerra. Este artigo aplica o mesmo instrumento a uma pessoa. A diferença é que aqui está escrito em papel bom, com caligrafia bonita, numa sala com éter no piso.
+Não aceito.
+— Artigo VIII — A Obrigação do Estudo. Não aceito.
+O artigo proíbe busca de conhecimento fora das áreas de utilidade doméstica e obriga a declarar todo conhecimento que já possua além desse escopo. Memorizei as rotas de navegação do arquipélago de Dornath. Sei os resultados de cada campanha representada nas condecorações do peito do meu noivo. Li relatórios médicos do Almirantado. Se for declarar tudo que sei que excede utilidade doméstica, vamos estar aqui por muitos anos.
+Prefiro não.
+— Artigo IX — A Obrigação da Lealdade Hierárquica. Não aceito.
+O artigo exige que, em qualquer conflito entre os interesses da minha família e os do Comandante, eu priorize o Comandante — incluindo testemunho legal. Olhei para meu pai há dois minutos. Não consigo assinar um contrato que juridicamente o torna menos importante para mim do que um homem que conheço há seis meses.
+Não funciona dessa forma.
+— Artigo X — A Obrigação da Imobilidade. Não aceito.
+O artigo proíbe viagens, ausências superiores a três dias e correspondência não aprovada. Não sei viver parada. Nunca soube. Três dias imóvel e a cabeça começa a funcionar mal. Imobilidade como regra de vida vai ser problema para todos os envolvidos — principalmente para o Comandante.
+— Artigo XI — A Obrigação do Silêncio Deliberativo. Não aceito.
+Esse artigo me reduz a observadora em qualquer matéria com consequência além do cotidiano — política, estratégia, comércio. Posso estar na sala, mas sem voto e com opinião espontânea classificável como irregularidade registrável.
+Ela olhou em volta do salão, lentamente.
+— Aproximadamente metade de todos aqui nasce com essa condição. Esse artigo formaliza o que já existe informalmente. Prefiro que o que existe informalmente permaneça sem contrato.
+— Artigo XII — A Obrigação da Permanência. Não aceito.
+O artigo declara o vínculo irrevogável por iniciativa minha em vida — sem possibilidade de dissolução, sem petição ao Almirantado sem consentimento do Comandante. Em viuvez, as disposições permanecem vigentes. Em resumo: entro nesse vínculo com permissão de sair apenas morta, e mesmo morta há pendências.
+Uma pausa.
+— Doze artigos. Nenhum aceito. Isso é tudo.
+________________
+
+
+O salão estava em silêncio absoluto.
+Elizabeth ficou de pé com as mãos juntas na frente do vestido e olhou diretamente para Scarn Vael pela primeira vez.
+— Você não está comprando uma esposa. Está comprando um móvel que vem com certos bens e pode lhe fazer certos agrados. Estou usando a palavra móvel porque há crianças na plateia.
+Uma pausa.
+— Também gostaria de registrar, já que temos testemunhas das Seis Marés presentes, minha esperança sincera de ter saúde mais robusta do que as Senhoras Vael-Prima, Vael-Secunda e Vael-Tercia. As mortes das três foram especialmente curiosas. Os relatórios médicos sobre concentração de Névoa Cinza em ambientes fechados fazem leituras muito fascinantes. Caso alguém aqui tenha interesse acadêmico — os comentários que circulam entre criados de casas boas são ainda mais fascinantes.
+O rosto de Scarn Vael ficou da cor do mármore.
+________________
+
+
+A mãe de Elizabeth atravessou a multidão em linha reta, afastando cadeiras com a saia.
+— Você acabou de destruir esta família — disse ela, voz baixa e tensa. Que era, na experiência de Elizabeth, muito pior do que gritos.
+— Tecnicamente sobrevivi a ela. É diferente.
+— Você tem catorze anos. Não sabe o que é sobrevivência —
+— Mãe. — Elizabeth a olhou. — Você sabe o que aconteceu com as três primeiras esposas dele?
+Silêncio.
+Ela sabe. Ou suspeitava. E ficou quieta.
+— Eu sei — disse Elizabeth. — Ouvi o suficiente. Quer discutir o assunto aqui, ou continuar?
+A mãe fechou a boca. Saiu pelo corredor lateral sem dizer mais nada.
+Uma das Noturnas — a mais velha, mais quieta do que as outras — estava apagando as velas de éter uma a uma. Passou por Elizabeth duas vezes sem parar. Na terceira, sem virar o rosto, disse em voz muito baixa:
+— Há um costume muito antigo neste rito. Enquanto a noiva recita as Obrigações, nenhuma voz pode se sobrepor à dela até o último artigo ser pronunciado. — Uma pausa. — Nenhuma noiva jamais havia entendido que aquele silêncio lhe pertencia.
+Continuou apagando velas. Não disse mais nada.
+Elizabeth ficou olhando para as costas dela até que desaparecesse entre as colunas.
+Era aliada. Havia sido aliada o tempo todo, dentro dos limites do que podia ser.
+O pai esperou que o último convidado saísse do alcance de voz.
+— Você já sabia o que ia acontecer depois — disse ele. Não era pergunta.
+— Tinha uma ideia razoável.
+— E fez mesmo assim.
+— Fiz mesmo assim.
+Ele ficou em silêncio por um momento. Quando falou, a voz estava diferente — mais baixa, como se dirigida apenas a ela.
+— Nasceu no mundo errado, ou com a genitália errada. Com outro sexo você seria um almirante. — Uma pausa. — Se você está contente com o que fez, então eu fico satisfeito.
+Ela não respondeu. Mas ficou ao lado dele até que o barulho de botas no corredor anunciasse que os conselheiros estavam voltando.
+Na sala fechada do segundo andar, a deliberação durou menos do que deveria.
+— Reclassificação — disse o assessor do Consul, com a tranquilidade de quem resolve um problema menor. — Trabalhadora em débito. Instalações de extração de Amvesh. Posição de supervisora. Acima das equipes não-humanas.
+Scarn Vael olhou para ele com algo próximo de aprovação.
+— A ironia de colocar uma Thoss acima de criaturas consideradas subumanas parece adequada.
+Nenhum dos homens na sala considerou, em nenhum momento, que uma jovem de catorze anos colocada entre trabalhadores tritões poderia aprender coisas.
+Era o tipo de pensamento que homens que nunca haviam sido invisíveis não tinham.
+O documento foi assinado.
+Por perturbação de cerimônia pública e declarações difamatórias contra oficial de alto posto — ELIZABETH Thoss será reclassificada como trabalhadora em débito e enviada para supervisão nas instalações de extração de Amvesh.
+Elizabeth ouviu a sentença.
+E pela primeira vez naquele dia, não teve nada a calcular.
+Amvesh não era uma prisão de humanos. Era um lugar para as outras raças — tritões capturados, orcs pacificados, criaturas que o Almirantado considerava abaixo de julgamento formal. Ela havia ouvido o nome em conversas que não eram endereçadas a ela. Nunca havia precisado prestar atenção nos detalhes.
+Deveria ter prestado.
+O plano havia terminado. Havia sido sempre um plano de uma única etapa — não se casar — e ela o havia executado. O que vinha depois não era plano. Era só ela, num vestido de noiva amassado, sendo levada para um lugar que não havia calculado, entre pessoas que tinham razões antigas e muito pessoais para não se importar se ela desaparecia.
+Coragem, Eli.
+Mas desta vez a frase não serviu para nada.</pre>
 
-  <p>ELIZABETH Thoss os viu chegar.</p>
-
-  <p><span class="thought">Quatro. Mais dois na saída lateral — provavelmente mais uns dez espalhados por todas as saídas, janelas e possíveis aberturas. Afinal, não permitiriam que ela se tornasse uma noiva em fuga.</span></p>
-
-  <p>Ela tinha catorze anos. O vestido de noiva ainda estava no corpo quando os guardas cruzaram o salão em sua direção. Nenhum dos presentes disse uma palavra.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O primeiro guarda estendeu a mão. Elizabeth girou o próprio pulso antes que ele a tocasse, deixou o peso do corpo dele levá-lo para frente, e num único movimento rápido e baixo o braço do homem ficou preso em suas próprias costas sem que ele sequer percebesse de quão ágil havia sido. Foram dois segundos. Menos, talvez.</p>
-
-  <p>Não tinha nenhum treinamento formal. O que tinha era melhor: anos de invisibilidade. Quando as mulheres são ignoradas numa sala onde homens discutem coisas sérias, elas escutam. E quando uma criança escuta o suficiente — reuniões do Almirantado, exercícios de contenção discutidos à mesa de jantar, sargentos que nunca se deram ao trabalho de abaixar a voz porque não havia ninguém importante o suficiente para ouvi-los — essa criança aprende. Não de um dia para o outro. Aos poucos, ao longo de anos, como quem aprende o idioma de um país em que vive sem nunca ter sido formalmente apresentada a ele.</p>
-
-  <p>Nenhum dos sargentos olhara para ela uma única vez.</p>
-
-  <p><span class="thought">Invisível não é o mesmo que ausente.</span></p>
-
-  <p>Isso fez o salão despertar de uma vez. Um guarda dominado por uma criança de catorze anos — e pior, uma garota — foi algo que chamou a atenção de modo que nenhum escândalo de casamento jamais chamaria. Alguns convidados ficaram indignados. Outros olhavam com a expressão de quem acabara de ver uma coisa que não deveria ser possível e ainda não havia decidido o que fazer com esse fato.</p>
-
-  <p>O segundo guarda a agarrou pelos dois ombros ao mesmo tempo. Elizabeth arremessou o peso para frente, rodou o primeiro guarda ainda preso pelo braço contra o segundo, e ambos caíram no piso de mármore com o estrondo de duas armaduras completas batendo ao mesmo tempo — um barulho que encheu o salão de teto a teto e não saiu por um longo momento. Alguns convidados começaram a se levantar. O que antes parecia uma curiosidade estava se tornando outra coisa.</p>
-
-  <p><span class="thought">Bom. Que se lembrem.</span></p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>Levou os quatro guardas, quinze minutos e uma quantidade considerável de constrangimento institucional e esforço para colocar uma jovem de catorze anos dentro de um Carro de Contenção.</p>
-
-  <p>O veículo esperava do lado de fora. Ela o havia visto chegar trinta minutos antes, quando havia subido até o teto do salão para pegar um pouco de ar e olhar pela última vez a cidade onde nasceu — a cidade que sabia que poderia nunca mais ver. Era impossível não notar. Um Contensor do Almirantado não era discreto por design. Caixa de ferro sobre rodas de oito raios, blindagem dupla nas paredes laterais, motor de éter comprimido que soltava vapor pelos tubos inferiores com um barulho baixo e constante — um som que entrava nos pulmões de quem ficava perto demais e não saía. Nas paredes internas, runas de supressão gravadas a fogo, desenhadas para bloquear qualquer manifestação mágica de raças não-humanas.</p>
-
-  <p><span class="thought">Interessante. Trouxeram supressão mágica para prender uma humana de catorze anos. Ou alguém está com muito medo. Ou muito pouco bom senso. Provavelmente as duas coisas.</span></p>
-
-  <p>Sendo empurrada para dentro, ela notou as algemas. Ferro negro com filigrana de éter cristalizado nas juntas — finas como veias desenhadas por um artesão que cobrava caro pelo trabalho. Ferros de Soberania. O nome oficial era burocrático e sem graça, como tudo que o Almirantado nomeava. Mas o que eles faziam não era sem graça: a filigrana de éter nas juntas lia a pele do prisioneiro como um texto, captando variações de calor, tensão muscular e ritmo cardíaco, transmitindo dados para um receptor de pulso no guarda responsável. Eram reservadas para prisioneiros que o Almirantado considerava capazes de surpreender — e para garantir que qualquer manifestação mágica fosse suprimida antes de acontecer.</p>
-
-  <p>Elizabeth olhou para as algemas e sentiu algo próximo de lisonja. Finalmente a estavam tratando à altura de um inimigo perigoso. Pela primeira vez naquele dia ela não era uma garotinha de vestido branco, não era uma mulher que havia causado um escândalo. Agora ela era uma prisioneira.</p>
-
-  <p><span class="thought">Obrigada. Isso foi, sinceramente, muito gentil da parte de vocês.</span></p>
-
-  <p>A porta de ferro fechou atrás dela com um som que deveria ter sido o fim do mundo.</p>
-
-  <p>Mas ela sorriu.</p>
-
-  <div class="ornament-break">⚓</div>
-
-  <!-- FLASHBACK -->
-  <span class="time-label">Cinco horas antes</span>
-
-  <p class="drop-cap">ELIZABETH Thoss estava de pé na entrada do Salão Vael-Thoss com o braço do pai em volta do dela, e o pensamento mais claro da sua vida instalado com precisão atrás dos olhos:</p>
-
-  <p><span class="thought">Coragem, Eli. As suas opções são bem simples. Morrer pela escolha dos outros, ou morrer pelas suas próprias escolhas.</span></p>
-
-  <p>Não era a primeira vez que ela pensava isso. Mas era a primeira vez que o plano não precisava de nenhum outro ingrediente além de uma coisa que ela já possuía havia catorze anos. Palavras. Conhecimento. E uma voz que havia aprendido a projetar autoridade porque passara anos escutando quem a tinha de verdade.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O corredor de entrada do salão tinha quarenta metros de comprimento e piso de mármore branco com veios de éter cristalizado natural que capturavam a luz das tochas e a devolviam em tom azulado. As famílias de Dornath gostavam disso. Gostavam de coisas que brilhavam, que custavam caro, que faziam os outros se sentirem menores pelo simples fato de existirem.</p>
-
-  <p>Elizabeth caminhou sobre o mármore com passos medidos.</p>
-
-  <p><span class="thought">Trinta e seis passos até o altar. Provavelmente trinta e oito com o peso do vestido puxando para os lados. Mais de trezentas pessoas sentadas. Mais oito em pé nos cantos. Seis Noturnas posicionadas entre as colunas, com velas de éter que não apagavam mesmo com o vento forte do oceano.</span></p>
-
-  <p>Ela olhou para as Noturnas — sacerdotisas das Seis Marés, de preto até o chão, aquela expressão imóvel que ela nunca havia conseguido classificar com precisão.</p>
-
-  <p><span class="thought">Imóveis como objetos. Mas estão aqui por uma razão. Nas Doze Obrigações da Consorte, as Noturnas são testemunhas sagradas. Se a noiva não pronunciar as obrigações, o casamento não é válido perante a Igreja das Seis Marés. Precisam que eu fale. Essa é a fissura.</span></p>
-
-  <p>Elizabeth continuou andando.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>Scarn Vael estava no altar.</p>
-
-  <p>Cinquenta e dois anos. Ombros largos que em outra época pertenceram a um homem que realmente brigava em guerras. Cabelo grisalho preso com cordão da marinha. Uniforme de gala do Almirantado com quatro fileiras de condecorações no peito — ela havia pesquisado cada uma. Sabia o que representava, em que campanha foi ganha, quantas pessoas morreram para que ele pudesse pendurar metal no tecido.</p>
-
-  <p>Ele a olhava como se olhasse para uma embarcação que acabara de ser adicionada à sua frota.</p>
-
-  <p><span class="thought">Claro. É exatamente isso que sou para ele.</span></p>
-
-  <p>Scarn Vael havia se casado cinco vezes. O número máximo tolerado mesmo numa sociedade que permitia múltiplos vínculos simultâneos — porque três das anteriores haviam morrido, e três mortes abriam espaço para três novas aquisições, e Elizabeth seria a sexta. A primeira esposa morreu de febre súbita dezoito meses após o casamento. A segunda de colapso cardíaco de origem desconhecida dois anos depois. A terceira afogou-se no porto durante um passeio de barco noturno. Sozinha. Num navio ancorado.</p>
-
-  <p>Elizabeth havia reunido tudo o que podia saber sobre aquelas mortes. Os relatórios médicos que o pai deixava abertos na mesa de trabalho — ela os leu enquanto fingia estudar à noite. As conversas entre criados que ela ouvia sem ser vista, quando iam buscar água na cozinha ou penduravam roupas nos corredores. Os boatos que circulavam nas casarões das famílias importantes, ouvidos nas ruas através de janelas abertas, de mulheres conversando nos pátios, de homens que falavam demais quando acreditavam que ninguém relevante estava escutando. Ela havia observado os padrões. Febre. Colapso. Afogamento sem testemunhas. Três mulheres. Três diferentes causas. Nenhuma que pudesse ser facilmente denunciada.</p>
-
-  <p>Ela não tinha prova formal. Tinha algo melhor: catorze anos de invisibilidade, observação cuidadosa, os relatos de quatro criadas diferentes que nunca souberam que estavam sendo ouvidas, e uma mente que não esquecia nada.</p>
-
-  <p><span class="thought">Podia imaginar como seria. Mesmo assim não sabia se estava completamente preparada. Eli, as suas opções são bem simples.</span></p>
-
-  <p>Ela chegou ao altar. O pai apertou o braço dela levemente. Ela olhou para ele de lado.</p>
-
-  <p>Errath Thoss era um homem de estatura média, ombros levemente curvados pela vida e não pela velhice, com aqueles olhos claros que ela havia herdado. Oficial de médio escalão, família respeitável mas nunca próspera — a classe invisível de Dornath, não pobre o suficiente para ser desprezada, não rica o suficiente para importar. Filhas de famílias como a deles casavam dentro do mesmo círculo, com jovens de igual invisibilidade, e seguiam vidas de igual irrelevância.</p>
-
-  <p>Scarn Vael havia sido uma exceção impossível. Uma abertura que não abria duas vezes.</p>
-
-  <p>Elizabeth sabia disso. Sabia que o pai acreditava, genuinamente, que estava fazendo o melhor que qualquer pai em sua posição poderia fazer. O que ele não havia pesquisado eram as mortes. Não porque não quisesse saber. Porque não sabia onde procurar. O pai nunca havia sido invisível o suficiente para aprender onde as coisas reais ficam escondidas.</p>
-
-  <p><span class="thought">Ele não sabe o que eu sei. E mesmo que soubesse — o que ele poderia fazer? Filhas da nossa classe que não casam entre os doze e os dezesseis esperam o pior. Entre os dezessete e os vinte, aceitam o que aparecer. Acima disso, deixam de ser filhas para se tornarem peso. Eu tenho catorze anos e sem magia alguma — ele está gastando o que tem de influência numa oportunidade que não voltará. Ele me ama. É por isso que está aqui. E é exatamente por isso que eu precisava fazer o que farei.</span></p>
-
-  <p>Ela deu um leve aperto no braço dele antes de se soltar. Ele não disse nada. Não havia nada a dizer.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O sacerdote começou a falar quando ela chegou ao altar. Voz treinada para salas grandes, tom de cerimônia que não subia nem descia — o tipo de voz que tornava tudo que dizia soar como verdade inevitável.</p>
-
-  <p>Elizabeth escutou as fórmulas de abertura com a atenção de quem revisa um mapa antes de uma batalha. Ela os conhecia todos de memória. Havia memorizado o documento completo em dois dias, em agosto, três meses atrás. As Doze Obrigações da Consorte — cento e quarenta anos de jurisprudência patriarcal condensados num papel que toda noiva de família nobre de Dornath recitava em voz alta perante testemunhas.</p>
-
-  <p><span class="thought">Nossa, isso vai ser realmente divertido. Uma pena que vai demorar tanto até chegar a minha vez.</span></p>
-
-  <p>O sacerdote chegou ao ponto de recitação. Elizabeth ficou parada. O silêncio que se formou foi estranho — não foi imediato. Levou dois, três segundos para que as pessoas percebessem que algo estava errado. Que a noiva não havia começado a falar. Que a pausa era longa demais para ser hesitação e curta demais para ser esquecimento.</p>
-
-  <p>Elizabeth esperou que o silêncio ficasse completo.</p>
-
-  <p>Depois falou.</p>
-
-  <div class="pull-quote">
-    <p>— Nossa, que canseira. Desde criança que não fico tanto tempo ajoelhada — esse sempre foi o castigo preferido da minha mãe. Parece até irônico que para o meu casamento eu tenha de fazer a mesma coisa. Meus Mares. Como já fui castigada, então chegou a hora de justificarmos esse castigo.</p>
-  </div>
-
-  <p>Alguém na plateia fez um som. Suprimido rapidamente. Scarn Vael a olhou com uma expressão que ela classificou como confusão com irritação emergindo por baixo, como vapor escapando por uma junta mal vedada.</p>
-
-  <p>— Não é costumeiro — disse o sacerdote, visivelmente desconfortável — que a noiva diga algo que não seja o juramento das Doze Obrigações.</p>
-
-  <p>— Não — concordou ela. — Mas as Doze Obrigações existem há cento e quarenta anos e nenhuma consorte as questionou formalmente perante testemunhas. Isso também não é costumeiro. Então estamos todos em território novo. — Uma pausa. — Vou passar pelos artigos um por um. Prometo ser breve. — Pausa menor. — Minto. Não prometo.</p>
-
-  <p>Ela se virou para o salão. Não para Scarn. Para todos que estavam olhando para ela.</p>
-
-  <!-- OBLIGATIONS -->
-  <div class="obligations">
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo I</p>
-      <p class="ob-name">A Obrigação do Nome</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque gosto do meu nome. Thoss. É curto, tem peso, bate nos dentes no começo e abre no final — Thoss. Já Vael termina antes de começar. Elizabeth Vael perde toda a identidade em três sílabas. Tentei me acostumar durante três meses. Não funciona. O nome é meu. Fica comigo.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo II</p>
-      <p class="ob-name">A Obrigação da Residência</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo me obriga a seguir residência a critério exclusivo do Comandante, sem direito de recusa, sem prazo de adaptação, sem nenhuma voz sobre para onde ou por quanto tempo. Isso não é casamento. É transferência de propriedade com o endereço em aberto. Não me interessa.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo III</p>
-      <p class="ob-name">A Obrigação da Voz</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo proíbe opinião espontânea em contexto que não seja doméstico imediato. Estou expressando uma opinião espontânea agora, em contexto que definitivamente não é doméstico imediato, na frente de todos aqui. Isso significa que já estou em infração. Sendo assim, não vejo motivo para parar.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo IV</p>
-      <p class="ob-name">A Obrigação da Guarda</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo me obriga a guardar segredos domésticos com o mesmo rigor de sigilo aplicado a oficiais do Almirantado — inclusive irregularidades internas. Sou péssima em guardar segredos que não escolhi guardar. Se souber de algo errado, vou falar. Esse é um traço de caráter inconveniente, admito. Mas não tenho como consertá-lo em tempo hábil.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo V</p>
-      <p class="ob-name">A Obrigação da Linhagem</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo descreve, com alguma elegância jurídica, um serviço de reprodução compulsória sem cláusula de recusa. Não sou contra o conceito de família em abstrato. Sou contra a ausência da minha própria voz em qualquer decisão relacionada ao assunto. Esse artigo remove essa voz por completo. Não concordo.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo VI</p>
-      <p class="ob-name">A Obrigação da Representação</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque esse artigo transforma minha aparência, minhas roupas, minhas companhias e meu comportamento público em extensão da imagem institucional do Comandante, sujeitos à aprovação prévia dele. Isso significa que eu deixo de ser uma pessoa e passo a ser parte do uniforme de outro. Não é isso que sou. Não é isso que vou ser.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo VII</p>
-      <p class="ob-name">A Obrigação Patrimonial</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response weight">Não aceito. E deixo claro que é neste artigo, especificamente, que a linguagem para de ser inconveniência e passa a ser crime. Pela leitura do texto: tudo que possuo, tudo que vier a possuir, tudo que alguém me der — herança, benfeitoria, qualquer bem presente ou futuro — passa integralmente ao Comandante no momento desta cerimônia. Sem compensação. Sem possibilidade de recusa. Sem reversão em nenhuma circunstância. No Código Comercial Naval, esse instrumento tem um nome técnico. Chamamos de confisco de ativos. Aplicamos a navios capturados em zona de guerra. Este artigo aplica o mesmo instrumento a uma pessoa. A diferença é que aqui está escrito em papel bom, com caligrafia bonita, numa sala com éter no piso. Não aceito.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo VIII</p>
-      <p class="ob-name">A Obrigação do Estudo</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo proíbe busca de conhecimento fora das áreas de utilidade doméstica e obriga a declarar, ao Comandante, qualquer conhecimento que já possua além desse escopo. Memorizei as rotas de navegação do arquipélago de Dornath. Sei os nomes e resultados de cada campanha representada nas condecorações do peito do meu noivo. Li relatórios médicos do Almirantado. Se for declarar tudo que sei que excede utilidade doméstica, vamos estar aqui por muitos anos. Prefiro não.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo IX</p>
-      <p class="ob-name">A Obrigação da Lealdade Hierárquica</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo exige que, em qualquer conflito entre os interesses da minha família e os interesses do Comandante, eu priorize o Comandante — em todo e qualquer âmbito, incluindo testemunho legal. Olhei para meu pai há dois minutos. Não consigo assinar um contrato que juridicamente o torna menos importante para mim do que um homem que conheço há seis meses. Não funciona dessa forma.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo X</p>
-      <p class="ob-name">A Obrigação da Imobilidade</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo proíbe viagens, ausências superiores a três dias e qualquer correspondência com pessoas não aprovadas, tudo sujeito a autorização prévia e por escrito. Não sei viver parada. Nunca soube. Não é preferência — é constituição. Três dias imóvel e a cabeça começa a funcionar mal. Imobilidade como regra de vida vai ser problema para todos os envolvidos, e principalmente para o Comandante, que vai ter que lidar com as consequências.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo XI</p>
-      <p class="ob-name">A Obrigação do Silêncio Deliberativo</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo me reduz a observadora em qualquer matéria com consequência além do cotidiano imediato — política, estratégia, comércio, administração. Posso estar na sala, mas sem voto, sem iniciativa e com opinião espontânea classificável como irregularidade registrável. — Ela olhou em volta do salão, vagarosa, como quem faz uma contagem silenciosa. — Aproximadamente metade de todos aqui nasce com essa condição. Esse artigo formaliza o que já existe informalmente. Prefiro que o que existe informalmente permaneça sem contrato.</p>
-    </div>
-
-    <div class="obligation-item">
-      <p class="ob-number">Artigo XII</p>
-      <p class="ob-name">A Obrigação da Permanência</p>
-      <p class="ob-refusal">Não aceito</p>
-      <p class="ob-response">Não aceito porque o artigo declara o vínculo irrevogável por iniciativa minha em vida — sem possibilidade de dissolução, sem mediação unilateral, sem petição ao Almirantado sem consentimento do Comandante. E em viuvez, as disposições permanecem vigentes pelo período que o Almirantado determinar. Em resumo: entro nesse vínculo com permissão de sair apenas morta, e mesmo morta há pendências. — Uma pausa. — Doze artigos. Nenhum aceito. Isso é tudo.</p>
-    </div>
-
-  </div><!-- /obligations -->
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O salão estava em silêncio absoluto.</p>
-
-  <p>Elizabeth ficou de pé com as mãos juntas na frente do vestido e olhou diretamente para Scarn Vael pela primeira vez desde que chegara ao altar.</p>
-
-  <div class="pull-quote">
-    <p>— Você não está comprando uma esposa. Está comprando um móvel que vem com certos bens e pode lhe fazer certos agrados. Estou usando a palavra móvel porque há crianças na plateia — acho a outra expressão um pouco forte para o público.</p>
-  </div>
-
-  <p>Uma pausa menor.</p>
-
-  <p>— Também gostaria de registrar, já que estamos com testemunhas sagradas das Seis Marés presentes, minha esperança sincera de ter saúde mais robusta do que as Senhoras Vael-Prima, Vael-Secunda e Vael-Tercia. As mortes das três foram especialmente curiosas. Os relatórios médicos sobre concentração de Névoa Cinza em ambientes fechados fazem leituras muito fascinantes. Caso alguém neste salão tenha interesse acadêmico no assunto — os comentários que circulam entre criados de casas boas são ainda mais fascinantes. Algumas histórias que eu ouvi dariam, no mínimo, abertura suficiente para uma investigação formal.</p>
-
-  <p>O rosto de Scarn Vael ficou da cor do mármore.</p>
-
-  <div class="ornament-break">⚓</div>
-
-  <!-- AFTERMATH -->
-  <h2>Fim da cerimônia</h2>
-
-  <p>O silêncio que veio depois foi o tipo de silêncio que acontece quando todos processam simultaneamente a mesma informação e nenhum sabe o que fazer com ela. Scarn se virou para os conselheiros do Consórcio Vael na segunda fileira.</p>
-
-  <p>— Sala de deliberação. Agora.</p>
-
-  <p>Saiu sem olhar para ela.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>A mãe de Elizabeth atravessou a multidão em linha reta, afastando cadeiras com a saia.</p>
-
-  <p>— ELIZABETH Thoss — disse ela em voz baixa e controlada, o que era, na experiência de Elizabeth, muito pior do que gritos. — Você acabou de destruir esta família.</p>
-
-  <p>— Tecnicamente eu acabei de sobreviver a ela. É diferente.</p>
-
-  <p>— Você tem catorze anos. Não sabe o que é sobrevivência. Você fez um espetáculo na frente de todo Dornath —</p>
-
-  <p>— Na frente de mais de trezentas testemunhas, sim. De propósito.</p>
-
-  <p>— Isso não foi inteligência, foi idiotice disfarçada de coragem —</p>
-
-  <p>— Mãe. — Elizabeth a olhou. — Você sabe o que aconteceu com as três primeiras esposas dele?</p>
-
-  <p>Silêncio.</p>
-
-  <p>— Eu sei — disse Elizabeth. — Ouvi o suficiente. Quer discutir o assunto, ou quer continuar falando sobre o tamanho do espetáculo?</p>
-
-  <p>A mãe abriu a boca. Fechou. Virou-se e saiu pelo corredor lateral com a postura de quem está com raiva demais para continuar presente.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>Uma Noturna que havia ficado para trás — mais velha do que as outras, mais quieta — estava apagando as velas de éter uma a uma. Passou por Elizabeth duas vezes sem parar. Na terceira, sem virar o rosto, disse em voz muito baixa:</p>
-
-  <p>— Há um costume muito antigo neste rito. Enquanto a noiva recita as Obrigações, ninguém pode interrompê-la. Nenhuma voz pode se sobrepor à dela até que o último artigo seja pronunciado. — Uma pausa. — Nenhuma noiva jamais havia entendido o que esse silêncio realmente lhe pertencia.</p>
-
-  <p>Elizabeth a olhou.</p>
-
-  <p>A Noturna continuou apagando velas e não disse mais nada.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O pai de Elizabeth ficou. Esperou que o último dos convidados saísse do alcance de voz antes de se aproximar. Ficou de pé ao lado dela, olhando para o salão vazio, para as velas que as Noturnas ainda não haviam apagado, ardendo entre as colunas sem nenhum propósito agora que a cerimônia não havia acontecido.</p>
-
-  <p>— Você já sabia o que ia acontecer depois — disse ele. Não era pergunta.</p>
-
-  <p>— Tinha uma ideia razoável.</p>
-
-  <p>— E fez mesmo assim.</p>
-
-  <p>— Fiz mesmo assim.</p>
-
-  <p>Ele ficou em silêncio por um momento. Quando falou, a voz estava diferente — mais quieta, sem o peso de homem que estava segurando alguma coisa.</p>
-
-  <p>— Eu não sabia. — Uma pausa. — Sobre as esposas dele.</p>
-
-  <p>— Eu sei que não sabia, pai.</p>
-
-  <p>— Se eu soubesse —</p>
-
-  <p>— Eu sei. — Ela o olhou. — Você não sabia onde procurar. Eu sabia. Isso não é culpa sua.</p>
-
-  <p>Ele assentiu devagar. Era o assentimento de um homem que estava aceitando uma coisa desconfortável porque era verdade e porque a filha havia dito com gentileza suficiente para que ele pudesse aceitá-la.</p>
-
-  <p>— Você sempre foi assim. Desde pequena. — Uma pausa. — Nasceu no mundo errado, ou com a genitália errada. Selvagem. Inteligente. Com outro sexo você seria um almirante. Eu sabia que um dia faria alguma coisa sem volta.</p>
-
-  <p>— Pai. — Ela o olhou. — Não é sem volta. Olhando as opções que eu tinha — as reais, não as que parecem opções — essa é a única que me abre caminho para um futuro que é meu. As outras fechavam tudo. Essa só fecha algumas coisas.</p>
-
-  <p>— Algumas coisas dolorosas.</p>
-
-  <p>— Sim.</p>
-
-  <p>Ele ficou quieto por um tempo. Não a abraçou — não eram esse tipo de família, especialmente não num salão ainda com velas acesas e guardas no corredor. Mas havia algo diferente no rosto dele agora. Não era alívio. Era aquela expressão que Elizabeth havia visto nele poucas vezes — quando ela fazia algo que ele não havia ensinado, algo que ele não sabia de onde havia vindo, e ele olhava para a filha como se estivesse vendo uma pessoa que não sabia que existia.</p>
-
-  <p>— Farei o que puder — disse ele, por fim. — Mas não existe muito que eu possa fazer.</p>
-
-  <p>— Eu sei, pai.</p>
-
-  <p>— Se você está contente com o que fez... — Ele fez uma pausa pequena. — Então eu fico satisfeito.</p>
-
-  <p>Ela não respondeu. Mas ficou ao lado dele até que o barulho de botas no corredor anunciasse que os conselheiros estavam voltando, e só então ele deu um passo para trás.</p>
-
-  <div class="ornament-break">⚓</div>
-
-  <!-- DELIBERATION -->
-  <h2>A deliberação</h2>
-
-  <p class="drop-cap">Na sala fechada do segundo andar, o que deveria ter sido uma reunião de dez minutos não foi.</p>
-
-  <p>— Uma jovem de catorze anos nos fez de espetáculo perante toda a cidade — disse o Conselheiro Aldric Vorn. — Isso não pode ser tratado como capricho.</p>
-
-  <p>— Precisamente porque não foi capricho — respondeu um dos assessores com o cuidado de quem calcula cada palavra. — Ela citou o Código Naval. O Código de Cerimônia. Os artigos corretos, os números corretos. Isso é preparação deliberada.</p>
-
-  <p>— Então é pior. É premeditação.</p>
-
-  <p>— É uma jovem de catorze anos que decorou documentos públicos — disse o Consul Drath Vermundi, seco. — Não é conspiração. É inconveniência.</p>
-
-  <p>— Ela mencionou as esposas — disse Scarn Vael, da cadeira ao fundo. Sua voz estava controlada de uma forma que Vermundi havia aprendido, ao longo de anos, a tratar como sinal de perigo. — Perante testemunhas. Perante Noturnas das Seis Marés. E mencionou criados.</p>
-
-  <p>Essa última palavra pousou na sala de forma diferente. Criados eram o tipo de testemunho que não se admitia em tribunal — mas que chegava em todo lugar e saía de nenhum.</p>
-
-  <p>— Sem evidências admissíveis — disse Vermundi, com menos convicção do que antes. — Insinuação não é acusação.</p>
-
-  <p>— Insinuação perante toda Dornath é suficientemente danosa. — Scarn ficou de pé. — O que eu quero saber é o que fazemos com o dano, não com ela.</p>
-
-  <p>— Ela é o vetor do dano — disse Vorn. — Controlamos ela, controlamos o estrago.</p>
-
-  <p>— Como? Executamos uma Thoss? O pai é oficial. Há escândalo de qualquer forma.</p>
-
-  <p>O assessor do Consul tinha a solução antes de entrar na sala. Esperou o silêncio certo para dizê-la.</p>
-
-  <p>— Reclassificação. Trabalhadora em débito. Encaminhamento às operações de extração no arquipélago de Amvesh. O instrumento não especifica raça — especifica comportamento incompatível com o vínculo social estabelecido. Posição de supervisora. Acima das equipes não-humanas.</p>
-
-  <p>Scarn Vael olhou para o assessor com algo que, com muito esforço interpretativo, poderia ser chamado de aprovação.</p>
-
-  <p>— A ironia de colocar uma Thoss acima de criaturas consideradas subumanas parece adequada.</p>
-
-  <p>Nenhum dos homens na sala considerou, em nenhum momento, que uma jovem de catorze anos colocada entre trabalhadores tritões poderia aprender coisas.</p>
-
-  <p>Era o tipo de pensamento que homens que nunca haviam sido invisíveis não tinham.</p>
-
-  <p>Vermundi assinou o documento.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O Conselheiro Aldric Vorn ficou de pé no centro do salão com a postura de quem lê uma sentença escrita quarenta minutos antes.</p>
-
-  <p>— Por perturbação de cerimônia pública registrada perante testemunhas do Almirantado, e por declarações de natureza difamatória contra um oficial de alto posto sem evidências admissíveis — ELIZABETH Thoss será reclassificada como trabalhadora em débito e enviada para supervisão nas instalações de extração de Amvesh até determinação de tribunal competente.</p>
-
-  <p>Ele fechou o papel.</p>
-
-  <p>— Os guardas serão convocados. Preparem o Contensor.</p>
-
-  <p>Trinta minutos depois, a porta do Salão Vael-Thoss se abria.</p>
-
-  <div class="ornament-break">⚓</div>
-
-  <!-- A SAÍDA -->
-  <h2>A saída</h2>
-
-  <p class="drop-cap">O salão ficou para trás. O corredor de mármore ficou para trás. As portas do Salão Vael-Thoss se fecharam atrás dela, e pela última vez ELIZABETH Thoss viu o azul dos cristais de éter no piso refletindo a luz das tochas como estrelas no fundo do oceano.</p>
-
-  <p><span class="thought">Não vou sentir falta disso.</span></p>
-
-  <p>O guarda abriu a porta de ferro do Contensor. Elizabeth entrou. A porta fechou. O som foi pesado, definitivo — o tipo de som que o Almirantado Imperial havia passado gerações aperfeiçoando para comunicar uma única mensagem:</p>
-
-  <p><em>Acabou.</em></p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>ELIZABETH Thoss ficou sentada no banco de ferro com os Ferros de Soberania nos pulsos e o vestido de noiva amassado nas bordas onde os guardas a haviam segurado. O motor ronronou sob seus pés.</p>
-
-  <p>O Contensor começou a se mover.</p>
-
-  <p>Ninguém imaginava — nem os que iam sair do Salão Vael-Thoss comentando o escândalo do ano, nem os guardas que haviam levado quinze minutos para conter uma jovem num vestido branco, nem os conselheiros que haviam assinado o papel com a tranquilidade de quem resolve um problema menor — que naquele dia, ao invés de um casamento, haviam assistido ao começo de outra coisa. Que o nome ELIZABETH Thoss havia saído daquele salão não como o nome de uma noiva, mas como o nome de alguém que o mundo iria aprender a pronunciar de formas muito diferentes.</p>
-
-  <p>Era a primeira vez. Não seria a última.</p>
-
-  <div class="ornament-break">⚓</div>
-
-  <!-- AMVESH -->
-  <h2>Amvesh</h2>
-
-  <p class="drop-cap">Amvesh não foi o que Elizabeth esperava.</p>
-
-  <p>Ela havia calculado uma prisão de humanos. Uma cela, guardas, o tempo necessário para entender o sistema e encontrar a saída. Era o que o Almirantado fazia com humanos incômodos. Era o que havia de precedente, de protocolo, de previsível.</p>
-
-  <p>O que não havia calculado foi a extensão da raiva que havia causado. Alguém no alto escalão — ela sabia quem — havia decidido que uma prisão de humanos era pouco. Que ela merecia ser colocada num lugar onde humanos não eram postos. Onde ela não teria nenhuma das proteções invisíveis que a raça conferia mesmo a criminosos. Onde todos ao redor teriam razões históricas, pessoais e profundas para não se importar se ela desaparecia.</p>
-
-  <p>Não era punição. Era uma sentença de morte com burocracia na frente.</p>
-
-  <p>Os primeiros doze dias foram solitários. Não metáfora — cela de pedra, janela pequena demais para ver mais do que um pedaço de céu cor de chumbo, o som constante do motor de éter das instalações de extração soando como um coração mecânico que batia em ritmo errado. Scarn Vael havia enviado instruções. Ela soube disso depois, pelos guardas que repetiam as ordens sem perceber que ela ouvia. Doze açoites por dia, doze dias — o mesmo número de artigos que ela havia recusado, um por um. Suficiente para marcar sem incapacitar. Suficiente para que ela chegasse ao trabalho funcional e soubesse exatamente quem havia calculado aquele número, com aquele cuidado específico.</p>
-
-  <p>Elizabeth recebeu os doze dias com a mesma frieza com que havia recebido a sentença. Registrou cada um.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>Aquele lugar não era uma prisão comum. Prisões comuns existiam para humanos — celas para oficiais desonrados, devedores do Almirantado, cidadãos que cometiam crimes de cidadãos. Este lugar existia para as outras raças: tritões capturados nas minas, orcs de territórios pacificados, mestiços que não cabiam em nenhuma categoria limpa. A hierarquia era simples e brutal: raças puras no topo, mestiços abaixo, mestiços de sangue humano mais abaixo ainda.</p>
-
-  <p>E então existia Elizabeth.</p>
-
-  <p>Ela era o único ser humano naquela instalação. Todos sabiam. E todos sabiam o que aquilo significava: que ela havia feito algo tão abjeto aos olhos do Almirantado que estava sendo tratada como se não fosse humana. Não havia precedente para isso. Não havia protocolo. Havia apenas ela, num uniforme de prisioneira, num lugar construído para conter raças que os humanos consideravam inferiores.</p>
-
-  <p>No décimo terceiro dia, quando a porta da solitária finalmente abriu e a levaram para o pátio, Elizabeth sentiu pela primeira vez em toda aquela história algo que havia treinado para não sentir.</p>
-
-  <p>Medo de verdade.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O pátio era uma mistura que ela não havia visto em nenhum lugar de Dornath — tritões com as marcas das coleiras de supressão visíveis no pescoço, orcs que haviam aprendido a se tornar menores do que eram para sobreviver no espaço, mestiços de combinações que a cidade alta de Dornath nem reconhecia como possíveis. Todos com razões antigas e pessoais para odiar o que ela representava.</p>
-
-  <p>Ela esperava violência. Esperava que alguém viesse resolver pessoalmente o que o Almirantado havia terceirizado para o ambiente.</p>
-
-  <p>O que veio foi diferente.</p>
-
-  <p>Um cuspido no uniforme quando passou perto de um grupo de tritões. Palavrões em três idiomas que ela identificou e dois que não reconhecia. Uma cotovelada que não era acidente. Um prato de comida empurrado longe antes que ela pudesse alcançá-lo. Ninguém a olhava nos olhos por tempo suficiente para que fosse um desafio. Ninguém se levantava para confrontá-la. O ódio era real — mas era o ódio preguiçoso de quem considera que a coisa no chão não merece nem o esforço de ser chutada com vontade.</p>
-
-  <p>Ela era o lixo do lixo. E para o lixo do lixo, ninguém perdia tempo.</p>
-
-  <p>Elizabeth passou o primeiro dia engolindo tudo isso e mapeando. Passou o segundo dia fazendo a mesma coisa. E no final do segundo dia, enquanto ficava de pé num canto do pátio que ninguém disputava com ela porque ninguém a queria perto, percebeu algo que deveria ter percebido mais cedo.</p>
-
-  <p>Ela conhecia isso. Havia passado catorze anos nisso.</p>
-
-  <p>O mecanismo era idêntico. As raças eram diferentes, as razões eram diferentes, o vocabulário dos insultos era diferente — mas o movimento por baixo era o mesmo: uma mulher humana numa sala de homens que discutiam coisas sérias. Um ser considerado irrelevante demais para representar perigo. Alguém que podia estar presente e ser tratado como se não estivesse, porque a alternativa — reconhecer a presença — exigia um esforço que ninguém achava que valia.</p>
-
-  <p>Invisibilidade. Em Dornath, ela havia aprendido tudo que sabia através dela. Aqui não seria diferente.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>Não era o diretor da instalação que mandava naquele pátio. Isso ela confirmou no segundo dia. O diretor aparecia três vezes ao dia, lia relatórios sem olhar para o que reportavam e sumia. Não era ele.</p>
-
-  <p>Era o orc do canto. Grande. Mais velho do que parecia. Ficava encostado na parede com a postura de quem não precisa provar nada para ninguém porque já provou todas as vezes necessárias. Os outros ao redor se moviam em formas sutis — afastavam quando ele andava, aproximavam quando ele chamava, resolviam disputas entre si sem nunca deixar a resolução chegar até ele.</p>
-
-  <p>Esse era o idioma do poder real. Elizabeth havia aprendido esse idioma ouvindo pela janela da sala do pai.</p>
-
-  <p>Ninguém a vigiava enquanto ela observava. Ninguém vigiava o lixo.</p>
-
-  <p><span class="thought">Amanhã começo por ele.</span></p>
-
-  <p>Não porque precisasse de um aliado. Porque precisava entender como aquele sistema funcionava, e sistemas desse tipo só se entendem de dentro. Ela tinha tempo. E tinha o que ninguém ali esperava que ela tivesse — porque nunca haviam se dado ao trabalho de olhar para ela com atenção suficiente para ver.</p>
-
-  <p>Paciência. Memória. E a capacidade de ouvir o que não era endereçado a ela.</p>
-
-  <div class="pull-quote">
-    <p>Amvesh. Você não sabe ainda com quem está lidando. Mas vai aprender.</p>
-    <cite>— ELIZABETH Thoss · pátio da instalação de extração · décimo quinto dia</cite>
-  </div>
-
-  <!-- END -->
   <div class="chapter-end">
     <p class="end-label">— Fim do Capítulo Um —</p>
   </div>
 
-  <!-- CHAPTER NAV -->
   <nav class="chapter-nav" aria-label="Navegação entre capítulos">
-    <span class="ch-nav-prev disabled">← Anterior</span>
+    <a href="prologo.html" class="ch-nav-prev">← Anterior</a>
     <a href="../capitulos/" class="ch-nav-center">⚓ &nbsp;Todos os capítulos</a>
     <a href="capitulo2.html" class="ch-nav-next">Próximo →</a>
   </nav>
 
-</div><!-- /reading-wrap -->
+</div>
 
 <footer class="site-footer">
   <p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p>

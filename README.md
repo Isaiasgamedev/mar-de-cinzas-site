@@ -6,12 +6,10 @@ Site do projeto **Mar de Cinzas** — Audio Comic de dark fantasy.
 
 ```
 index.html          ← Homepage
-capitulos/          ← Capítulos (capitulo1.html, capitulo2.html, capitulo3.html, index.html)
+capitulos/          ← Leitura (prologo.html, capitulo1.html, capitulo2.html, index.html)
 universo/           ← Project Bible (protagonista, personagens, antag., ilhas, raças, magia, etc.)
 css/style.css       ← Design system unificado
 js/main.js          ← Nav mobile, scroll
-project-bible.html  ← Redirect → universo/
-capitulo1.html      ← Redirect → capitulos/capitulo1.html
 ```
 
 ## Notas

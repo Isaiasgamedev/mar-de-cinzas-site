@@ -3,58 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capítulo 2: Amvesh — Mar de Cinzas</title>
-<meta name="description" content="Capítulo 2 de Mar de Cinzas. A mina, os tritões e o sistema que ela decidiu aprender.">
+<title>Capítulo 2: O Décimo Terceiro Dia — Mar de Cinzas</title>
+<meta name="description" content="Capítulo 2 de Mar de Cinzas: O Décimo Terceiro Dia.">
 <link rel="stylesheet" href="../css/style.css">
 <style>
-.reading-wrap {
-  max-width: var(--read-w);
-  margin: 0 auto;
-  padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem;
-}
-.chapter-header {
-  text-align: center;
-  padding-bottom: 3.5rem;
-  margin-bottom: 3.5rem;
-  border-bottom: 1px solid var(--rule);
-}
-.ch-series { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1.6rem; }
+.reading-wrap { max-width: var(--read-w); margin: 0 auto; padding: calc(var(--nav-h) + 4rem) 1.5rem 8rem; }
+.chapter-header { text-align: center; padding-bottom: 2.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+.ch-series { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem; }
 .ch-number { font-family: var(--display); font-size: 0.72rem; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--faint); margin-bottom: 0.8rem; }
 .ch-title-main { font-family: var(--display); font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 900; color: var(--text); letter-spacing: 0.04em; line-height: 1.1; margin-bottom: 0.6rem; }
-.ch-subtitle { font-family: var(--display); font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--faint); }
+.ch-subtitle { font-family: var(--display); font-size: 0.6rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--faint); }
 .ch-ornament { font-size: 1.5rem; opacity: 0.2; margin: 2rem auto 0; filter: sepia(0.5); }
-.reading-wrap p { font-family: var(--serif); font-size: clamp(1.05rem, 2.5vw, 1.2rem); line-height: 1.85; color: var(--text); margin-bottom: 1.2em; }
-.drop-cap::first-letter { font-family: var(--display); font-size: 4.2em; font-weight: 900; line-height: 0.75; float: left; margin: 0.08em 0.1em 0 0; color: var(--gold); }
-.thought { font-style: italic; color: var(--sea); }
-.scene-break { text-align: center; font-size: 0.9rem; color: var(--faint); letter-spacing: 0.5em; margin: 2.5rem 0; user-select: none; }
-.ornament-break { text-align: center; font-size: 1.3rem; color: var(--gold-dim); opacity: 0.4; margin: 3.5rem 0; user-select: none; }
-.reading-wrap h2 { font-family: var(--display); font-size: 1.05rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-dim); margin: 3.5rem 0 1.6rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
-.pull-quote { border-left: 2px solid var(--gold-dim); padding: 0 0 0 1.4rem; margin: 2rem 0; }
-.pull-quote p { font-style: italic; color: var(--muted); font-size: clamp(1rem, 2.3vw, 1.15rem); }
-.pull-quote cite { display: block; font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); font-style: normal; margin-top: -0.6rem; margin-bottom: 1.2em; }
-.chapter-end { text-align: center; padding-top: 3.5rem; margin-top: 2rem; border-top: 1px solid var(--rule); }
+.chapter-text {
+  font-family: var(--serif);
+  font-size: clamp(1.02rem, 2.4vw, 1.16rem);
+  line-height: 1.9;
+  color: var(--text);
+  white-space: pre-wrap;
+  margin: 0;
+}
+.chapter-end { text-align: center; padding-top: 2.5rem; margin-top: 2rem; border-top: 1px solid var(--rule); }
 .end-label { font-family: var(--mono) !important; font-size: 9px !important; letter-spacing: 0.28em !important; text-transform: uppercase; color: var(--faint) !important; font-style: normal !important; margin: 0 !important; }
-.chapter-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.75rem; align-items: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.chapter-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.75rem; align-items: center; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
 .ch-nav-prev, .ch-nav-next { font-family: var(--display); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; padding: 1rem 1.5rem; border: 1px solid var(--gold-dim); border-radius: 6px; color: var(--gold); background: rgba(200,151,58,0.05); transition: all 0.2s; }
 .ch-nav-prev { text-align: left; }
 .ch-nav-next { text-align: right; }
-.ch-nav-prev:hover, .ch-nav-next:hover { background: rgba(200,151,58,0.12); border-color: var(--gold); color: var(--text); box-shadow: 0 0 18px rgba(200,151,58,0.15); }
+.ch-nav-prev:hover, .ch-nav-next:hover { background: rgba(200,151,58,0.12); border-color: var(--gold); color: var(--text); }
 .ch-nav-prev.disabled, .ch-nav-next.disabled { opacity: 0.2; pointer-events: none; border-color: var(--rule2); color: var(--faint); background: none; }
-.ch-nav-center { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); text-decoration: none; text-align: center; white-space: nowrap; transition: color 0.15s; }
-.ch-nav-center:hover { color: var(--gold-dim); }
-/* ══ READER CONTROLS ══ */
+.ch-nav-center { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--faint); text-decoration: none; text-align: center; white-space: nowrap; }
+
 :root { --prose-size: 1.1rem; }
-.reading-wrap p { font-size: var(--prose-size) !important; }
-.reader-bar { position: fixed; bottom: 1.6rem; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 0.9rem; padding: 0.55rem 1.1rem; background: rgba(11,15,21,0.94); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; z-index: 180; box-shadow: 0 6px 28px rgba(0,0,0,0.65); white-space: nowrap; }
+.chapter-text { font-size: var(--prose-size) !important; }
+.reader-bar { position: fixed; bottom: 1.6rem; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 0.9rem; padding: 0.55rem 1.1rem; background: rgba(11,15,21,0.94); border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; z-index: 180; white-space: nowrap; }
 .rbar-group { display: flex; align-items: center; gap: 0.4rem; }
 .rbar-label { font-family: var(--mono); font-size: 7.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); user-select: none; }
-.rbar-btn { font-family: var(--display); font-size: 0.7rem; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 6px; padding: 0.28rem 0.55rem; line-height: 1; transition: all 0.15s; }
-.rbar-btn:hover { color: var(--text); border-color: rgba(200,151,58,0.4); background: rgba(200,151,58,0.08); }
+.rbar-btn { font-family: var(--display); font-size: 0.7rem; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 6px; padding: 0.28rem 0.55rem; line-height: 1; }
 .rbar-btn:disabled { opacity: 0.3; cursor: default; }
 .rbar-divider { width: 1px; height: 18px; background: rgba(255,255,255,0.09); flex-shrink: 0; }
-.rbar-swatch { width: 16px; height: 16px; border-radius: 50%; border: 2px solid transparent; padding: 0; transition: transform 0.15s, border-color 0.15s; }
-.rbar-swatch:hover { transform: scale(1.25); }
-.rbar-swatch.active { border-color: var(--gold); transform: scale(1.15); }
+.rbar-swatch { width: 16px; height: 16px; border-radius: 50%; border: 2px solid transparent; padding: 0; }
+.rbar-swatch.active { border-color: var(--gold); }
 .sw-dark  { background: #07090d; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18); }
 .sw-coal  { background: #1e222c; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1); }
 .sw-sepia { background: #2a1f10; }
@@ -64,11 +51,11 @@ html[data-theme="coal"]  { --bg:#151820; --bg2:#1c2028; --bg3:#22262e; --bg4:#28
 html[data-theme="sepia"] { --bg:#1e1508; --bg2:#261c0f; --bg3:#2e2212; --bg4:#352817; --text:#ead9b8; --muted:#9a7850; --faint:#5a3820; }
 html[data-theme="fog"]   { --bg:#080d16; --bg2:#0d1320; --bg3:#121828; --bg4:#171d2e; --text:#c5d2e0; --muted:#617a96; --faint:#2e4060; }
 html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8d0b8; --text:#28200e; --muted:#6a5838; --faint:#a09060; --rule:rgba(0,0,0,0.09); --rule2:rgba(0,0,0,0.16); }
+
 @media (max-width: 520px) {
   .reading-wrap { padding-top: calc(var(--nav-h) + 2.5rem); }
   .chapter-nav { grid-template-columns: 1fr 1fr; }
   .ch-nav-center { display: none; }
-  .reader-bar { bottom: 1rem; padding: 0.45rem 0.8rem; gap: 0.6rem; }
 }
 </style>
 </head>
@@ -88,7 +75,6 @@ html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8
   </div>
 </nav>
 
-<!-- READER BAR -->
 <div class="reader-bar" id="reader-bar">
   <div class="rbar-group">
     <span class="rbar-label">Texto</span>
@@ -111,117 +97,151 @@ html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8
   <header class="chapter-header">
     <p class="ch-series">Mar de Cinzas &nbsp;·&nbsp; Arco I — Fuga</p>
     <p class="ch-number">Capítulo Dois</p>
-    <h1 class="ch-title-main">Amvesh</h1>
-    <p class="ch-subtitle">The Mine</p>
+    <h1 class="ch-title-main">O Décimo Terceiro Dia</h1>
+    <p class="ch-subtitle">Capítulo canônico</p>
     <div class="ch-ornament">⚓</div>
   </header>
 
-  <p class="drop-cap">O orc se chamava Reth. Não Elizabeth soube disso no primeiro dia, nem no segundo — soube no quinto, quando alguém no pátio gritou o nome de longe num tom que significava que havia um problema que não podia esperar. Reth virou o rosto. Elizabeth, que havia passado três dias fingindo não observá-lo, registrou o movimento com a precisão de quem estava mapeando.</p>
+  <pre class="chapter-text">Capítulo Dois — O Décimo Terceiro Dia
+O Contensor do Almirantado não era discreto por design.
+Caixa de ferro sobre rodas de oito raios, blindagem dupla, motor de éter que soltava vapor com um barulho baixo e constante — um som que entrava nos pulmões de quem ficava perto demais e não saía. Nas paredes internas, runas de supressão gravadas a fogo para bloquear manifestação mágica de raças não-humanas.
+Elizabeth olhou para as runas enquanto os guardas fechavam a porta atrás dela.
+Supressão mágica. Para uma humana. Ou alguém estava com muito medo, ou com muito pouco bom senso. Provavelmente as duas coisas.
+As algemas eram Ferros de Soberania — ferro negro com filigrana de éter cristalizado nas juntas, reservados para prisioneiros que o Almirantado considerava capazes de surpreender.
+Ela olhou para elas e sentiu algo próximo de lisonja.
+Finalmente me tratando à altura.
+A porta de ferro fechou com um som definitivo.
+O sorriso durou até o Contensor começar a se mover. Depois o barulho do motor tomou conta de tudo, e Elizabeth ficou sozinha com os pensamentos e com o balanço das rodas sobre o paralelepípedo. O sorriso foi embora sem que ela percebesse exatamente quando.
+Amvesh.
+Sabia o nome. Havia ouvido em conversas que não eram endereçadas a ela — homens do Almirantado discutindo logística de extração, números de produção, transporte de mão de obra. Nunca havia prestado atenção nos detalhes porque nunca havia precisado.
+Deveria ter prestado.
+O que sabia era o suficiente para entender o tamanho do problema. Amvesh não era uma prisão de humanos. Era um arquipélago colonial — ilhas tomadas, pacificadas, transformadas em operação de extração de éter. O trabalho era feito por tritões capturados, por orcs de territórios ocupados, por qualquer raça que o Almirantado considerasse mais útil trabalhando do que existindo livremente. Lugares assim não tinham protocolos para humanos porque humanos não iam para lá como prisioneiros.
+Iam como guardas. Como supervisores. Como a hierarquia.
+Elizabeth olhou para as algemas nos próprios pulsos.
+Coragem, Eli.
+Mas desta vez a frase não serviu para nada.
+________________
 
-  <p>Cinco dias. E esse era o primeiro pedaço de informação que valia algo.</p>
 
-  <p><span class="thought">Nome. Reth. Reação a chamados de urgência — responde, mas não apressado. Posição de força real, não de hierarquia formal. O diretor não sabe que é ele quem manda aqui. Ou sabe e prefere não encarar esse fato.</span></p>
+A viagem durou três dias.
+Ela não comeu durante os três dias. Não por escolha — a refeição que empurraram pela fresta da porta no segundo dia era uma tigela de algo que cheirava a óleo queimado e tinha a consistência de argamassa. Ficou olhando para a tigela por um tempo, depois a empurrou de volta.
+Erro. Entendeu isso no terceiro dia, quando o enjoo da fome começou a confundir os pensamentos.
+Comer o que tem. Lembrar disso.
+O Contensor parou numa doca que cheirava a sal e a éter queimado. Quando abriram a porta, a luz de Amvesh entrou de uma vez e Elizabeth piscou, desorientada — o tipo de desorientação que três dias em caixa de ferro produzem e que nenhum treinamento formal cobre.
+Dois guardas locais. Não os do Almirantado de Dornath — esses ficaram no Contensor. Os novos tinham o uniforme diferente, mais surrado, com a insígnia da administração colonial no ombro esquerdo. Olharam para ela com a expressão de quem havia recebido um problema burocrático inesperado.
+Um deles disse algo que ela não entendeu. Não era idioma que reconhecia.
+O outro, em Dornath-esse com sotaque carregado: — Você fala?
+— Sim — disse Elizabeth.
+— Bem. Anda.
+Ela andou.
+________________
 
-  <p>A instalação de Amvesh operava em três turnos. Mineração de éter bruto nas camadas inferiores, processamento nos andares do meio, embalagem e transferência no nível da superfície. Os tritões trabalhavam no subsolo — suas fisiologias toleravam a pressão e a umidade que destruíam pulmões humanos em meses. Os orcs e mestiços de maior porte operavam as máquinas de extração. Os mestiços menores faziam o trabalho de manuseio e transporte.</p>
 
-  <p>Elizabeth havia sido designada como supervisora de turno da embalagem. O título soava importante. Na prática, significava que ela ficava de pé por doze horas num corredor entre as esteiras de transferência e assinava papéis que ninguém lia, referentes a caixotes que tinham o peso errado em pelo menos um terço das contagens.</p>
+A cela tinha três metros por dois metros e meio. Mediu no primeiro dia, contando os passos.
+Paredes de pedra vulcânica escura. Chão de terra batida, dura como concreto, com uma depressão rasa no canto esquerdo onde a umidade havia acumulado por tempo suficiente para criar uma crosta esverdeada. Uma janela com grade de ferro que deixava entrar um retângulo de céu do tamanho de uma folha de papel. Uma manta que havia pertencido a alguém antes dela e que não havia sido lavada desde então.
+Um balde no canto direito.
+Elizabeth olhou para o balde e entendeu, sem que ninguém precisasse explicar, a extensão completa do que havia sido decidido para ela naquele salão em Dornath.
+Ficou de pé no centro da cela por um longo momento. Depois se sentou no chão com as costas na parede e ficou olhando para o retângulo de céu.
+Tudo bem. Pensa.
+O problema era que pensar exigia informação, e informação exigia observação, e ela estava numa cela de pedra com um balde no canto. Então passou o primeiro dia observando a pedra. Os veios de mineral. As marcas de quem havia estado ali antes — riscos verticais em grupos de cinco, na parede da esquerda, à altura de uma mão adulta do chão.
+Ela contou os grupos. Quarenta e sete dias. O último grupo estava incompleto.
+Não quis pensar no que havia acontecido com quem estava contando.
+Fez o próprio primeiro risco na parede direita com a borda da algema. O som do metal na pedra foi mais alto do que esperava no silêncio absoluto da cela.
+Dia um.
+Dormiu no chão porque não havia outra opção. A manta entre ela e a pedra era espessa o suficiente para ser a diferença entre frio insuportável e frio apenas insuportável. Dobrou metade por baixo e usou a outra metade por cima e ficou assim até o amanhecer, acordando três vezes com o frio nos tornozelos onde a manta não chegava, uma vez com um barulho do lado de fora que não conseguiu identificar.
+________________
 
-  <p><span class="thought">Um terço das contagens com peso errado. Isso não é incompetência — é sistemático. Alguém está desviando. E alguém acima está deixando isso acontecer por alguma razão.</span></p>
 
-  <div class="scene-break">· · ·</div>
+No segundo dia, os guardas abriram a porta antes do amanhecer.
+O guarda principal tinha o uniforme da administração colonial — mais surrado do que o do Almirantado de Dornath, com a insígnia costurada de qualquer jeito no ombro. Segurava algo que Elizabeth havia descrito para si mesma como um chicote porque era o que era. Havia certa clareza em chamar as coisas pelo nome.
+— Vira — disse ele em Dornath-esse com sotaque carregado.
+Elizabeth virou.
+O primeiro golpe pegou nas costas, cruzado, acima da cintura. O vestido de noiva — que ainda era o que ela estava usando porque ninguém havia se dado ao trabalho de fornecer outra coisa — rasgou ao longo de um terço do corte. Ela não fez nenhum som.
+Contar. Foca em contar.
+O segundo pegou no mesmo lugar que o primeiro. Sentiu o calor antes de sentir a dor — sempre é assim, havia lido isso algum lugar, algum relatório médico que o pai havia deixado sobre a mesa, e havia sido uma informação inútil até agora. O terceiro foi mais baixo, perto do quadril. O quarto voltou para cima.
+Ficou de pé durante os doze golpes.
+Não foi simples. No oitavo ela precisou apoiar a mão na parede porque as pernas comunicaram que estavam considerando opções alternativas. Aplicou o peso de volta nos calcanhares e ficou de pé.
+Quando o guarda saiu, ela ficou parada por um momento na mesma posição, de frente para a parede, sem virar. As costas ardiam com o tipo de calor que irradia para fora e não fica parado — subia pelo pescoço, descia pelo quadril, pulsava com a frequência do coração.
+Depois virou e se sentou no chão.
+O vestido estava destruído nas costas. Tentou olhar por cima do ombro para avaliar o dano e conseguiu ver o suficiente — tecido rasgado, sangue em linhas finas onde a pele havia cedido. Não era fundo. Não era o tipo de corte que criava problema além do problema imediato.
+Limpar. Como limpar.
+A tigela de água que trouxeram meia hora depois era para beber. Bebeu metade e usou a outra metade com um pedaço do vestido que rasgou com as próprias mãos. Não alcançava direito. Fez o que conseguiu.
+A comida cheirava a gordura velha e tinha a consistência de massa crua. Comeu.
+Comer o que tem. Sempre comer o que tem.
+________________
 
-  <p>Ela passou a semana seguinte não falando com ninguém que não precisasse ouvir. Assinava os papéis. Ficava de pé no corredor. Não reclamava do peso. Não reclamava da comida. Quando alguém testava — uma cotovelada, um prato virado por acidente, a sua cota de ferramenta sumindo antes do turno começar — ela recolhia o que sobrava e continuava trabalhando.</p>
 
-  <p>Ninguém esperava isso. O invisível aguenta. O invisível não reage de forma que force uma resposta.</p>
+O terceiro dia foi o pior.
+Não pelas costas, que haviam desenvolvido uma camada de dor mais constante e menos aguda — o tipo que o corpo aprende a registrar em segundo plano, ruído de fundo em vez de sinal de alarme. Não pelo frio da madrugada, para o qual havia ajustado a posição na manta.
+Foi o balde.
+Era inevitável. Ela sabia que era inevitável desde o primeiro dia, havia postergado a inevitabilidade com a força de vontade de quem foi criada numa casa com banheiro privado e que ainda não havia processado completamente o tamanho do que havia mudado. Mas o terceiro dia foi o terceiro dia, e o corpo não negocia com força de vontade de forma indefinida.
+Ficou de pé no canto com o balde, de costas para a janela, sozinha numa cela de pedra, e a humilhação foi específica e precisa de uma forma que a dor nas costas não havia sido. A dor nas costas era externa — havia sido feita por alguém, era responsabilidade de alguém, tinha um endereço. Isso era só ela, reduzida a uma função que partilhava com qualquer animal, num canto de pedra que cheirava a mofo.
+Scarn Vael calculou isso também. O número dos artigos e o balde.
+Ficou olhando para a parede por um longo momento depois.
+Registra. Registra tudo.
+________________
 
-  <p>Na segunda semana, os testes diminuíram.</p>
 
-  <p>Na terceira, pararam.</p>
+Nos dias que se seguiram, ela aprendeu o ritmo do lugar.
+Os guardas chegavam antes do amanhecer. Aprendeu a acordar com o som das botas no corredor — um deles arrastava levemente o pé direito, o que dava quatro décimos de segundo de aviso antes da porta abrir. Quatro décimos de segundo não serviam para nada prático. Mas era informação, e informação era o único recurso que não conseguiam tirar dela.
+Ficava de pé antes de a porta abrir. Não por dignidade — por postura. Havia algo na mecânica de ser pega deitada que havia decidido negar.
+No quinto dia, choveu.
+A chuva entrou pelo retângulo da janela em diagonal e molhou uma faixa do chão por duas horas. Elizabeth ficou sentada na parte seca olhando para a parte molhada e ouvindo o som da água na pedra — diferente do silêncio de uma forma que o silêncio havia se tornado insuportável nas últimas horas sem que ela houvesse percebido.
+Havia vozes do lado de fora, na chuva. Dois trabalhadores tritões passando — conseguia identificar a língua agora, o padrão rítmico diferente de qualquer idioma humano que conhecia. Não entendia nada. Mas ficou absolutamente imóvel e escutou.
+Tinha que fazer alguma coisa com o tempo. E a única coisa que sabia fazer era escutar.
+No sétimo dia havia separado dois padrões distintos — palavras curtas que se repetiam no início das frases, que funcionavam como articuladores, como o "então" e o "mas" em Dornath-esse. No nono dia tinha uma hipótese sobre o que uma delas significava. No décimo primeiro, confirmou — a palavra apareceu num contexto que batia com a hipótese.
+Doze dias em solitária.
+Saiu com o início de um vocabulário que ninguém havia ensinado, costas que haviam cicatrizado o suficiente para não rasgar ao se mover, e um ódio que havia passado os doze dias sendo catalogado com a mesma frieza que ela havia aplicado a tudo que havia aprendido ouvindo pela janela da sala do pai.
+O ódio não era quente. Não era o tipo que grita e passa. Era o tipo frio que fica quieto e espera e anota o nome de tudo — quem calculou o número dos artigos, quem assinou o documento, quem enviou as instruções.
+Ela tinha tempo.
+No décimo segundo dia, antes de apagar a vela que deixavam por uma hora à noite, olhou para os doze riscos na parede direita.
+Depois olhou para os quarenta e sete riscos incompletos na parede esquerda.
+Quem você era.
+Apagou a vela.
+________________
 
-  <div class="ornament-break">⚓</div>
 
-  <h2>O idioma do subsolo</h2>
+No décimo terceiro dia, a porta da solitária finalmente abriu.
+Levaram-na para o pátio.
+E Elizabeth Thoss, pela primeira vez em toda aquela história, sentiu algo que havia treinado para não sentir.
+Medo de verdade.
+O pátio era uma mistura que ela não havia visto em nenhum lugar de Dornath. Tritões com as marcas das coleiras de supressão visíveis no pescoço. Orcs que haviam aprendido a se tornar menores do que eram para sobreviver no espaço. Mestiços de combinações que a cidade alta de Dornath nem reconhecia como possíveis. Todos com razões antigas e pessoais para odiar o que ela representava.
+Esperava violência.
+O que veio foi diferente.
+Um cuspe no uniforme quando passou perto de um grupo de tritões. Palavrões em três idiomas que identificou e dois que não reconhecia. Uma cotovelada que não era acidente. Um prato de comida empurrado longe antes que pudesse alcançá-lo.
+Ninguém a olhava nos olhos por tempo suficiente para que fosse um desafio. Ninguém se levantava para confrontá-la. O ódio era real — mas era o ódio preguiçoso de quem considera que a coisa no chão não merece nem o esforço de ser chutada com vontade.
+Ela era o lixo do lixo.
+E para o lixo do lixo, ninguém perdia tempo.
+________________
 
-  <p class="drop-cap">Os tritões não falavam o idioma padrão do Almirantado. Falavam uma mistura de Náutico Antigo e sinais manuais — uma língua que havia evoluído ao longo de décadas de trabalho forçado subterrâneo, onde o barulho das máquinas de éter tornava qualquer som inútil para comunicação a mais de três metros. Elizabeth havia visto referências a esse idioma em documentos do Almirantado. Havia lido a nota de rodapé que dizia que a língua não tinha nome oficial e que o Almirantado não reconhecia sua importância como sistema comunicativo.</p>
 
-  <p>A nota de rodapé havia sido escrita por alguém que nunca havia tentado supervisionar tritões.</p>
+Elizabeth passou o primeiro dia no pátio engolindo tudo isso e mapeando.
+Passou o segundo dia fazendo a mesma coisa.
+No final do segundo dia, num canto que ninguém disputava com ela porque ninguém a queria perto, percebeu algo que deveria ter percebido mais cedo.
+Ela conhecia isso.
+O mecanismo era idêntico. As raças eram diferentes, as razões eram diferentes — mas o movimento por baixo era o mesmo. Um ser considerado irrelevante demais para representar perigo. Alguém que podia estar presente e ser tratado como se não estivesse, porque reconhecer a presença exigiria um esforço que ninguém achava que valia.
+Invisibilidade.
+Em Dornath, havia aprendido tudo que sabia através dela.
+Aqui não seria diferente.
+________________
 
-  <p><span class="thought">Se eu não consigo me comunicar com um terço da força de trabalho, sou supervisora de nada. E se sou supervisora de nada, não tenho utilidade nenhuma. E se não tenho utilidade nenhuma, sou apenas o erro humano que o Almirantado jogou aqui para morrer.</span></p>
 
-  <p>Ela começou a estudar os sinais durante o turno. Não perguntando — observando. Mapeando o braço que indicava parada de emergência, a mão aberta que significava peso a mais na carga, o sinal de dois dedos que ela levou três semanas para descobrir que era um aviso de vazamento de éter nas câmaras inferiores.</p>
+Não era o diretor da instalação que mandava naquele pátio. Confirmou isso no segundo dia. O diretor aparecia três vezes ao dia, lia relatórios sem olhar para o que reportavam e sumia.
+Não era ele.
+Era o orc do canto.
+Grande. Mais velho do que parecia. Ficava encostada na parede com a postura de quem não precisa provar nada para ninguém porque já provou todas as vezes necessárias. Os outros ao redor se moviam em torno dela de formas sutis — afastavam quando andava, aproximavam quando chamava, resolviam disputas entre si sem nunca deixar a resolução chegar até ela.
+Esse era o idioma do poder real.
+Elizabeth havia aprendido esse idioma ouvindo pela janela da sala do pai.
+Ninguém a vigiava enquanto observava. Ninguém vigiava o lixo.
+Amanhã começo por ela.
+Não porque precisasse de uma aliada. Porque precisava entender como aquele sistema funcionava, e sistemas desse tipo só se entendem de dentro. Tinha tempo. E tinha o que ninguém ali esperava que ela tivesse — porque nunca haviam se dado ao trabalho de olhar para ela com atenção suficiente para ver.
+Paciência. Memória. E a capacidade de ouvir o que não era endereçado a ela.
+Amvesh. Você não sabe ainda com quem está lidando.
+Mas vai aprender.
+________________
 
-  <p>Ninguém percebeu que ela estava aprendendo. O lixo não aprende.</p>
 
-  <div class="scene-break">· · ·</div>
-
-  <p>No quadragésimo dia, houve um vazamento de verdade.</p>
-
-  <p>O sinal veio da câmara três — dois dedos levantados, palm voltada para baixo, movimento giratório no pulso. Vazamento ativo, câmara pressurizada, risco de expansão de éter não processado. O protocolo oficial do Almirantado para essa situação envolvia acionar o painel de controle do nível médio, esperar a confirmação do diretor e evacuar pelo corredor leste.</p>
-
-  <p>O problema era que o corredor leste estava obstruído por uma carga que havia tombado duas horas antes e que ninguém havia desmontado ainda, porque a ordem de desmontagem estava esperando assinatura do próprio diretor, que não havia aparecido no turno.</p>
-
-  <p>Elizabeth viu o sinal. Viu o corredor leste. Fez o cálculo.</p>
-
-  <p>— Corredor norte — disse ela em voz alta. E na língua de sinais que havia passado quarenta dias aprendendo sem que ninguém percebesse, repetiu o mesmo: corredor norte, saída alternativa, agora.</p>
-
-  <p>Houve um silêncio de dois segundos que ela nunca havia sentido antes naquele lugar.</p>
-
-  <p>Todos saíram pelo corredor norte.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>O diretor chegou vinte minutos depois do esvaziamento da câmara. Encontrou o corredor leste bloqueado, o corredor norte com a equipe completa sem baixas, e um relatório de incidente que Elizabeth havia preenchido com precisão cirúrgica enquanto esperava — incluindo a nota de que a carga tombada do corredor leste havia sido reportada duas horas antes do turno e que a demora na desmontagem havia tornado necessária a evacuação alternativa.</p>
-
-  <p>Ele a olhou por um momento longo.</p>
-
-  <p>Depois assinou o relatório e foi embora sem dizer nada.</p>
-
-  <p>Reth, que havia saído pelo corredor norte com os demais e havia observado tudo, ficou parado perto da saída depois que o diretor foi embora. Não olhou para Elizabeth diretamente. Mas quando passou por ela no caminho de volta para o pátio, disse em voz baixa — em idioma padrão, o que ela soube depois que era um gesto que ele raramente fazia:</p>
-
-  <div class="pull-quote">
-    <p>— Você aprendeu rápido para alguém que não devia saber nada.</p>
-    <cite>— Reth &nbsp;·&nbsp; instalação de extração de Amvesh &nbsp;·&nbsp; quadragésimo primeiro dia</cite>
-  </div>
-
-  <p>Elizabeth não respondeu. Mas guardou cada palavra.</p>
-
-  <div class="ornament-break">⚓</div>
-
-  <h2>O sistema que ela decidiu aprender</h2>
-
-  <p class="drop-cap">O desvio funcionava da seguinte forma: um em cada doze caixotes saía com peso líquido menor do que o registrado. A diferença era pequena o suficiente para que qualquer variação individual parecesse erro de pesagem — mas consistente o suficiente, ao longo de meses, para que a acumulação total representasse uma quantidade significativa de éter bruto desaparecido do inventário oficial.</p>
-
-  <p>Elizabeth levou duas semanas para mapear o sistema completamente. Levou mais uma semana para entender quem sabia e quem não sabia que sabia, que é diferente: havia três camadas de conhecimento na instalação, e cada camada achava que a informação parava nela.</p>
-
-  <p>O éter desviado ia para algum lugar. E esse algum lugar não era um cofre particular de alguém que estava ficando rico à custa do Almirantado.</p>
-
-  <p>Era o fundo de fuga.</p>
-
-  <div class="scene-break">· · ·</div>
-
-  <p>Reth a explicou isso no sexagésimo dia, quando ela finalmente perguntou de forma direta em vez de inferir. Não porque não soubesse a resposta — sabia. Mas porque havia uma diferença entre saber e ser incluída, e ela havia aprendido, em Dornath, que algumas portas só abrem quando você bate nelas pela porta certa.</p>
-
-  <p>Havia dezessete tritões, seis orcs e quatro mestiços com planos ativos de saída. Não fuga em pânico — saída planejada, com datas, rotas e identidades alternativas arranjadas ao longo de anos de desvio silencioso. O fundo cobria passagens, documentos falsos e a primeira semana de custo em qualquer porto que não tivesse guarnição pesada do Almirantado.</p>
-
-  <p>— E você — disse Elizabeth. — Você vai também?</p>
-
-  <p>— Quando o fundo for suficiente.</p>
-
-  <p>— Quanto falta?</p>
-
-  <p>Reth a olhou por um momento.</p>
-
-  <p>— Por que você quer saber?</p>
-
-  <p>Elizabeth pensou na pergunta corretamente antes de responder. Não a resposta que ele esperava. A resposta que abriria a porta seguinte.</p>
-
-  <p>— Porque eu tenho um problema diferente do seu e uma solução diferente. E acho que podem se encaixar da forma certa se eu entender o tamanho exato do que você precisa.</p>
-
-  <div class="pull-quote">
-    <p>Reth ficou quieto por um tempo. Depois disse o número.</p>
-  </div>
-
-  <p>Era menor do que ela esperava. E ela já havia estado pensando por três semanas em como consegui-lo.</p>
+— ELIZABETH Thoss · pátio da instalação de extração · décimo quinto dia</pre>
 
   <div class="chapter-end">
     <p class="end-label">— Fim do Capítulo Dois —</p>
@@ -230,7 +250,7 @@ html[data-theme="paper"] { --bg:#f0ead8; --bg2:#e8e0cc; --bg3:#e0d8c0; --bg4:#d8
   <nav class="chapter-nav" aria-label="Navegação entre capítulos">
     <a href="capitulo1.html" class="ch-nav-prev">← Anterior</a>
     <a href="../capitulos/" class="ch-nav-center">⚓ &nbsp;Todos os capítulos</a>
-    <a href="capitulo3.html" class="ch-nav-next">Próximo →</a>
+    <span class="ch-nav-next disabled">Próximo →</span>
   </nav>
 
 </div>
