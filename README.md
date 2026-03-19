@@ -16,5 +16,5 @@ capitulo1.html      ← Redirect → capitulos/capitulo1.html
 
 ## Notas
 
-- O nome da protagonista no Capítulo 1 é **Elizabeth Thoss** (catorze anos). "Escarleti" é adotado após o período em Amvesh.
+- O nome da protagonista é **Elizabeth Thoss**.
 - Toda a bibília do universo está em `universo/` — cada seção é um arquivo HTML separado.
