@@ -541,6 +541,20 @@ a.chapter-card:hover {
   font-style: italic;
 }
 
+/* ══ EMBEDDED HEADLINES BANNER ══ */
+.headline-banner-wrap {
+  margin-top: 1.2rem;
+}
+
+.banner-frame {
+  width: 100%;
+  height: 355px;
+  border: 1px solid var(--rule2);
+  border-radius: 12px;
+  background: var(--bg3);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+}
+
 /* ═══ RESPONSIVE ═══ */
 @media (max-width: 500px) {
   .chapter-card {
@@ -552,6 +566,7 @@ a.chapter-card:hover {
   .home-quote::before { font-size: 2.5rem; top: 0.3rem; left: 0.6rem; }
   .banner-content { grid-template-columns: 1fr; }
   .story-banner { margin: 0 -1.5rem 3rem; padding: 2.5rem 1.5rem; }
+  .banner-frame { height: 430px; }
 }
 
 </style>
@@ -626,6 +641,20 @@ a.chapter-card:hover {
 
 <!--  CONTENT  -->
 <div class="home-content">
+
+  <!-- ── BANNER GIRATÓRIO ── -->
+  <section class="home-section" style="padding-bottom: 3rem;">
+    <p class="section-label">⚓ manchetes</p>
+    <h2 class="section-heading">Últimos capítulos · Edição de Thalvorn</h2>
+    <div class="headline-banner-wrap">
+      <iframe
+        class="banner-frame"
+        src="banner/banner.html"
+        title="Banner giratório com manchetes dos últimos cinco capítulos"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
 
   <!-- ── CITAÇÃO ── -->
   <section class="home-section">
