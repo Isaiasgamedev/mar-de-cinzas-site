@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thalvorn — Catálogo Avançado de Raças</title>
+<meta name="description" content="Catálogo avançado de raças de Thalvorn: conhecidas, raras e povos fora da nomenclatura oficial.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.page-wrap { max-width: 980px; margin: 0 auto; padding: calc(var(--nav-h) + 3rem) 1.5rem 5rem; }
+.page-header { margin-bottom: 2rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--rule); }
+.kicker { font-family: var(--mono); font-size: 9px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: .7rem; }
+.page-title { font-family: var(--display); font-size: clamp(1.8rem, 5vw, 2.8rem); letter-spacing: .04em; margin: 0 0 .6rem; }
+.page-sub { font-family: var(--serif); font-style: italic; color: var(--muted); line-height: 1.7; }
+.group { margin-top: 1rem; background: var(--bg3); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.1rem; }
+.group h2 { margin: 0 0 .45rem; font-family: var(--display); font-size: 1rem; }
+.pill { display: inline-block; margin: .1rem .4rem .35rem 0; padding: 4px 8px; border: 1px solid var(--rule2); border-radius: 999px; font-family: var(--mono); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+.group p { margin: .4rem 0; line-height: 1.72; color: var(--muted); }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+.mini { border:1px solid var(--rule); border-radius:8px; padding:.8rem .85rem; }
+.mini h3 { margin:0 0 .25rem; font-family:var(--display); font-size:.95rem; }
+.mini p { margin:.25rem 0; font-size:.93rem; }
+.back-link { display: inline-block; margin-top: 1.1rem; font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-dim); text-decoration: none; }
+.back-link:hover { color: var(--gold); }
+@media (max-width: 860px){ .cols{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<nav class="site-nav"><div class="nav-inner"><a href="../index.html" class="nav-brand">Mar de Cinzas</a><button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links" id="site-nav-links"><a href="../index.html">Início</a><a href="../capitulos/">Capítulos</a><a href="index.html" class="active">Universo</a></div></div></nav>
+<div class="page-wrap">
+  <header class="page-header">
+    <p class="kicker">⚓ Dossiê populacional</p>
+    <h1 class="page-title">Catálogo Avançado de Raças</h1>
+    <p class="page-sub">Versão expandida para worldbuilding: status político, longevidade, relação com o éter e posição no sistema de exploração de Thalvorn.</p>
+  </header>
+
+  <section class="group">
+    <h2>Raças conhecidas (núcleo histórico)</h2>
+    <span class="pill">Elfos do Mar</span><span class="pill">Anões</span><span class="pill">Tritões</span><span class="pill">Orcs</span><span class="pill">Ogros</span><span class="pill">Humanos</span>
+    <p>As seis matrizes de poder e conflito da era industrial. O eixo do mundo é definido por três assimetrias: sensibilidade ao éter, acesso institucional à força e controle das rotas de extração.</p>
+    <div class="cols">
+      <article class="mini"><h3>Raças de alta sensibilidade</h3><p>Elfos e Tritões concentram percepção de éter e custo neurológico da Névoa. São também as populações que mais carregam memória histórica não escrita.</p></article>
+      <article class="mini"><h3>Raças de engenharia e contenção</h3><p>Anões e Ogros operam saberes técnicos de longa duração: um industrial, outro elemental. Ambos fora do centro político formal das Coroas.</p></article>
+      <article class="mini"><h3>Raças de resistência territorial</h3><p>Orcs preservam estratégia de sobrevivência matrilinear em conflito de 500 anos. Tritões mantêm infraestrutura de resistência em comunicação de três frequências.</p></article>
+      <article class="mini"><h3>Raça administrativa dominante</h3><p>Humanos controlam instituição e narrativa. A imunidade à Névoa cria vantagem operacional e, ao mesmo tempo, cegueira estrutural para a memória do mundo.</p></article>
+    </div>
+  </section>
+
+  <section class="group">
+    <h2>Raças de borda e mobilidade</h2>
+    <span class="pill">Halflings</span><span class="pill">Gnomos</span><span class="pill">Duendes</span><span class="pill">Kobolds</span><span class="pill">Meio-Elfos</span><span class="pill">Meio-Orcs</span><span class="pill">Povo-Pássaro</span>
+    <p>Povos que ocupam os interstícios dos mapas: comércio informal, túneis, recifes, rotas de vento e territórios sem soberania estável. São fundamentais para fluxo de informação e logística real de Thalvorn.</p>
+  </section>
+
+  <section class="group">
+    <h2>Transformações e linhagens limiares</h2>
+    <span class="pill">Tieflings</span><span class="pill">Genasi das Marés</span><span class="pill">Nharak</span>
+    <p>Esses grupos funcionam como prova biológica de processos de longa escala: industrialização da névoa, convergência elemental e heranças marítimas anteriores ao regime das Coroas.</p>
+  </section>
+
+  <section class="group">
+    <h2>Povos fora da nomenclatura oficial</h2>
+    <span class="pill">Velhari</span><span class="pill">Nadai</span><span class="pill">Brumhari</span><span class="pill">Keth'nar</span><span class="pill">Os Apagados</span><span class="pill">Os da Maré Morta</span>
+    <p>Conjunto classificado como desconhecido em relatórios formais: espécies/estruturas sociais com percepção incompatível com o instrumental político do Almirantado. A presença desses povos amplia Thalvorn para além da cartografia humana.</p>
+    <p><strong>Nota editorial:</strong> esta área consolida os dados recebidos para uso narrativo e será expandida conforme novas entradas forem formalizadas no cânone.</p>
+  </section>
+
+  <a href="index.html" class="back-link">← voltar para o universo</a>
+</div>
+<footer class="site-footer"><p>Mar de Cinzas &nbsp;·&nbsp; The Sea of Ashes</p><small>dark fantasy · thalvorn · éter vivo · o inquilino</small></footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
