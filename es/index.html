@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mar de Cenizas</title>
+<meta name="description" content="Una historia de fantasía oscura. Piratería, magia industrial y un océano que guarda secretos más antiguos que los mapas.">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+
+/* ══ ATMOSPHERIC BACKGROUND ══ */
+.hero-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% -5%,  rgba(100,72,40,0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 15% 100%,  rgba(32,55,75,0.20) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 35% at 90% 85%,   rgba(15,30,50,0.28) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* ══ TOPOGRAPHY TEXTURE — pure CSS, zero images ══ */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(255,255,255,0.012) 39px,
+      rgba(255,255,255,0.012) 40px
+    );
+  pointer-events: none;
+}
+
+/* ══ HERO ══ */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: calc(var(--nav-h) + 3rem) 1.5rem 6rem;
+  gap: 0;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 2.2rem;
+}
+
+.hero-title {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(3.2rem, 14vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  position: relative;
+}
+
+/* gold glow on the title */
+.hero-title::after {
+  content: 'MAR\ADDE CENIZAS';
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: linear-gradient(135deg, #c8973a 0%, #e8b85a 40%, #a87230 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: blur(18px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.hero-rule {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  margin: 2rem auto;
+}
+
+.hero-sub {
+  font-family: var(--display);
+  font-size: clamp(0.55rem, 1.5vw, 0.72rem);
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 2.4rem;
+}
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  color: var(--muted);
+  max-width: 44ch;
+  line-height: 1.75;
+  margin: 0 auto 3rem;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--display);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 3px;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #0d0a05;
+  border: 1px solid var(--gold);
+}
+.btn-gold:hover {
+  background: #e0aa42;
+  border-color: #e0aa42;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200,151,58,0.25);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--rule2);
+}
+.btn-ghost:hover {
+  border-color: var(--rule2);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+/* scroll hint */
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.hero-scroll::after {
+  content: '';
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, var(--faint), transparent);
+  animation: drop 1.8s ease-in-out infinite;
+}
+
+@keyframes drop {
+  0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.4; }
+  60%       { transform: scaleY(1);   transform-origin: top; opacity: 1; }
+}
+
+/* ══ CONTENT WRAPPER ══ */
+.home-content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ══ SECTION ══ */
+.home-section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-family: var(--display);
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+}
+
+/* ══ QUOTE BLOCK ══ */
+.home-quote {
+  position: relative;
+  padding: 2.4rem 2.4rem 2.4rem 3rem;
+  background: var(--bg3);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  margin: 2rem 0 0;
+}
+
+.home-quote::before {
+  content: '"';
+  position: absolute;
+  top: 0.4rem;
+  left: 0.9rem;
+  font-family: var(--display);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--gold-dim);
+  opacity: 0.5;
+}
+
+.home-quote blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.home-quote cite {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  font-style: normal;
+}
+
+/* ══ CHAPTER CARDS ══ */
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 2rem 0 2.5rem;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chapter-card {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg3);
+  text-decoration: none;
+  transition: background 0.15s;
+  position: relative;
+}
+
+a.chapter-card:hover {
+  background: var(--bg4);
+}
+
+.chapter-card.locked {
+  opacity: 0.42;
+  cursor: default;
+}
+
+.ch-num {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--rule2);
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+}
+
+.chapter-card:not(.locked) .ch-num {
+  color: var(--gold-dim);
+}
+
+.ch-arc {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sea-dim);
+  margin-bottom: 0.2rem;
+}
+
+.ch-title {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2rem;
+}
+
+.ch-desc {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.ch-status {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.status-live {
+  color: #88c87a;
+  border-color: rgba(136,200,122,0.3);
+  background: rgba(136,200,122,0.06);
+}
+
+.status-soon {
+  color: var(--faint);
+  border-color: var(--rule);
+}
+
+/* ══ WORLD BLURB ══ */
+.world-text {
+  font-family: var(--serif);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  color: var(--muted);
+  line-height: 1.85;
+  max-width: 58ch;
+  margin-bottom: 2.5rem;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--rule2);
+  border-radius: 20px;
+  color: var(--muted);
+  background: var(--bg3);
+}
+
+/* quick-link grid */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg3);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.quick-link:hover { background: var(--bg4); }
+
+.ql-icon {
+  font-size: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg2);
+  border: 1px solid var(--rule2);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.ql-title {
+  font-family: var(--display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.15rem;
+}
+
+.ql-sub {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+}
+
+/* ══ STORY BANNER ══ */
+.story-banner {
+  margin: 0 -1.5rem 4rem;
+  padding: 3.5rem 1.5rem;
+  background: linear-gradient(135deg, rgba(25,35,55,0.6) 0%, rgba(15,20,30,0.8) 50%, rgba(20,30,45,0.6) 100%);
+  border-top: 2px solid var(--gold-dim);
+  border-bottom: 2px solid var(--gold-dim);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(90,154,186,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(200,151,58,0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.banner-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.banner-label {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--sea-dim);
+  margin-bottom: 1.2rem;
+}
+
+.banner-title {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(135deg, var(--text) 0%, var(--gold) 50%, var(--text) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.banner-text {
+  font-family: var(--serif);
+  font-size: clamp(0.95rem, 2.1vw, 1.1rem);
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.banner-text p {
+  margin-bottom: 1rem;
+}
+
+.banner-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.element {
+  padding: 1.25rem;
+  border: 1px solid rgba(200,151,58,0.25);
+  border-left: 3px solid var(--gold-dim);
+  background: rgba(7,9,13,0.4);
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+.element-title {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.45rem;
+}
+
+.element-text {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ══ EMBEDDED HEADLINES BANNER ══ */
+.headline-banner-wrap {
+  margin-top: 1.2rem;
+}
+
+.banner-frame {
+  width: 100%;
+  height: 355px;
+  border: 1px solid var(--rule2);
+  border-radius: 12px;
+  background: var(--bg3);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 500px) {
+  .chapter-card {
+    grid-template-columns: 36px 1fr;
+    gap: 1rem;
+  }
+  .ch-status { display: none; }
+  .home-quote { padding: 1.6rem 1.4rem 1.6rem 2rem; }
+  .home-quote::before { font-size: 2.5rem; top: 0.3rem; left: 0.6rem; }
+  .banner-content { grid-template-columns: 1fr; }
+  .story-banner { margin: 0 -1.5rem 3rem; padding: 2.5rem 1.5rem; }
+  .banner-frame { height: 430px; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero-bg"></div>
+
+<!--  NAV  -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Mar de Cenizas</a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="site-nav-links">
+      <a href="index.html" class="active">Inicio</a>
+      <a href="../capitulos/">Capítulos</a>
+      <a href="../universo/">Universo</a>
+    </div>
+  </div>
+</nav>
+
+<!--  HERO  -->
+<section class="hero">
+  <p class="hero-eyebrow">Dark Fantasy · Piratería</p>
+
+  <h1 class="hero-title" data-text="MAR DE CENIZAS">
+    MAR<br>DE CENIZAS
+  </h1>
+
+  <div class="hero-rule"></div>
+  <p class="hero-sub">The Sea of Ashes</p>
+
+  <!-- STORY BANNER -->
+  <div class="story-banner" style="margin: 2.5rem -1.5rem 2.5rem; max-width: none; background: linear-gradient(135deg, rgba(25,35,55,0.4) 0%, rgba(15,20,30,0.6) 50%, rgba(20,30,45,0.4) 100%);">
+    <div class="banner-inner">
+      <p class="banner-label" style="margin-bottom: 0.8rem;">⚓ · La Narrativa</p>
+      <h2 class="banner-title" style="margin-bottom: 1rem; font-size: clamp(1.2rem, 4vw, 1.8rem);">Desobediencia, Magia y Abismos</h2>
+      
+      <div class="banner-content" style="grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+        <div class="banner-text" style="font-size: clamp(0.9rem, 2vw, 1rem);">
+          <p><strong style="color: var(--gold);">En una época de guerras mineras y magia industrial</strong>, Elizabeth Thoss, una joven de 14 años, rechaza su destino trazado — trabajo, silencio, vasallaje — y es condenada a trabajos forzados en las minas de Éter.</p>
+          <p style="margin-top: 0.8rem;">En la oscuridad de las profundidades, entre cristales que guardan la memoria del mundo, descubre una verdad que la Compañía de las Islas Profundas mataría por mantener enterrada: <em>lo que está roto bajo la superficie no es una mina. Es una prisión.</em></p>
+        </div>
+        
+        <div class="banner-elements">
+          <div class="element">
+            <div class="element-title">El Mundo</div>
+            <div class="element-text">Thalvorn — un océano infinito de islas, razas en conflicto y un continente que ya no existe. Mapas que no llegan ni a la mitad.</div>
+          </div>
+          <div class="element">
+            <div class="element-title">La Magia</div>
+            <div class="element-text">Éter. Memoria cristalizada. Quemarlo en el poderío industrial es más barato que cualquier carbón — pero tiene un precio que nadie quiere pagar.</div>
+          </div>
+          <div class="element">
+            <div class="element-title">El Abismo</div>
+            <div class="element-text">500 años de guerras raciales. Genocidios disfrazados. Y algo antiguo despertando bajo las minas — porque cada mina es un poco menos de tiempo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-ctas">
+    <a href="../capitulos/prologo.html" class="btn btn-gold">Empezar a leer &nbsp;›</a>
+    <a href="../capitulos/" class="btn btn-ghost">Ver capítulos</a>
+  </div>
+
+  <div class="hero-scroll">scroll</div>
+</section>
+
+<!--  CONTENT  -->
+<div class="home-content">
+
+  <!-- ── BANNER GIRATÓRIO ── -->
+  <section class="home-section" style="padding-bottom: 3rem;">
+    <p class="section-label">⚓ titulares</p>
+    <h2 class="section-heading">Últimos capítulos · Edición de Thalvorn</h2>
+    <div class="headline-banner-wrap">
+      <iframe
+        class="banner-frame"
+        src="../banner/banner.html"
+        title="Banner rotatorio con titulares de los últimos cinco capítulos"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- ── CITAÇÃO ── -->
+  <section class="home-section">
+    <p class="section-label">⚓ la protagonista</p>
+    <div class="home-quote">
+      <blockquote>
+        "Doce artículos. Ninguno aceptado. Eso es todo."
+      </blockquote>
+      <cite>— ELIZABETH Thoss &nbsp;·&nbsp; Capítulo Uno &nbsp;·&nbsp; Las Doce Obligaciones</cite>
+    </div>
+  </section>
+
+  <!-- ── CAPÍTULOS ── -->
+  <section class="home-section">
+    <p class="section-label">⚓ capítulos</p>
+    <h2 class="section-heading">La historia</h2>
+
+    <div class="chapter-list">
+
+      <a href="../capitulos/prologo.html" class="chapter-card">
+        <div class="ch-num">P</div>
+        <div class="ch-body">
+          <p class="ch-arc">Arco I — Huida</p>
+          <p class="ch-title">Prólogo — El Inquilino Habla</p>
+          <p class="ch-desc">Una voz de treinta mil años presenta el mundo antes de la caída del Almirantazgo</p>
+        </div>
+        <span class="ch-status status-live">Disponible</span>
+      </a>
+
+      <a href="../capitulos/capitulo1.html" class="chapter-card">
+        <div class="ch-num">I</div>
+        <div class="ch-body">
+          <p class="ch-arc">Arco I — Huida</p>
+          <p class="ch-title">Las Doce Obligaciones</p>
+          <p class="ch-desc">En el altar, Elizabeth rechaza los doce artículos ante 314 testigos</p>
+        </div>
+        <span class="ch-status status-live">Disponible</span>
+      </a>
+
+      <a href="../capitulos/capitulo2.html" class="chapter-card">
+        <div class="ch-num">II</div>
+        <div class="ch-body">
+          <p class="ch-arc">Arco I — Huida</p>
+          <p class="ch-title">El Decimotercer Día</p>
+          <p class="ch-desc">Doce días de aislamiento en Amvesh y el inicio de la supervivencia en el patio</p>
+        </div>
+        <span class="ch-status status-live">Disponible</span>
+      </a>
+
+    </div>
+
+    <a href="../capitulos/" class="btn btn-ghost">Ver todos los capítulos &nbsp;›</a>
+  </section>
+
+  <!-- ── UNIVERSO ── -->
+  <section class="home-section">
+    <p class="section-label">⚓ el universo</p>
+    <h2 class="section-heading">Thalvorn</h2>
+
+    <p class="world-text">
+      Thalvorn no es solo un archipiélago — es una civilización oceánica completa, fragmentada en cientos de islas,
+      imperios navales, rutas comerciales, zonas de guerra y culturas que sobrevivieron a siglos de genocidio industrial.
+      El Éter Vivo sostiene motores, armas y gobiernos; las Seis Mareas moldean religión, política y destino.
+      Y por debajo de todo eso, en el fondo que ningún mapa alcanza, existe una memoria más antigua que las propias razas.
+    </p>
+
+    <div class="tag-row">
+      <span class="tag">Dark Fantasy</span>
+      <span class="tag">Piratería</span>
+      <span class="tag">Magia Industrial</span>
+      <span class="tag">Horror Cósmico</span>
+      <span class="tag">Posguerra</span>
+    </div>
+
+    <div class="quick-links">
+      <a href="../universo/protagonista.html" class="quick-link">
+        <div class="ql-icon">⚓</div>
+        <div>
+          <p class="ql-title">ELIZABETH Thoss</p>
+          <p class="ql-sub">Protagonista · Capitana de la Perpétua</p>
+        </div>
+      </a>
+      <a href="../universo/magia.html" class="quick-link">
+        <div class="ql-icon">🔮</div>
+        <div>
+          <p class="ql-title">Sistema de Magia</p>
+          <p class="ql-sub">Éter Vivo · El Inquilino</p>
+        </div>
+      </a>
+      <a href="../universo/obrigacoes-consorte.html" class="quick-link">
+        <div class="ql-icon">📜</div>
+        <div>
+          <p class="ql-title">Las Doce Obligaciones</p>
+          <p class="ql-sub">Código ceremonial completo + traducción de Escarleti</p>
+        </div>
+      </a>
+      <a href="../universo/catalogo-aberracoes.html" class="quick-link">
+        <div class="ql-icon">🕳️</div>
+        <div>
+          <p class="ql-title">Dossieres de Expansión</p>
+          <p class="ql-sub">Aberraciones, criaturas, razas avanzadas y pueblos humanos</p>
+        </div>
+      </a>
+      <a href="../universo/" class="quick-link">
+        <div class="ql-icon">📖</div>
+        <div>
+          <p class="ql-title">Project Bible</p>
+          <p class="ql-sub">Mundo completo · Razas · Arcos</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</div><!-- /home-content -->
+
+<footer class="site-footer">
+  <p>Mar de Cenizas &nbsp;·&nbsp; The Sea of Ashes</p>
+  <small>dark fantasy · thalvorn · éter vivo · el inquilino</small>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

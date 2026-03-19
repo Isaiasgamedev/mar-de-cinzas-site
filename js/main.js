@@ -5,20 +5,37 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── Seletor de idioma (visual, sem ação por enquanto) ── */
+  /* ── Seletor de idioma ── */
   const navLinks = document.querySelector('.nav-links');
   if (navLinks && !navLinks.querySelector('.lang-picker')) {
     const languagePicker = document.createElement('div');
     languagePicker.className = 'lang-picker';
+
+    const path = window.location.pathname;
+    const pathSegments = path.split('/').filter(Boolean);
+    const hostedOnGithubPages = window.location.hostname.endsWith('github.io');
+    const siteBase = hostedOnGithubPages && pathSegments.length > 0 ? `/${pathSegments[0]}` : '';
 
     const currentLang = (document.documentElement.lang || 'pt-BR').toLowerCase();
     let selectedLang = 'pt';
     if (currentLang.startsWith('en')) selectedLang = 'en';
     if (currentLang.startsWith('es')) selectedLang = 'es';
 
+    const labelByLang = {
+      pt: 'Idioma',
+      es: 'Idioma',
+      en: 'Language',
+    };
+
+    const languageTargets = {
+      pt: `${siteBase}/index.html`,
+      es: `${siteBase}/es/index.html`,
+      en: `${siteBase}/en/index.html`,
+    };
+
     languagePicker.innerHTML = `
-      <label class="lang-picker-label" for="site-language">Idioma</label>
-      <select id="site-language" class="lang-picker-select" aria-label="Selecionar idioma">
+      <label class="lang-picker-label" for="site-language">${labelByLang[selectedLang] || 'Idioma'}</label>
+      <select id="site-language" class="lang-picker-select" aria-label="Language selector">
         <option value="pt">Português</option>
         <option value="es">Español</option>
         <option value="en">English</option>
@@ -28,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const select = languagePicker.querySelector('.lang-picker-select');
     if (select) {
       select.value = selectedLang;
+      select.addEventListener('change', () => {
+        const target = languageTargets[select.value];
+        if (target) {
+          window.location.href = target;
+        }
+      });
     }
 
     navLinks.appendChild(languagePicker);
