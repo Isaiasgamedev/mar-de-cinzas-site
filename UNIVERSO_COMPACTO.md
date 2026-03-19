@@ -139,7 +139,7 @@ Na cerimônia (>300 testemunhas), onde o costume exige silêncio absoluto enquan
 
 **Em Amvesh:** Em três meses aprende mais que em dois anos de Formação de Consorte. Aprende fragmentos de Veth-Nar por escutar o que não era endereçado a ela. Identifica que o poder real pertence a um orc encostado na parede, não ao diretor.
 
-**A fuga:** Em Amvesh, Elizabeth e três amigas da prisão encontram um casco antiquíssimo durante escavações e o restauram em segredo. Na hora da saída, o navio responde de forma anômala à presença dela e volta a operar. Ela não sai sozinha: doze tritãs saem com ela, incluindo Mira.
+**A fuga:** Em Amvesh, Elizabeth e três amigas da prisão encontram um casco antiquíssimo durante escavações e o restauram em segredo. Na hora da saída, o navio responde de forma anômala à presença dela e volta a operar. Ela não sai sozinha: sai com essas três amigas.
 
 **A Perpétua:** Não é cargueiro moderno nem compra de ocasião. É um navegador pré-industrial, mais antigo que o Almirantado, sem dependência de éter como os navios atuais. Foi revivido pelas prisioneiras — e parece ressoar com Elizabeth desde o primeiro encontro.
 
@@ -173,9 +173,13 @@ Na cerimônia (>300 testemunhas), onde o costume exige silêncio absoluto enquan
 
 ### Tripulação inicial
 
-**Mira** — Tritã, 17 anos, mergulhadora. Liberta das gaiolas da mina, a única que embarca voluntariamente. Mergulha mais fundo que qualquer ser vivo registrado. Uma vez foi longe demais e voltou com algo diferente nos olhos. Às vezes para tudo e escuta o que ninguém consegue escutar. Micro-exposições ao éter bruto desde os 4 anos criaram adaptação neurológica única: processa sinais de éter como linguagem. Sua mãe lhe ensinou Veth-Nar completo antes de morrer na mina — ato de resistência disfarçado de amor. **Custo:** a cada sessão de contato com O Inquilino, memórias Veth substituem fragmentos dela. Quando acorda pergunta o próprio nome por um segundo. Nunca vai perder a identidade completamente. Mas sempre vai se perguntar onde Mira termina e onde os Veth começam.
+**Núcleo de saída de Amvesh:** Elizabeth + 3 amigas.
 
-**Bross** — Anã, 52 anos, engenharia. Estava na mina como "contratada" (dívida impagável). Não está na Perpétua por ideologia — precisa recomprar a forja perdida há dez anos. Trata Elizabeth como nobre entediada que vai desistir na primeira tempestade. Muda de ideia quando Elizabeth demonstra competência técnica. Competência é a única moeda que aceita. **Segredo:** É Leitora de Éter. As coisas que ela vê a assustam mais que qualquer tempestade. Nunca contou para ninguém.
+**Mira** — Nome canônico mantido. Mergulhadora do núcleo inicial. Tem sensibilidade rara ao éter e, às vezes, escuta o que ninguém mais percebe. **Custo:** a cada sessão de contato com O Inquilino, memórias Veth substituem fragmentos dela. Raça, idade e origem detalhada permanecem em definição.
+
+**Bross** — Nome canônico mantido. Engenheira do núcleo inicial. Pragmatismo alto, precisão técnica extrema. **Segredo:** é Leitora de Éter. Raça, idade e origem detalhada permanecem em definição.
+
+**Terceira companheira de Amvesh** — Nome e ficha completos ainda em definição canônica.
 
 ### Encontradas ao longo da jornada
 

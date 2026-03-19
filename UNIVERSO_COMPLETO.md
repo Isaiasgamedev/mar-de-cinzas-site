@@ -433,7 +433,7 @@ Elizabeth e três amizades formadas na prisão restauram a estrutura em segredo,
 
 No momento da saída, o navio reage de forma anômala à presença de Elizabeth e volta a operar.
 
-Ela deixa Amvesh com 12 tritãs, incluindo Mira.
+Ela deixa Amvesh com três amizades formadas na prisão.
 
 ### 10.7 A Perpétua e liderança
 
@@ -480,19 +480,28 @@ Essa assimetria sustenta tensão ética até o fim.
 
 ### 12.1 Núcleo inicial
 
+Núcleo de saída de Amvesh: Elizabeth + 3 amigas.
+
 #### Mira
 
-- tritã, 17
+- nome canônico mantido
 - mergulhadora extrema
 - receptor principal dos vazamentos do Inquilino
 - custo de identidade crescente
+- raça/origem detalhada em definição
 
 #### Bross
 
-- anã, 52
+- nome canônico mantido
 - engenharia de éter
 - pragmatismo duro
 - Leitora de Éter (segredo)
+- raça/origem detalhada em definição
+
+#### Terceira companheira de Amvesh
+
+- nome em definição
+- perfil, raça, origem e função em definição
 
 #### Elizabeth
 
